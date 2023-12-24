@@ -1,13 +1,13 @@
 // import this after install `@mdi/font` package
-import '@mdi/font/css/materialdesignicons.css'
+import '@mdi/font/css/materialdesignicons.css';
 
-import 'vuetify/styles'
-import { createVuetify } from 'vuetify'
-import * as components from 'vuetify/components'
-import * as directives from 'vuetify/directives'
+import 'vuetify/styles';
+import { createVuetify } from 'vuetify';
+import * as components from 'vuetify/components';
+import * as directives from 'vuetify/directives';
 
 // Loading scss
-import '@/assets/scss/main.scss'
+import '@/assets/scss/main.scss';
 
 // Custom theme
 import {
@@ -86,4 +86,4 @@ export default defineNuxtPlugin((app) => {
   });
 
   app.vueApp.use(vuetify);
-})
+});
