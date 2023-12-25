@@ -1,1 +1,11 @@
-@use 'vuetify/styles/main.sass'
+// Override sass
+@use './variables';
+@use './override';
+
+// Vuetify main sass
+@use 'vuetify/styles/main.sass';
+
+// layout
+@use './layout/sidebar';
+
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&display=swap");
