@@ -3,5 +3,4 @@ import 'vue3-perfect-scrollbar/dist/vue3-perfect-scrollbar.css';
 
 export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.use(PerfectScrollbar);
-  nuxtApp.vueApp.mount('#app');
 });
