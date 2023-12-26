@@ -17,7 +17,7 @@ const customizer = useCustomizerStore();
     app
   >
     <!-- Logo -->
-    <div class="ps-5">
+    <div class="pa-5">
       <Logo />
     </div>
     <!-- Logo  -->
@@ -54,7 +54,6 @@ const customizer = useCustomizerStore();
           />
         </template>
       </VList>
-
       <!-- Profile Card-->
       <div class="pa-6 userbottom">
         <LayoutSidebarProfile />
