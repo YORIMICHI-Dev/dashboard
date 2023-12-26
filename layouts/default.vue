@@ -1,11 +1,13 @@
 <script setup lang="ts">
 const customizer = useCustomizerStore();
-const title = ref('Kusuda Daisuke Dashboard');
+const TITLE = 'Kusuda Daisuke Dashboard';
 
 useHead({
-  meta: [{ content: title }],
-  titleTemplate: (titleChunk) => {
-    return titleChunk ? `${title}` : 'Dashboard';
+  meta: [{ content: TITLE }],
+  titleTemplate: (titleChunk: string | undefined) => {
+    let title = TITLE;
+    if (titleChunk !== undefined) return `${titleChunk} | Dashboard`;
+    return title;
   },
 });
 </script>
@@ -41,23 +43,14 @@ useHead({
     <!-- Main Contents -->
     <VMain>
       <VContainer fluid class="page-wrapper pb-sm-15 pb-10">
-        <!-- Main View -->
-        <slot />
-        <!-- Main View -->
+        <div class="maxWidth">
+          <!-- Main View -->
+          <slot />
+          <!-- Main View -->
 
-        <!-- Customizer button -->
-        <VBtn
-          class="customizer-btn"
-          size="large"
-          icon
-          variant="flat"
-          color="primary"
-          @click.stop="
-            customizer.SET_CUSTOMIZER_DRAWER(!customizer.Customizer_drawer)
-          "
-        >
-          <SettingsIcon />
-        </VBtn>
+          <!-- Customizer button -->
+          <LayoutSetting />
+        </div>
         <!-- Customizer button -->
       </VContainer>
     </VMain>
