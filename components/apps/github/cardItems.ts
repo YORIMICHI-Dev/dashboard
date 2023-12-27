@@ -1,8 +1,8 @@
 import type { cardsType } from '@/types/cardTypes/cardType';
 
-import img1 from '@/public/images/githubCard/blog-img1.jpg'
-import img2 from '@/public/images/githubCard/blog-img1.jpg'
-import img3 from '@/public/images/githubCard/blog-img1.jpg'
+import img1 from '/images/githubCard/blog-img1.jpg'
+import img2 from '/images/githubCard/blog-img1.jpg'
+import img3 from '/images/githubCard/blog-img1.jpg'
 
 /*--Blog Cards--*/
 export const githubCard: cardsType[] = [
