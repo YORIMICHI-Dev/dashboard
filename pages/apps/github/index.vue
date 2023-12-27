@@ -21,4 +21,12 @@ const breadcrumbs = ref([
 <template>
   <!-- Breadcrumb -->
   <SharedBaseBreadCrumb :title="TITLE" :breadcrumbs="breadcrumbs" />
+
+  <!-- Github Repository -->
+  <v-row>
+    <!-- Blog cards -->
+    <v-col cols="12">
+      <AppsGithubCard />
+    </v-col>
+  </v-row>
 </template>
