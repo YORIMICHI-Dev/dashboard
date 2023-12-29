@@ -29,6 +29,7 @@ useHead({
       v-model="customizer.Customizer_drawer"
       width="320"
     >
+      <LayoutCustom />
     </VNavigationDrawer>
     <!-- Customizer Drawer -->
 

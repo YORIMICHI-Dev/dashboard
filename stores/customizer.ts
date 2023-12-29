@@ -7,7 +7,7 @@ export const useCustomizerStore = defineStore({
     Sidebar_drawer: null,
     Customizer_drawer: false,
     mini_sidebar: false,
-    actTheme: 'BLUE_THEME',
+    actTheme: 'GREEN_THEME',
   }),
 
   getters: {},

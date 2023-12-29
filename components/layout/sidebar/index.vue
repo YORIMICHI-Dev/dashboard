@@ -56,7 +56,7 @@ const customizer = useCustomizerStore();
       </VList>
       <!-- Profile Card-->
       <div class="pa-6 userbottom">
-        <LayoutSidebarProfile />
+        <LayoutSidebarProfile v-if="!customizer.mini_sidebar" />
       </div>
     </perfect-scrollbar>
   </VNavigationDrawer>

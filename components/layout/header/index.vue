@@ -1,6 +1,5 @@
 <script setup lang="ts">
 const customizer = useCustomizerStore();
-const appsdrawer = ref(false);
 </script>
 
 <template>
