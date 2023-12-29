@@ -27,7 +27,6 @@ const sidebarItem: menu[] = [
   {
     title: 'Profile',
     icon: UserCircleIcon,
-    chip: 'New',
     chipColor: 'surface',
     chipBgColor: 'secondary',
     to: '/dashboard/profile',
@@ -49,10 +48,10 @@ const sidebarItem: menu[] = [
   },
   { header: 'Apps' },
   {
-    title: 'Github Repository',
+    title: 'Repository',
     icon: BrandGithubIcon,
     to: '/apps/github',
-    chip: '1',
+    chip: 'New',
     chipColor: 'surface',
     chipBgColor: 'secondary',
   },
