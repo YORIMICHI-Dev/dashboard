@@ -31,7 +31,11 @@ import { githubCard } from './cardItems';
                 <VAvatar class="" size="18">
                   <CodeIcon size="18" />
                 </VAvatar>
-                <div class="d-flex" v-for="language in card.languages">
+                <div
+                  class="d-flex"
+                  v-for="language in card.languages"
+                  v-bind:key="language"
+                >
                   <VChip
                     class="text-body-2 ml-1"
                     size="small"

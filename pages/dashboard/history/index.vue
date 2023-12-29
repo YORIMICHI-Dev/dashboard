@@ -21,4 +21,14 @@ const breadcrumbs = ref([
 <template>
   <!-- Breadcrumb -->
   <SharedBaseBreadCrumb :title="TITLE" :breadcrumbs="breadcrumbs" />
+
+  <VRow>
+    <VCol cols="12">
+      <DashboardHistoryUnaiit />
+      <DashboardHistoryLaniakea />
+      <DashboardHistoryIPX />
+      <DashboardHistoryKIOXIA />
+      <DashboardHistorySumitomo />
+    </VCol>
+  </VRow>
 </template>

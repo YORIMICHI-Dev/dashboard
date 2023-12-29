@@ -1,9 +1,5 @@
-//
-// Profile
-//
+import type { profileType } from '@/types/hearderTypes/profileType';
 import proUser1 from '/images/svgs/icon-account.svg';
-import proUser2 from '/images/svgs/icon-inbox.svg';
-import proUser3 from '/images/svgs/icon-tasks.svg';
 export const profileItems: profileType[] = [
   {
     avatar: proUser1,

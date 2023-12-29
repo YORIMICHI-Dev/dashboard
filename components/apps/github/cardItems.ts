@@ -16,8 +16,7 @@ export const githubCard: cardsType[] = [
   },
   {
     coveravatar: img2,
-    title:
-      'Chat Gpt clone application with chat gpt-3.5',
+    title: 'Chat Gpt clone application with chat gpt-3.5',
     link: 'https://github.com/YORIMICHI-Dev/chat-app',
     category: 'Chat App',
     languages: ['Typescript', 'Next.js', 'Python', 'FastAPI'],
