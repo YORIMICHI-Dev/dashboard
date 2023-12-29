@@ -1,4 +1,8 @@
 <script setup lang="ts">
+definePageMeta({
+  middleware: ['home'],
+});
+
 const TITLE = 'Home';
 useHead({
   title: TITLE,
