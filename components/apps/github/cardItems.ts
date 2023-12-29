@@ -1,14 +1,14 @@
 import type { cardsType } from '@/types/cardTypes/cardType';
 
-import img1 from '/images/githubCard/blog-img1.jpg'
-import img2 from '/images/githubCard/blog-img1.jpg'
-import img3 from '/images/githubCard/blog-img1.jpg'
+import img1 from '/images/githubCard/github-blog.png';
+import img2 from '/images/githubCard/github-chat.png';
+import img3 from '/images/githubCard/github-chat.png';
 
 /*--Blog Cards--*/
 export const githubCard: cardsType[] = [
   {
     coveravatar: img3,
-    title: 'COVID outbreak deepens as more lockdowns loom in China',
+    title: 'Dashboard ',
     link: 'https://github.com/YORIMICHI-Dev/dashboard',
     category: 'Dashboard',
     languages: ['Typescript', 'Nuxt3'],
@@ -17,7 +17,7 @@ export const githubCard: cardsType[] = [
   {
     coveravatar: img2,
     title:
-      'Intel loses bid to revive antitrust case against patent foe Fortress',
+      'Chat Gpt clone application with chat gpt-3.5',
     link: 'https://github.com/YORIMICHI-Dev/chat-app',
     category: 'Chat App',
     languages: ['Typescript', 'Next.js', 'Python', 'FastAPI'],
@@ -25,7 +25,7 @@ export const githubCard: cardsType[] = [
   },
   {
     coveravatar: img1,
-    title: 'As yen tumbles, gadget-loving Japan goes for secondhand iPhones',
+    title: 'Coding skill blog',
     link: 'https://github.com/YORIMICHI-Dev/Blog',
     category: 'Old Blog',
     languages: ['Typescript', 'JavaScript', 'Next.js'],
