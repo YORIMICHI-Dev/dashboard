@@ -16,7 +16,7 @@ import type { SharedUIChildCard } from '#build/components';
                   <h5 class="h5"></h5>
                   <VList>
                     <!-- <VListItem> -->
-                      <!-- <VListItemTitle
+                    <!-- <VListItemTitle
                         >・Bard Sentence,
                         TFIDFによる文章類似度測定の実装</VListItemTitle
                       >
@@ -37,7 +37,7 @@ import type { SharedUIChildCard } from '#build/components';
                   <h5 class="h5"></h5>
                   <VList>
                     <!-- <VListItem> -->
-                      <!-- <VListItemTitle
+                    <!-- <VListItemTitle
                         >・Bard Sentence,
                         TFIDFによる文章類似度測定の実装</VListItemTitle
                       >
@@ -49,7 +49,7 @@ import type { SharedUIChildCard } from '#build/components';
                         >・Project Leader、窓口業務</VListItemTitle
                       >
                     </VListItem> -->
-Coming soon
+                    Coming soon
                   </VList>
                   <VDivider />
                 </div>
