@@ -61,7 +61,7 @@ const DarkthemeColors = ref([
           <v-item v-slot="{ isSelected, toggle }" :value="theme.name">
             <v-sheet
               rounded="md"
-              class="border cursor-pointer d-block text-center px-5 py-4 hover-btns"
+              class="border-sm border-primary cursor-pointer d-block text-center px-5 py-4 hover-btns"
               elevation="9"
               @click="toggle"
             >
@@ -83,7 +83,7 @@ const DarkthemeColors = ref([
           <v-item v-slot="{ isSelected, toggle }" :value="theme.name">
             <v-sheet
               rounded="md"
-              class="border cursor-pointer d-block text-center px-5 py-4 hover-btns"
+              class="border-sm border-primary cursor-pointer d-block text-center px-5 py-4 hover-btns"
               elevation="9"
               @click="toggle"
             >

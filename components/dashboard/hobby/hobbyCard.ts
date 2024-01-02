@@ -5,10 +5,10 @@ import image3 from '/images/hobby/bird3.jpg';
 
 // types
 export type galleryType = {
-  id: string,
-  image: string,
-  title: string,
-  dateTime: string,
+  id: string;
+  image: string;
+  title: string;
+  dateTime: string;
 };
 
 // gallery components
