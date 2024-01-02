@@ -18,6 +18,11 @@ html {
     }
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .border,
 .v-divider {
     border-color: rgba(var(--v-border-color), 1) !important;
