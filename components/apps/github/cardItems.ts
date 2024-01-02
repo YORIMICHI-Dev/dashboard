@@ -2,7 +2,7 @@ import type { cardsType } from '@/types/cardTypes/cardType';
 
 import img1 from '/images/githubCard/github-blog.png';
 import img2 from '/images/githubCard/github-chat.png';
-import img3 from '/images/githubCard/github-chat.png';
+import img3 from '/images/githubCard/github-dashboard.png';
 
 /*--Blog Cards--*/
 export const githubCard: cardsType[] = [
