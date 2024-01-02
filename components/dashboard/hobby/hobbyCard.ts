@@ -4,12 +4,15 @@ import image2 from '/images/hobby/bird2.jpg';
 import image3 from '/images/hobby/bird3.jpg';
 
 // types
-export type KeyedObject = {
-  [key: string]: string | number | KeyedObject | any;
+export type galleryType = {
+  id: string,
+  image: string,
+  title: string,
+  dateTime: string,
 };
 
 // gallery components
-export const birdGallery: KeyedObject[] = [
+export const birdGallery: galleryType[] = [
   {
     id: '#1Gallery',
     image: image1,

@@ -3,12 +3,11 @@ import { githubCard } from './cardItems';
 </script>
 <template>
   <VRow>
-    <VCol cols="12" md="4" sm="4" v-for="card in githubCard" :key="card.title">
+    <VCol cols="12" lg="4" v-for="card in githubCard" :key="card.title">
       <VCard elevation="10" rounded="md" class="card-hover">
         <div>
           <VImg
             :src="card.coveravatar"
-            height="250px"
             cover
             class="rounded-t-md align-end text-right"
           >
