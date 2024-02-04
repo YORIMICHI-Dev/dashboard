@@ -4,6 +4,7 @@ import {
   UserCircleIcon,
   HistoryIcon,
   HeartIcon,
+  CertificateIcon,
 } from 'vue-tabler-icons';
 
 export interface menu {
@@ -40,6 +41,11 @@ const sidebarItem: menu[] = [
     title: 'History',
     icon: HistoryIcon,
     to: '/dashboard/history',
+  },
+  {
+    title: 'Certification',
+    icon: CertificateIcon,
+    to: '/dashboard/certification',
   },
   {
     title: 'Hobby',
