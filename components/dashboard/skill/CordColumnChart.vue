@@ -8,6 +8,7 @@ import {
 } from './frameworkColumnChart';
 import { dbOptions, dbIcon, dbChart } from './dbColumnChart';
 import { osOptions, osIcon, osChart } from './osColumnChart';
+import { azureOptions, azureIcon, azureChart } from './azureColumnChart';
 
 const chartOptions = computed(() => {
   return columnOptions;
@@ -70,6 +71,19 @@ const chartOptions = computed(() => {
       </SharedUIParentCard>
     </VCol>
 
+    <!-- Azure -->
+    <VCol cols="12" sm="4">
+      <SharedUIParentCard title="Azure" :icon="azureIcon">
+        <VueApexCharts
+          type="bar"
+          height="300"
+          :options="azureOptions"
+          :series="azureChart.series"
+        >
+        </VueApexCharts>
+      </SharedUIParentCard>
+    </VCol>
+
     <!-- Role -->
     <!-- <VCol cols="12" sm="4">
         <SharedUIParentCard title="Role" :icon="frameworkIcon">
@@ -84,3 +98,4 @@ const chartOptions = computed(() => {
       </VCol> -->
   </VRow>
 </template>
+./azureColumnChart

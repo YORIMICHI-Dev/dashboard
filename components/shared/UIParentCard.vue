@@ -11,7 +11,7 @@ const { title } = props;
 ParentCard||=============================== //
 <template>
   <VCard class="mb-6" elevation="10">
-    <VCardItem class="py-4 px-6">
+    <VCardItem class="py-4 px-6 bg-lightsecondary">
       <div class="d-sm-flex align-center">
         <v-card-title class="text-h4 d-flex">
           <div v-if="icon" class="mr-2 d-flex align-center">

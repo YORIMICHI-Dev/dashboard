@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { BrandCSharpIcon } from 'vue-tabler-icons';
 import profileBg from '/images/profile/profile-card.png';
 import UserImage from '/images/profile/user-7.jpg';
 </script>
@@ -9,23 +10,28 @@ import UserImage from '/images/profile/user-7.jpg';
     <div class="mb-4">
       <VRow class="mt-1">
         <!-- About -->
-        <VCol cols="12" lg="4" sm="12" class="order-sm-second">
+        <VCol cols="12" lg="5" sm="12" class="order-sm-second">
           <div class="px-4 py-1">
             <VRow class="justify-center">
-              <VCol cols="4" class="text-center">
-                <TieIcon size="32" />
-                <h4 class="text-h4">3 Years</h4>
-                <h6 class="text-h6 font-weight-regular">Backend</h6>
+              <VCol cols="3" class="text-center">
+                <TieIcon class="text-primary" size="32" />
+                <h4 class="text-primary text-h6">Full Stack</h4>
+                <h6 class="text-primary text-subtitle-1 font-weight-regular">3 years</h6>
               </VCol>
-              <v-col cols="4" class="text-center">
-                <BrandPythonIcon size="32" />
-                <h4 class="text-h4">Python</h4>
-                <h6 class="text-h6 font-weight-regular">Main skill</h6>
+              <v-col cols="3" class="text-center">
+                <BrandCSharpIcon class="text-teal-darken-2" size="32" />
+                <h4 class="text-teal-darken-2 text-h6">Front/Back</h4>
+                <h6 class="text-teal-darken-2 text-subtitle-1 font-weight-regular">1 years</h6>
               </v-col>
-              <v-col cols="4" class="text-center">
-                <HeartIcon size="32" />
-                <h4 class="text-h4">2 years</h4>
-                <h6 class="text-h6 font-weight-regular">Married</h6>
+              <v-col cols="3" class="text-center">
+                <BrandPythonIcon class="text-purple-darken-1" size="32" />
+                <h4 class="text-purple-darken-1 text-h6">Backend</h4>
+                <h6 class="text-purple-darken-1 text-subtitle-1 font-weight-regular">3 years</h6>
+              </v-col>
+              <v-col cols="3" class="text-center">
+                <HeartIcon class="text-pink-lighten-4" size="32" />
+                <h4 class="text-pink-lighten-4 text-h6">Married</h4>
+                <h6 class="text-pink-lighten-4 text-subtitle-1 font-weight-regular">2 years</h6>
               </v-col>
             </VRow>
           </div>
@@ -34,7 +40,7 @@ import UserImage from '/images/profile/user-7.jpg';
         <!-- Avator -->
         <VCol
           cols="12"
-          lg="4"
+          lg="2"
           sm="12"
           class="d-flex justify-center order-sml-first"
         >
@@ -52,7 +58,7 @@ import UserImage from '/images/profile/user-7.jpg';
         <!-- External site -->
         <VCol
           cols="12"
-          lg="4"
+          lg="5"
           class="d-flex align-center justify-center justify-lg-end order-sm-third"
         >
           <div

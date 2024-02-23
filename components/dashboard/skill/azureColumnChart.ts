@@ -1,6 +1,6 @@
-import { BrandWindowsIcon } from 'vue-tabler-icons';
+import { BrandAzureIcon } from 'vue-tabler-icons';
 
-export const osOptions = {
+export const azureOptions = {
   chart: {
     type: 'bar',
     height: 300,
@@ -27,7 +27,7 @@ export const osOptions = {
     colors: ['transparent'],
   },
   xaxis: {
-    categories: ['Windows', 'Ubuntu', 'Miracle Linux'],
+    categories: ['Azure VM', 'Web App', 'Functions', 'SQL Server'],
   },
   yaxis: {
     title: {
@@ -65,18 +65,14 @@ export const osOptions = {
   ],
 };
 
-export const osChart = {
+export const azureChart = {
   // chunk name and career years
   series: [
     {
-      name: 'Linux',
-      data: [0, 2, 1],
-    },
-    {
-      name: 'Windows',
-      data: [2, 0, 0],
+      // name: 'Linux',
+      data: [1, 1, 1, 1],
     },
   ],
 };
 
-export const osIcon = BrandWindowsIcon;
+export const azureIcon = BrandAzureIcon;
