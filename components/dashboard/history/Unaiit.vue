@@ -33,23 +33,20 @@ import type { SharedUIChildCard } from '#build/components';
                   <VDivider class="my-3" />
                 </div>
                 <div class="">
-                  <span class="text-body-2">2024/02~</span>
-                  <h5 class="h5"></h5>
+                  <span class="text-body-2">2024/02~2024/03</span>
+                  <h5 class="h5">特定地域を走行する車両の可視化サンプルアプリ開発</h5>
                   <VList>
-                    <!-- <VListItem> -->
-                    <!-- <VListItemTitle
-                        >・Bard Sentence,
-                        TFIDFによる文章類似度測定の実装</VListItemTitle
+                    <VListItem>
+                    <VListItemTitle
+                        >・Map box GL JSより車両データをマップ上に可視化</VListItemTitle
                       >
                       <VListItemTitle
-                        >・AWS(ES2, S3, RDB,
-                        SES)によるデプロイ環境構築</VListItemTitle
+                        >・Azureよるクラウドリソース設計とデプロイ環境構築</VListItemTitle
                       >
                       <VListItemTitle
-                        >・Project Leader、窓口業務</VListItemTitle
+                        >・.Net CoreによるWebアプリの開発とデプロイ</VListItemTitle
                       >
-                    </VListItem> -->
-                    Coming soon
+                    </VListItem>
                   </VList>
                   <VDivider />
                 </div>
@@ -82,7 +79,38 @@ import type { SharedUIChildCard } from '#build/components';
                 <div
                   class="d-flex my-4 mx-auto justify-center align-center overflow-hidden ga-3"
                 >
-                  coming soon
+                  <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                      height="32"
+                    />
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg"
+                    height="32"
+                  />
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                    height="32"
+                  />
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg"
+                    height="32"
+                  />
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dotnetcore/dotnetcore-original.svg"
+                    height="32"
+                  />
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg"
+                    height="32"
+                  />
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg"
+                    height="32"
+                  />
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/windows8/windows8-original.svg"
+                    height="32"
+                  />
                 </div>
                 <VDivider />
               </div>

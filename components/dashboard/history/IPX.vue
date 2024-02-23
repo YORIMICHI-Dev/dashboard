@@ -61,11 +61,8 @@
                   </div>
                   <VList class="bg-lightsuccess">
                     <VListItem>
-                      <VListItemTitle>・Python バックエンド開発</VListItemTitle>
-                      <VListItemTitle>・AWSクラウド環境構築開発</VListItemTitle>
-                      <VListItemTitle
-                        >・Project Leader、担当窓口業務</VListItemTitle
-                      >
+                      <VListItemTitle>・Pythonプログラマ</VListItemTitle>
+                      <VListItemTitle>・AGVシミュレータエンジン開発</VListItemTitle>
                     </VListItem>
                   </VList>
                   <VDivider class="my-2" />
@@ -97,7 +94,7 @@
                       height="32"
                     />
                     <img
-                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg"
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ubuntu/ubuntu-original.svg"
                       height="32"
                     />
                   </div>

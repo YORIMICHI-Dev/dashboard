@@ -109,7 +109,7 @@ import { UserCheckIcon } from 'vue-tabler-icons';
                     height="32"
                   />
                   <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
                     height="32"
                   />
                 </div>
