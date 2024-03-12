@@ -3,7 +3,7 @@ import { birdGallery } from './hobbyCard';
 </script>
 
 <template>
-  <SharedUIParentCard title="Bird">
+  <SharedUIParentCard title="ジュウシマツ">
     <VRow>
       <VCol cols="12" md="4" sm="6" v-for="(card, i) in birdGallery" :key="i">
         <VCard elevation="10" class="card-hover overflow-hidden">

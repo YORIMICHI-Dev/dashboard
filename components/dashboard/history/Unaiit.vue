@@ -1,8 +1,7 @@
-import type { SharedUIChildCard } from '#build/components';
 <script setup lang="ts"></script>
 
 <template>
-  <SharedUIParentCard title="UNAIIT Co.">
+  <SharedUIParentCard title="株式会社UNAIIT">
     <VRow>
       <VCol cols="12">
         <SharedUiParentCard title="Avatar">
@@ -34,17 +33,21 @@ import type { SharedUIChildCard } from '#build/components';
                 </div>
                 <div class="">
                   <span class="text-body-2">2024/02~2024/03</span>
-                  <h5 class="h5">特定地域を走行する車両の可視化サンプルアプリ開発</h5>
+                  <h5 class="h5">
+                    特定地域を走行する車両の可視化サンプルアプリ開発
+                  </h5>
                   <VList>
                     <VListItem>
-                    <VListItemTitle
-                        >・Map box GL JSより車両データをマップ上に可視化</VListItemTitle
+                      <VListItemTitle
+                        >・Map box GL
+                        JSより車両データをマップ上に可視化</VListItemTitle
                       >
                       <VListItemTitle
                         >・Azureよるクラウドリソース設計とデプロイ環境構築</VListItemTitle
                       >
                       <VListItemTitle
-                        >・.Net CoreによるWebアプリの開発とデプロイ</VListItemTitle
+                        >・.Net
+                        CoreによるWebアプリの開発とデプロイ</VListItemTitle
                       >
                     </VListItem>
                   </VList>
@@ -80,9 +83,9 @@ import type { SharedUIChildCard } from '#build/components';
                   class="d-flex my-4 mx-auto justify-center align-center overflow-hidden ga-3"
                 >
                   <img
-                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-                      height="32"
-                    />
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                    height="32"
+                  />
                   <img
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg"
                     height="32"

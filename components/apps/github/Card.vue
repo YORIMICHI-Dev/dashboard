@@ -14,10 +14,11 @@ import { githubCard } from './cardItems';
           </VImg>
           <VCardItem class="pt-4">
             <VChip
-              class="text-body-2 font-weight-medium bg-grey100 text-decoration-none"
+              class="text-body-2 font-weight-medium bg-grey300 text-decoration-none"
               size="small"
-              v-text="card.category"
-            ></VChip>
+              variant="outlined"
+              >{{ card.category }}</VChip
+            >
             <h5 class="text-h5 text-13 my-6">
               <NuxtLink
                 class="text-decoration-none color-inherits"
@@ -38,8 +39,8 @@ import { githubCard } from './cardItems';
                   <VChip
                     class="text-body-2 ml-1"
                     size="small"
-                    variant="outlined"
-                    color="success"
+                    variant="flat"
+                    color="error"
                   >
                     {{ language }}
                   </VChip>

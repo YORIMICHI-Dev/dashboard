@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <SharedUIParentCard title="KIOXIA Co.">
+  <SharedUIParentCard title="KIOXIA株式会社">
     <VRow>
       <VCol cols="12">
         <!-- Resume -->

@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <SharedUIParentCard title="Sumitomo Electric Co.">
+  <SharedUIParentCard title="住友電気工業株式会社">
     <!-- Resume -->
     <VRow>
       <VCol cols="12" lg="8">

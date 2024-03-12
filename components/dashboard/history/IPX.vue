@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <SharedUIParentCard title="iPX Co." period="2021/02~2022/02">
+  <SharedUIParentCard title="株式会社iPX" period="2021/02~2022/02">
     <VRow>
       <VCol cols="12">
         <SharedUiParentCard title="Avatar">
@@ -62,7 +62,9 @@
                   <VList class="bg-lightsuccess">
                     <VListItem>
                       <VListItemTitle>・Pythonプログラマ</VListItemTitle>
-                      <VListItemTitle>・AGVシミュレータエンジン開発</VListItemTitle>
+                      <VListItemTitle
+                        >・AGVシミュレータエンジン開発</VListItemTitle
+                      >
                     </VListItem>
                   </VList>
                   <VDivider class="my-2" />

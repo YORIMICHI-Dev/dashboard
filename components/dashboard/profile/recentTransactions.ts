@@ -12,7 +12,7 @@ type recentTrans = {
 const recentTransaction: recentTrans[] = [
   {
     title: 'Currently',
-    subtitle: 'UNAIIT Co.',
+    subtitle: '株式会社UNAIIT',
     textcolor: 'info',
     boldtext: true,
     line: true,
@@ -21,7 +21,7 @@ const recentTransaction: recentTrans[] = [
   },
   {
     title: '~2024/01',
-    subtitle: 'Laniakea Co.',
+    subtitle: 'Laniakea株式会社',
     textcolor: 'success',
     boldtext: false,
     line: true,
@@ -30,7 +30,7 @@ const recentTransaction: recentTrans[] = [
   },
   {
     title: '~2023/02',
-    subtitle: 'iPX Co.',
+    subtitle: '株式会社iPX',
     textcolor: 'success',
     boldtext: false,
     line: true,
@@ -39,7 +39,7 @@ const recentTransaction: recentTrans[] = [
   },
   {
     title: '~2021/12',
-    subtitle: 'KIOXIA Co.',
+    subtitle: 'KIOXIA株式会社',
     textcolor: 'secondary',
     boldtext: false,
     line: true,
@@ -48,7 +48,7 @@ const recentTransaction: recentTrans[] = [
   },
   {
     title: '~2021/08',
-    subtitle: 'Sumitomo Electronics Co.',
+    subtitle: '住友電気工業株式会社',
     textcolor: 'secondary',
     boldtext: false,
     line: true,
@@ -57,7 +57,7 @@ const recentTransaction: recentTrans[] = [
   },
   {
     title: '~2019/03',
-    subtitle: 'Graduated from  The University of Electro-Communications',
+    subtitle: '電気通信大学大学院機械知能システム学専攻',
     textcolor: 'primary',
     boldtext: false,
     line: true,
