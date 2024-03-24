@@ -16,46 +16,29 @@ import UserImage from '/images/profile/user-7.jpg';
               <VCol cols="3" class="text-center">
                 <TieIcon class="text-primary" size="32" />
                 <h4 class="text-primary text-h6">Full Stack</h4>
-                <h6 class="text-primary text-subtitle-1 font-weight-regular">
-                  3 years
-                </h6>
+                <h6 class="text-primary text-subtitle-1 font-weight-regular">3 years</h6>
               </VCol>
               <v-col cols="3" class="text-center">
                 <BrandNuxtIcon class="text-success" size="32" />
                 <h4 class="text-success text-h6">Frontend</h4>
-                <h6 class="text-success text-subtitle-1 font-weight-regular">
-                  1 years
-                </h6>
+                <h6 class="text-success text-subtitle-1 font-weight-regular">1 years</h6>
               </v-col>
               <v-col cols="3" class="text-center">
                 <BrandCSharpIcon class="text-teal-darken-2" size="32" />
                 <h4 class="text-teal-darken-2 text-h6">Backend</h4>
-                <h6
-                  class="text-teal-darken-2 text-subtitle-1 font-weight-regular"
-                >
-                  1 years
-                </h6>
+                <h6 class="text-teal-darken-2 text-subtitle-1 font-weight-regular">1 years</h6>
               </v-col>
               <v-col cols="3" class="text-center">
                 <BrandPythonIcon class="text-purple-darken-1" size="32" />
                 <h4 class="text-purple-darken-1 text-h6">Backend</h4>
-                <h6
-                  class="text-purple-darken-1 text-subtitle-1 font-weight-regular"
-                >
-                  3 years
-                </h6>
+                <h6 class="text-purple-darken-1 text-subtitle-1 font-weight-regular">3 years</h6>
               </v-col>
             </VRow>
           </div>
         </VCol>
 
         <!-- Avator -->
-        <VCol
-          cols="12"
-          lg="2"
-          sm="12"
-          class="d-flex justify-center order-sml-first"
-        >
+        <VCol cols="12" lg="2" sm="12" class="d-flex justify-center order-sml-first">
           <div class="text-center top-spacer">
             <div class="avatar-border">
               <VAvatar size="100" class="userImage">
@@ -74,18 +57,12 @@ import UserImage from '/images/profile/user-7.jpg';
               <VCol cols="3" class="text-center">
                 <BrandGithubIcon class="text-black" size="32" />
                 <h4 class="text-black text-h6">Github</h4>
-                <h6 class="text-black text-subtitle-1 font-weight-regular">
-                  3 years
-                </h6>
+                <h6 class="text-black text-subtitle-1 font-weight-regular">3 years</h6>
               </VCol>
               <v-col cols="3" class="text-center">
                 <HeartIcon class="text-pink-lighten-4" size="32" />
                 <h4 class="text-pink-lighten-4 text-h6">Married</h4>
-                <h6
-                  class="text-pink-lighten-4 text-subtitle-1 font-weight-regular"
-                >
-                  2 years
-                </h6>
+                <h6 class="text-pink-lighten-4 text-subtitle-1 font-weight-regular">2 years</h6>
               </v-col>
             </VRow>
           </div>

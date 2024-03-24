@@ -10,14 +10,26 @@ export const azureOptions = {
       show: false,
     },
   },
-  colors: ['#edb4ed', '#6ac3fd'],
   plotOptions: {
     bar: {
       horizontal: false,
       endingShape: 'rounded',
       columnWidth: '20%',
+      distributed: true,
     },
   },
+  colors: [
+    '#33b2df',
+    '#ddb1fa',
+    '#d4526e',
+    '#13d8aa',
+    '#A5978B',
+    '#2b908f',
+    '#f9a3a4',
+    '#90ee7e',
+    '#f48024',
+    '#69d2e7',
+  ],
   dataLabels: {
     enabled: false,
   },
@@ -69,7 +81,7 @@ export const azureChart = {
   // chunk name and career years
   series: [
     {
-      // name: 'Linux',
+      name: 'On work',
       data: [1, 1, 1, 1],
     },
   ],

@@ -14,10 +14,7 @@ const { title, breadcrumbs } = props;
           <!-- Breadcrumbs -->
           <div>
             <h3 class="text-h3 mb-2">{{ title }}</h3>
-            <v-breadcrumbs
-              :items="breadcrumbs"
-              class="text-h6 font-weight-medium pa-0 ml-n1"
-            >
+            <v-breadcrumbs :items="breadcrumbs" class="text-h6 font-weight-medium pa-0 ml-n1">
               <template v-slot:divider>
                 <div class="d-flex align-center text-h3 mt-n4">.</div>
               </template>

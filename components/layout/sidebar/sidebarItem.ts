@@ -1,11 +1,4 @@
-import {
-  CodeIcon,
-  BrandGithubIcon,
-  UserCircleIcon,
-  HistoryIcon,
-  HeartIcon,
-  CertificateIcon,
-} from 'vue-tabler-icons';
+import { CodeIcon, BrandGithubIcon, UserCircleIcon, HistoryIcon, HeartIcon, CertificateIcon } from 'vue-tabler-icons';
 
 export interface menu {
   header?: string;

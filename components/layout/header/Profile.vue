@@ -24,16 +24,10 @@ import { profileItems } from './profileItem';
           </VAvatar>
           <div class="ml-3">
             <h6 class="text-h6 mb-n1">Kusuda Daisuke</h6>
-            <span class="text-subtitle-1 font-weight-regular textSecondary"
-              >Engineer</span
-            >
+            <span class="text-subtitle-1 font-weight-regular textSecondary">Engineer</span>
             <div class="d-flex align-center mt-1">
               <MailIcon size="18" stroke-width="1.5" />
-              <span
-                class="text-subtitle-1 font-weight-regular textSecondary ml-2"
-              >
-                yorimichi.dev@gmail.com
-              </span>
+              <span class="text-subtitle-1 font-weight-regular textSecondary ml-2"> yorimichi.dev@gmail.com </span>
             </div>
           </div>
         </div>
@@ -41,20 +35,10 @@ import { profileItems } from './profileItem';
       </div>
       <!-- Route page -->
       <VList class="py-0 theme-list" lines="two">
-        <VListItem
-          v-for="item in profileItems"
-          :key="item.title"
-          class="py-4 px-8 custom-text-primary"
-          :to="item.href"
-        >
+        <VListItem v-for="item in profileItems" :key="item.title" class="py-4 px-8 custom-text-primary" :to="item.href">
           <template v-slot:prepend>
             <VAvatar size="48" color="lightprimary" class="mr-3" rounded="md">
-              <VImg
-                :src="item.avatar"
-                width="24"
-                height="24"
-                :alt="item.avatar"
-              />
+              <VImg :src="item.avatar" width="24" height="24" :alt="item.avatar" />
             </VAvatar>
           </template>
           <div>

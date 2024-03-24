@@ -52,12 +52,7 @@ const DarkthemeColors = ref([
     <div class="pa-6">
       <h6 class="text-h6 mt-8 mb-5">Theme Color</h6>
       <v-item-group mandatory v-model="customizer.actTheme" class="ml-n2 v-row">
-        <v-col
-          cols="4"
-          v-for="theme in themeColors"
-          :key="theme.name"
-          class="pa-2"
-        >
+        <v-col cols="4" v-for="theme in themeColors" :key="theme.name" class="pa-2">
           <v-item v-slot="{ isSelected, toggle }" :value="theme.name">
             <v-sheet
               rounded="md"
@@ -74,12 +69,7 @@ const DarkthemeColors = ref([
       </v-item-group>
       <h6 class="text-h6 mt-11 mb-5">Theme Dark Color</h6>
       <v-item-group mandatory v-model="customizer.actTheme" class="ml-n2 v-row">
-        <v-col
-          cols="4"
-          v-for="theme in DarkthemeColors"
-          :key="theme.name"
-          class="pa-2"
-        >
+        <v-col cols="4" v-for="theme in DarkthemeColors" :key="theme.name" class="pa-2">
           <v-item v-slot="{ isSelected, toggle }" :value="theme.name">
             <v-sheet
               rounded="md"

@@ -14,9 +14,7 @@ import { birdGallery } from './hobbyCard';
             <div class="d-flex align-center gap-3">
               <div>
                 <h6 class="text-h6 mb-1">{{ card.title }}</h6>
-                <span
-                  class="text-subtitle-1 d-block text-truncate d-flex align-center gap-2"
-                >
+                <span class="text-subtitle-1 d-block text-truncate d-flex align-center gap-2">
                   {{ card.dateTime }}
                 </span>
               </div>

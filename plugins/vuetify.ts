@@ -10,14 +10,7 @@ import * as directives from 'vuetify/directives';
 import '@/assets/scss/main.scss';
 
 // Custom theme
-import {
-  BLUE_THEME,
-  AQUA_THEME,
-  PURPLE_THEME,
-  GREEN_THEME,
-  CYAN_THEME,
-  ORANGE_THEME,
-} from '@/theme/LightTheme';
+import { BLUE_THEME, AQUA_THEME, PURPLE_THEME, GREEN_THEME, CYAN_THEME, ORANGE_THEME } from '@/theme/LightTheme';
 import {
   DARK_BLUE_THEME,
   DARK_AQUA_THEME,

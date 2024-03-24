@@ -9,13 +9,7 @@ import { recentTransaction } from './recentTransactions';
       <div class="recent-transaction mt-10 px-3">
         <div v-for="list in recentTransaction" :key="list.title">
           <VRow class="d-flex mb-4">
-            <VCol
-              cols="4"
-              lg="3"
-              md="auto"
-              sm="auto"
-              class="px-0 pt-0 pb-1 d-flex align-start"
-            >
+            <VCol cols="4" lg="3" md="auto" sm="auto" class="px-0 pt-0 pb-1 d-flex align-start">
               <h6 class="text-body-1 textSecondary text-no-wrap">
                 {{ list.title }}
               </h6>

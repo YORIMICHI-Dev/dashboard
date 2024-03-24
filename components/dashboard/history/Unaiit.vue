@@ -33,22 +33,12 @@
                 </div>
                 <div class="">
                   <span class="text-body-2">2024/02~2024/03</span>
-                  <h5 class="h5">
-                    特定地域を走行する車両の可視化サンプルアプリ開発
-                  </h5>
+                  <h5 class="h5">特定地域を走行する車両の可視化サンプルアプリ開発</h5>
                   <VList>
                     <VListItem>
-                      <VListItemTitle
-                        >・Map box GL
-                        JSより車両データをマップ上に可視化</VListItemTitle
-                      >
-                      <VListItemTitle
-                        >・Azureよるクラウドリソース設計とデプロイ環境構築</VListItemTitle
-                      >
-                      <VListItemTitle
-                        >・.Net
-                        CoreによるWebアプリの開発とデプロイ</VListItemTitle
-                      >
+                      <VListItemTitle>・Map box GL JSより車両データをマップ上に可視化</VListItemTitle>
+                      <VListItemTitle>・Azureよるクラウドリソース設計とデプロイ環境構築</VListItemTitle>
+                      <VListItemTitle>・.Net CoreによるWebアプリの開発とデプロイ</VListItemTitle>
                     </VListItem>
                   </VList>
                   <VDivider />
@@ -79,9 +69,7 @@
                   <BoltIcon class="mr-2" width="24" height="24" />
                   <h5 class="h5">Programming, Framework</h5>
                 </div>
-                <div
-                  class="d-flex my-4 mx-auto justify-center align-center overflow-hidden ga-3"
-                >
+                <div class="d-flex my-4 mx-auto justify-center align-center overflow-hidden ga-3">
                   <img
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
                     height="32"

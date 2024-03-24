@@ -29,11 +29,7 @@ const customizer = useCustomizerStore();
       <VList class="pa-6" density="compact">
         <template v-for="item in sidebarMenu">
           <!-- Item Sub Header -->
-          <LayoutSidebarNavGroup
-            :item="item"
-            v-if="item.header"
-            :key="item.title"
-          />
+          <LayoutSidebarNavGroup :item="item" v-if="item.header" :key="item.title" />
 
           <!-- If Has Child -->
           <LayoutSidebarNavCollapse
@@ -45,13 +41,7 @@ const customizer = useCustomizerStore();
           />
 
           <!-- Single Item -->
-          <LayoutSidebarNavItem
-            :item="item"
-            :level="0"
-            :key="item.chipIcon"
-            v-else
-            class="leftPadding"
-          />
+          <LayoutSidebarNavItem :item="item" :level="0" :key="item.chipIcon" v-else class="leftPadding" />
         </template>
       </VList>
       <!-- Profile Card-->

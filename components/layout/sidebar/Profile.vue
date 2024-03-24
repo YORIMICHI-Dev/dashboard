@@ -11,13 +11,7 @@
         <span class="text-subtitle-2 textSecondary">Engineer</span>
       </div>
       <div class="ml-auto">
-        <VBtn
-          variant="text"
-          icon
-          rounded="md"
-          color="primary"
-          to="/dashboard/profile"
-        >
+        <VBtn variant="text" icon rounded="md" color="primary" to="/dashboard/profile">
           <PowerIcon />
           <VTooltip activator="parent" location="top">Profile</VTooltip>
         </VBtn>

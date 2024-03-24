@@ -9,9 +9,7 @@ const customizer = useCustomizerStore();
     icon
     variant="flat"
     color="primary"
-    @click.stop="
-      customizer.SET_CUSTOMIZER_DRAWER(!customizer.Customizer_drawer)
-    "
+    @click.stop="customizer.SET_CUSTOMIZER_DRAWER(!customizer.Customizer_drawer)"
   >
     <ColorPickerIcon />
   </VBtn>

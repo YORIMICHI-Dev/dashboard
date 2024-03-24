@@ -9,7 +9,6 @@ export const columnOptions = {
       show: false,
     },
   },
-  // colors: ['#fb7cf1', '#6ac3fd', '#3a34fd', '#46ac3fd', '#asc3fd', ],
   plotOptions: {
     bar: {
       horizontal: false,

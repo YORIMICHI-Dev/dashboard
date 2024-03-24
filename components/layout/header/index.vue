@@ -16,22 +16,12 @@ const customizer = useCustomizerStore();
     </VBtn>
 
     <!-- Sidebar open/close less than lg -->
-    <VBtn
-      class="hidden-lg-and-up ms-3"
-      icon
-      variant="flat"
-      @click.stop="customizer.SET_SIDEBAR_DRAWER"
-      size="small"
-    >
+    <VBtn class="hidden-lg-and-up ms-3" icon variant="flat" @click.stop="customizer.SET_SIDEBAR_DRAWER" size="small">
       <Menu2Icon size="20" stroke-width="1.5" />
     </VBtn>
 
     <!-- Github -->
-    <NuxtLink
-      href="https://github.com/YORIMICHI-Dev"
-      target="_blank"
-      class="text-decoration-none"
-    >
+    <NuxtLink href="https://github.com/YORIMICHI-Dev" target="_blank" class="text-decoration-none">
       <VBtn variant="text" color="primary"> Github </VBtn>
     </NuxtLink>
 

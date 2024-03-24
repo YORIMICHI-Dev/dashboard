@@ -13,22 +13,9 @@ useHead({
 </script>
 
 <template>
-  <VApp
-    :theme="customizer.actTheme"
-    :class="[
-      customizer.actTheme,
-      customizer.mini_sidebar ? 'mini-sidebar' : '',
-    ]"
-  >
+  <VApp :theme="customizer.actTheme" :class="[customizer.actTheme, customizer.mini_sidebar ? 'mini-sidebar' : '']">
     <!-- Customizer Drawer -->
-    <VNavigationDrawer
-      app
-      temporary
-      elevation="10"
-      location="right"
-      v-model="customizer.Customizer_drawer"
-      width="320"
-    >
+    <VNavigationDrawer app temporary elevation="10" location="right" v-model="customizer.Customizer_drawer" width="320">
       <LayoutCustom />
     </VNavigationDrawer>
     <!-- Customizer Drawer -->

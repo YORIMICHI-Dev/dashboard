@@ -21,9 +21,7 @@
         <div class="pa-4">
           <div class="">
             <span class="text-body">2023/05</span>
-            <h5 class="h5">
-              AWS Certified Solutions Architect - Associate (SAA-C03)
-            </h5>
+            <h5 class="h5">AWS Certified Solutions Architect - Associate (SAA-C03)</h5>
             <VDivider class="my-3" />
           </div>
           <div class="">
