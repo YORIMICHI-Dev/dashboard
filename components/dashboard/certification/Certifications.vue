@@ -7,6 +7,11 @@
       <SharedUIParentCard title="Microsoft Azure認定">
         <div class="pa-4">
           <div class="">
+            <span class="text-body">2024/04</span>
+            <h5 class="h5">Azure AI Fundamentals (AI-900)</h5>
+            <VDivider class="my-3" />
+          </div>
+          <div class="">
             <span class="text-body">2024/03</span>
             <h5 class="h5">Azure Fundamentals (AZ-900)</h5>
             <VDivider class="my-3" />
