@@ -1,4 +1,5 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+</script>
 
 <template>
   <VRow>
@@ -6,16 +7,9 @@
     <VCol cols="12" lg="6">
       <SharedUIParentCard title="Microsoft Azure認定">
         <div class="pa-4">
-          <div class="">
-            <span class="text-body">2024/04</span>
-            <h5 class="h5">Azure AI Fundamentals (AI-900)</h5>
-            <VDivider class="my-3" />
-          </div>
-          <div class="">
-            <span class="text-body">2024/03</span>
-            <h5 class="h5">Azure Fundamentals (AZ-900)</h5>
-            <VDivider class="my-3" />
-          </div>
+          <DashboardCertification day="2024/04" certification="Azure Data Fundamentals (DP-900)" />
+          <DashboardCertification day="2024/04" certification="Azure AI Fundamentals (AI-900)" />
+          <DashboardCertification day="2024/03" certification="Azure Fundamentals (AZ-900)" />
         </div>
       </SharedUIParentCard>
     </VCol>
@@ -24,16 +18,8 @@
     <VCol cols="12" lg="6">
       <SharedUIParentCard title="AWS認定">
         <div class="pa-4">
-          <div class="">
-            <span class="text-body">2023/05</span>
-            <h5 class="h5">AWS Certified Solutions Architect - Associate (SAA-C03)</h5>
-            <VDivider class="my-3" />
-          </div>
-          <div class="">
-            <span class="text-body">2023/04</span>
-            <h5 class="h5">AWS Certified Cloud Practitioner (CLF-C01)</h5>
-            <VDivider class="my-3" />
-          </div>
+          <DashboardCertification day="2023/05" certification="AWS Certified Solutions Architect - Associate (SAA-C03)" />
+          <DashboardCertification day="2023/04" certification="AWS Certified Cloud Practitioner (CLF-C01" />
         </div>
       </SharedUIParentCard>
     </VCol>
@@ -42,16 +28,8 @@
     <VCol cols="12" lg="4">
       <SharedUIParentCard title="情報処理技術者試験">
         <div class="pa-4">
-          <div class="">
-            <span class="text-body">2023/12</span>
-            <h5 class="h5">応用情報技術者試験</h5>
-            <VDivider class="my-3" />
-          </div>
-          <div class="">
-            <span class="text-body">2022/07</span>
-            <h5 class="h5">基本情報技術者試験</h5>
-            <VDivider class="my-3" />
-          </div>
+          <DashboardCertification day="2023/12" certification="応用情報技術者試験" />
+          <DashboardCertification day="2022/07" certification="基本情報技術者試験" />
         </div>
       </SharedUIParentCard>
     </VCol>
@@ -60,11 +38,7 @@
     <VCol cols="12" lg="4">
       <SharedUIParentCard title="ディープラーニング協会">
         <div class="pa-4">
-          <div class="">
-            <span class="text-body">2024/03</span>
-            <h5 class="h5">G検定</h5>
-            <VDivider class="my-3" />
-          </div>
+          <DashboardCertification day="2024/03" certification="G検定" />
         </div>
       </SharedUIParentCard>
     </VCol>
@@ -73,11 +47,7 @@
     <VCol cols="12" lg="4">
       <SharedUIParentCard title="LPIC">
         <div class="pa-4">
-          <div class="">
-            <span class="text-body">2023/08</span>
-            <h5 class="h5">LPIC Level-1</h5>
-            <VDivider class="my-3" />
-          </div>
+          <DashboardCertification day="2023/08" certification="LPIC Level-1" />
         </div>
       </SharedUIParentCard>
     </VCol>
@@ -86,11 +56,7 @@
     <VCol cols="12" lg="4">
       <SharedUIParentCard title="Oracle資格">
         <div class="pa-4">
-          <div class="">
-            <span class="text-body">2022/01</span>
-            <h5 class="h5">Java SE 11 Programmer I (Java Silver)</h5>
-            <VDivider class="my-3" />
-          </div>
+          <DashboardCertification day="2022/01" certification="Java SE 11 Programmer I (Java Silver)" />
         </div>
       </SharedUIParentCard>
     </VCol>
