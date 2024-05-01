@@ -1,5 +1,4 @@
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <VRow>
@@ -18,7 +17,10 @@
     <VCol cols="12" lg="6">
       <SharedUIParentCard title="AWS認定">
         <div class="pa-4">
-          <DashboardCertification day="2023/05" certification="AWS Certified Solutions Architect - Associate (SAA-C03)" />
+          <DashboardCertification
+            day="2023/05"
+            certification="AWS Certified Solutions Architect - Associate (SAA-C03)"
+          />
           <DashboardCertification day="2023/04" certification="AWS Certified Cloud Practitioner (CLF-C01" />
         </div>
       </SharedUIParentCard>

@@ -39,7 +39,7 @@ export const azureOptions = {
     colors: ['transparent'],
   },
   xaxis: {
-    categories: ['Azure VM', 'Web App', 'Functions', 'SQL Server'],
+    categories: ['Azure VM', 'Web App', 'Functions', 'SQL Server', 'OpenAI', 'AI Search', 'Azure Blob'],
   },
   yaxis: {
     title: {
@@ -82,7 +82,7 @@ export const azureChart = {
   series: [
     {
       name: 'On work',
-      data: [1, 1, 1, 1],
+      data: [1, 1, 1, 1, 1, 1, 1],
     },
   ],
 };

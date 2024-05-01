@@ -30,6 +30,13 @@ const chartOptions = computed(() => {
       </SharedUIParentCard>
     </VCol>
 
+    <!-- Azure -->
+    <VCol cols="12" sm="8">
+      <SharedUIParentCard title="Azure" :icon="azureIcon">
+        <VueApexCharts type="bar" height="300" :options="azureOptions" :series="azureChart.series"> </VueApexCharts>
+      </SharedUIParentCard>
+    </VCol>
+
     <!-- DB -->
     <VCol cols="12" sm="4">
       <SharedUIParentCard title="DB" :icon="dbIcon">
@@ -41,13 +48,6 @@ const chartOptions = computed(() => {
     <VCol cols="12" sm="4">
       <SharedUIParentCard title="OS" :icon="osIcon">
         <VueApexCharts type="bar" height="300" :options="osOptions" :series="osChart.series"> </VueApexCharts>
-      </SharedUIParentCard>
-    </VCol>
-
-    <!-- Azure -->
-    <VCol cols="12" sm="4">
-      <SharedUIParentCard title="Azure" :icon="azureIcon">
-        <VueApexCharts type="bar" height="300" :options="azureOptions" :series="azureChart.series"> </VueApexCharts>
       </SharedUIParentCard>
     </VCol>
 

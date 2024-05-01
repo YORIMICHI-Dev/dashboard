@@ -1,11 +1,9 @@
-<script setup lang="ts">
-import { UserCheckIcon } from 'vue-tabler-icons';
-</script>
+<script setup lang="ts"></script>
 
 <script setup lang="ts"></script>
 
 <template>
-  <SharedUIParentCard title="株式会社iPX" period="2021/02~2022/02">
+  <SharedUIParentCard title="Laniakea株式会社" period="2021/02~2022/02">
     <VRow>
       <!-- Resume1 -->
       <VCol cols="12" lg="6">
