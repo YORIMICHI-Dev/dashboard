@@ -1,4 +1,4 @@
-import { CodeIcon, BrandGithubIcon, UserCircleIcon, HistoryIcon, HeartIcon, CertificateIcon } from 'vue-tabler-icons';
+import { CodeIcon, BrandGithubIcon, UserCircleIcon, HistoryIcon, HeartIcon, CertificateIcon, EditIcon } from 'vue-tabler-icons';
 
 export interface menu {
   header?: string;
@@ -50,28 +50,17 @@ const sidebarItem: menu[] = [
     title: 'Repository',
     icon: BrandGithubIcon,
     to: '/apps/github',
-    chip: 'New',
-    chipColor: 'surface',
-    chipBgColor: 'secondary',
+    // chip: 'New',
+    // chipColor: 'surface',
+    // chipBgColor: 'secondary',
   },
-
-  // {
-  //   title: 'Blog',
-  //   icon: ChartDonut3Icon,
-  //   to: '/',
-  //   children: [
-  //     {
-  //       title: 'Posts',
-  //       icon: PointIcon,
-  //       to: '/apps/blog/posts',
-  //     },
-  //     {
-  //       title: 'Detail',
-  //       icon: PointIcon,
-  //       to: '/apps/blog/early-black-friday-amazon-deals-cheap-tvs-headphones',
-  //     },
-  //   ],
-  // },
+  { header: 'Blog' },
+  {
+    title: 'Zenn',
+    icon: EditIcon,
+    to: 'https://zenn.dev/yorimichi',
+    type: 'external'
+  },
 ];
 
 export default sidebarItem;

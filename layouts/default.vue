@@ -18,15 +18,12 @@ useHead({
     <VNavigationDrawer app temporary elevation="10" location="right" v-model="customizer.Customizer_drawer" width="320">
       <LayoutCustom />
     </VNavigationDrawer>
-    <!-- Customizer Drawer -->
 
     <!-- Sidebar -->
     <LayoutSidebar />
-    <!-- Sidebar -->
 
     <!-- Header -->
     <LayoutHeader />
-    <!-- Header -->
 
     <!-- Main Contents -->
     <VMain>
@@ -34,14 +31,11 @@ useHead({
         <div class="maxWidth">
           <!-- Main View -->
           <slot />
-          <!-- Main View -->
 
           <!-- Customizer button -->
           <LayoutSetting />
         </div>
-        <!-- Customizer button -->
       </VContainer>
     </VMain>
-    <!-- Main Contents -->
   </VApp>
 </template>
