@@ -6,7 +6,8 @@
     <VCol cols="12" lg="6">
       <SharedUIParentCard title="Microsoft Azure認定">
         <div class="pa-4">
-          <DashboardCertification day="2024/05" certification="Azure Developer Associate (AZ-204)" />
+          <DashboardCertification day="2024/05" certification="Azure Developer Associate
+           (AZ-204)" />
           <DashboardCertification day="2024/04" certification="Azure Data Fundamentals (DP-900)" />
           <DashboardCertification day="2024/04" certification="Azure AI Fundamentals (AI-900)" />
           <DashboardCertification day="2024/03" certification="Azure Fundamentals (AZ-900)" />
@@ -22,7 +23,7 @@
             day="2023/05"
             certification="AWS Certified Solutions Architect - Associate (SAA-C03)"
           />
-          <DashboardCertification day="2023/04" certification="AWS Certified Cloud Practitioner (CLF-C01" />
+          <DashboardCertification day="2023/04" certification="AWS Certified Cloud Practitioner (CLF-C01)" />
         </div>
       </SharedUIParentCard>
     </VCol>
@@ -41,6 +42,7 @@
     <VCol cols="12" lg="4">
       <SharedUIParentCard title="ディープラーニング協会">
         <div class="pa-4">
+          <DashboardCertification day="2024/06" certification="Generative AI Test" />
           <DashboardCertification day="2024/03" certification="G検定" />
         </div>
       </SharedUIParentCard>
