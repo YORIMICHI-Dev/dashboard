@@ -1,4 +1,12 @@
-import { CodeIcon, BrandGithubIcon, UserCircleIcon, HistoryIcon, HeartIcon, CertificateIcon, EditIcon } from 'vue-tabler-icons';
+import {
+  CodeIcon,
+  BrandGithubIcon,
+  UserCircleIcon,
+  HistoryIcon,
+  HeartIcon,
+  CertificateIcon,
+  EditIcon,
+} from 'vue-tabler-icons';
 
 export interface menu {
   header?: string;
@@ -59,7 +67,7 @@ const sidebarItem: menu[] = [
     title: 'Zenn',
     icon: EditIcon,
     to: 'https://zenn.dev/yorimichi',
-    type: 'external'
+    type: 'external',
   },
 ];
 
