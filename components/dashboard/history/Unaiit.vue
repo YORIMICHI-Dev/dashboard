@@ -26,6 +26,7 @@ import containerInstance from '/Icons/containers/10104-icon-service-Container-In
                 <VListItem class="text-h6 font-weight-regular">
                   ・プロンプト制御構文をDBに登録・更新・削除・取得するAPIの開発
                 </VListItem>
+                <VListItem class="text-h6 font-weight-regular"> ・協力ベンダーとのAPI使用について協議・調整 </VListItem>
               </VList>
 
               <div class="d-flex text-success align-center">
@@ -38,6 +39,9 @@ import containerInstance from '/Icons/containers/10104-icon-service-Container-In
                 >
                 <VListItem class="text-h6 font-weight-regular"
                   >・共同開発者のコードレビュー・リードエンジニア</VListItem
+                >
+                <VListItem class="text-h6 font-weight-regular"
+                  >・協力ベンダーとのAPI仕様調整、APIドキュメント作成、テスト仕様書作成</VListItem
                 >
                 <VListItem class="text-h6 font-weight-regular"
                   >・先方との定例打合せ資料作成、開発状況説明、納品作業まで</VListItem
@@ -89,13 +93,13 @@ import containerInstance from '/Icons/containers/10104-icon-service-Container-In
               </div>
               <VList density="compact">
                 <VListItem class="text-h6 font-weight-regular">
-                  ・Azure Open AIとAI SearchによるRAG検索および生成AIによるチャットを連携したアプリ実装
+                  ・Azure Open AIとAI SearchによるRAG検索および生成AIによるチャットを連携したChatGPT系アプリ実装
                 </VListItem>
                 <VListItem class="text-h6 font-weight-regular">
                   ・AzureのPrivate EndpointとVNet統合を利用した閉域化クラウドリソース設計とデプロイ環境構築
                 </VListItem>
                 <VListItem class="text-h6 font-weight-regular">
-                  ・Nuxt3, .Net CoreによるWebアプリの開発とデプロイ
+                  ・利用ログの集計および可視化による運用監視機能の追加
                 </VListItem>
                 <VListItem class="text-h6 font-weight-regular">
                   ・Google DriveとAzure Storage Blobとのファイル同期サーバーの構築
@@ -111,7 +115,7 @@ import containerInstance from '/Icons/containers/10104-icon-service-Container-In
                   >・RAGアプリ開発のクラウド技術選定と機能要件抽出および工数見積もり</VListItem
                 >
                 <VListItem class="text-h6 font-weight-regular"
-                  >・クラウド設計と機能詳細設計、フルスタック実装</VListItem
+                  >・クラウド設計と機能詳細設計、Nuxt3, .NETによるフルスタック実装</VListItem
                 >
                 <VListItem class="text-h6 font-weight-regular"
                   >・先方との定例打合せ資料作成、開発状況説明、納品作業まで</VListItem
@@ -166,8 +170,8 @@ import containerInstance from '/Icons/containers/10104-icon-service-Container-In
         <div class="px-4 py-2">
           <!-- Resume1 -->
           <div class="">
-            <span class="text-body-2">2024/02~2024/03</span>
-            <h5 class="h5">特定地域を走行する車両の可視化サンプルアプリ開発</h5>
+            <span class="text-body-2">2024/02~2024/07</span>
+            <h5 class="h5">特定地域を走行する車両の可視化サンプルアプリ開発（PoC案件）</h5>
             <div class="pa-2">
               <div class="d-flex text-primary align-center">
                 <CheckboxIcon class="mr-2" width="24" height="24" />
@@ -175,15 +179,14 @@ import containerInstance from '/Icons/containers/10104-icon-service-Container-In
               </div>
               <VList density="compact">
                 <VListItem class="text-h6 font-weight-regular">
-                  ・Map box GL JSより車両データをマップ上に可視化・Azure Open AIとAI
-                  SearchによるRAG検索および生成AIによるチャットを連携したアプリ実装
+                  ・Map box GL JSより車両データをマップ上に可視化アプリ実装
                 </VListItem>
                 <VListItem class="text-h6 font-weight-regular">
                   ・Azureよるクラウドリソース設計とデプロイ環境構築・AzureのPrivate
                   EndpointとVNet統合を利用した閉域化クラウドリソース設計とデプロイ環境構築
                 </VListItem>
                 <VListItem class="text-h6 font-weight-regular">
-                  ・Nuxt3, .Net CoreによるWebアプリの開発とデプロイ
+                  ・3Dモデルの車両を時刻ごとにアニメーションとしてマップ上に表示
                 </VListItem>
               </VList>
 
@@ -194,7 +197,7 @@ import containerInstance from '/Icons/containers/10104-icon-service-Container-In
 
               <VList density="compact">
                 <VListItem class="text-h6 font-weight-regular"
-                  >・車両データの可視化に向けた技術選定と設計およびフルスタック実装</VListItem
+                  >・車両データの可視化に向けた技術選定と設計およびNuxt3, .NETによるフルスタック実装</VListItem
                 >
                 <VListItem class="text-h6 font-weight-regular"
                   >・先方との定例打合せ資料作成、開発状況説明、納品作業まで</VListItem

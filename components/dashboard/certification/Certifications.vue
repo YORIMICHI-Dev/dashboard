@@ -6,11 +6,8 @@
     <VCol cols="12" lg="6">
       <SharedUIParentCard title="Microsoft Azure認定">
         <div class="pa-4">
-          <DashboardCertification
-            day="2024/05"
-            certification="Azure Developer Associate
-           (AZ-204)"
-          />
+          <DashboardCertification day="2024/09" certification="Azure Administrator Associate (AZ-104)" />
+          <DashboardCertification day="2024/07" certification="Azure Developer Associate (AZ-204)" />
           <DashboardCertification day="2024/04" certification="Azure Data Fundamentals (DP-900)" />
           <DashboardCertification day="2024/04" certification="Azure AI Fundamentals (AI-900)" />
           <DashboardCertification day="2024/03" certification="Azure Fundamentals (AZ-900)" />
