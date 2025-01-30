@@ -82,7 +82,7 @@ export const azureChart = {
   series: [
     {
       name: 'On work',
-      data: [1, 1, 1, 1, 1, 1, 1],
+      data: [2, 2, 1, 2, 2, 2, 2],
     },
   ],
 };

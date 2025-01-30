@@ -74,7 +74,7 @@ export const osChart = {
     },
     {
       name: 'Windows',
-      data: [2, 0, 0],
+      data: [2.5, 0, 0],
     },
   ],
 };

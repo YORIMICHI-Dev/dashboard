@@ -80,7 +80,7 @@ export const dbChart = {
   series: [
     {
       name: 'On work',
-      data: [1, 1, 0.5, 1],
+      data: [1, 1, 0.5, 1.5],
     },
   ],
 };

@@ -79,7 +79,7 @@ export const columnChart = {
   series: [
     {
       name: 'On work',
-      data: [3, 1, 2, 1, 0.5],
+      data: [3, 1.5, 2.5, 1.5, 0.5],
     },
   ],
 };

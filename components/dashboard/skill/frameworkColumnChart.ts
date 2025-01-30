@@ -27,7 +27,7 @@ export const frameworkOptions = {
     colors: ['transparent'],
   },
   xaxis: {
-    categories: ['Nuxt.js', 'Next.js', '.NET', 'FastAPI', 'Django'],
+    categories: ['Nuxt.js', 'Next.js', '.NET', 'FastAPI', 'flask', 'Django'],
   },
   yaxis: {
     title: {
@@ -70,11 +70,11 @@ export const frameworkChart = {
   series: [
     {
       name: 'Frontend',
-      data: [1, 1, 0, 0, 0],
+      data: [1.5, 1, 0, 0, 0, 0],
     },
     {
       name: 'Backend',
-      data: [0, 0, 1, 1.5, 0.5],
+      data: [0, 0, 1.5, 2, 1, 0.5],
     },
   ],
 };

@@ -1,12 +1,93 @@
 <script setup lang="ts">
 import openAi from '/Icons/ai + machine learning/03438-icon-service-Azure-OpenAI.svg';
 import aiSearch from '/Icons/ai + machine learning/10044-icon-service-Cognitive-Search.svg';
+import webApp from '/Icons/web/10035-icon-service-App-Services.svg'
 import containerInstance from '/Icons/containers/10104-icon-service-Container-Instances.svg';
 </script>
 
 <template>
   <SharedUIParentCard title="株式会社UNAIIT">
     <VRow>
+      <!-- Resume2 -->
+      <VCol cols="12" lg="6">
+        <div class="px-4 py-2">
+          <!-- Resume1 -->
+          <div class="">
+            <span class="text-body-2">2024/09~2024/11</span>
+            <h5 class="h5">化学メーカーの作業手順書RAGアプリ開発</h5>
+            <div class="pa-2">
+              <div class="d-flex text-primary align-center">
+                <CheckboxIcon class="mr-2" width="24" height="24" />
+                <h5 class="h4">Task</h5>
+              </div>
+              <VList density="compact">
+                <VListItem class="text-h6 font-weight-regular">
+                  ・Chroma DBによるRAG検索に使用する文書の登録・更新・削除・チャンク取得APIをVM上に開発
+                </VListItem>
+                <VListItem class="text-h6 font-weight-regular">
+                  ・Nuxt3および.NETによるRAG検索画面とユーザー管理画面の実装
+                </VListItem>
+                <VListItem class="text-h6 font-weight-regular">
+                  ・Azure環境の構築（Azure Web App, Azure VM, SQL Server, VNET関連）
+                </VListItem>
+              </VList>
+
+              <div class="d-flex text-success align-center">
+                <UserIcon class="mr-2" width="24" height="24" />
+                <h5 class="h4">Role</h5>
+              </div>
+              <VList density="compact">
+                <VListItem class="text-h6 font-weight-regular"
+                  >・FastAPIとlangchainによるRAGバックエンド開発の詳細設計・実装作業</VListItem
+                >
+                <VListItem class="text-h6 font-weight-regular"
+                  >・共同開発者のコードレビュー・リードエンジニア</VListItem
+                >
+                <VListItem class="text-h6 font-weight-regular"
+                  >・先方との定例打合せ資料作成、開発状況説明、納品作業まで</VListItem
+                >
+              </VList>
+
+              <div class="d-flex text-error align-center">
+                <CodeIcon class="mr-2" width="24" height="24" />
+                <h5 class="h4">Skill</h5>
+              </div>
+              <div class="d-flex my-4 mx-auto justify-center align-center overflow-hidden ga-3">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+                  height="32"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nuxtjs/nuxtjs-original.svg"
+                  height="32"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg"
+                  height="32"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dotnetcore/dotnetcore-original.svg"
+                  height="32"
+                />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="32" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg" height="32" />
+
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg"
+                  height="32"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg"
+                  height="32"
+                />
+                <img :src="webApp" height="32" />
+                <img :src="openAi" height="32" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </VCol>
+
       <!-- Resume2 -->
       <VCol cols="12" lg="6">
         <div class="px-4 py-2">
