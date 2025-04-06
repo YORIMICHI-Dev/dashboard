@@ -25,13 +25,12 @@ const customizer = useCustomizerStore();
       <VBtn variant="text" color="primary"> Github </VBtn>
     </NuxtLink>
 
-    <VSpacer />
-    <!-- Mega menu -->
-    <!-- FUTURE -->
-    <!-- <div class="hidden-md-and-down">
-            <LayoutHeaderNavigations />
-        </div> -->
+    <!-- Zenn -->
+    <NuxtLink href="https://zenn.dev/yorimichi" target="_blank" class="text-decoration-none">
+      <VBtn variant="text" color="primary"> Zenn </VBtn>
+    </NuxtLink>
 
+    <VSpacer />
     <!-- User Profile -->
     <div class="ml-3">
       <LayoutHeaderProfile />

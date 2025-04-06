@@ -21,12 +21,12 @@ import UserImage from '/images/profile/user-7.jpg';
               <v-col cols="3" class="text-center">
                 <BrandNuxtIcon class="text-success" size="32" />
                 <h4 class="text-success text-h6">Frontend</h4>
-                <h6 class="text-success text-subtitle-1 font-weight-regular">1 years</h6>
+                <h6 class="text-success text-subtitle-1 font-weight-regular">2 years</h6>
               </v-col>
               <v-col cols="3" class="text-center">
                 <BrandCSharpIcon class="text-teal-darken-2" size="32" />
                 <h4 class="text-teal-darken-2 text-h6">Backend</h4>
-                <h6 class="text-teal-darken-2 text-subtitle-1 font-weight-regular">1 years</h6>
+                <h6 class="text-teal-darken-2 text-subtitle-1 font-weight-regular">2 years</h6>
               </v-col>
               <v-col cols="3" class="text-center">
                 <BrandPythonIcon class="text-purple-darken-1" size="32" />

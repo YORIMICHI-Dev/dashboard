@@ -13,6 +13,83 @@ import containerInstance from '/Icons/containers/10104-icon-service-Container-In
         <div class="px-4 py-2">
           <!-- Resume1 -->
           <div class="">
+            <span class="text-body-2">2024/04~2025/04</span>
+            <h5 class="h5">建設会社実行予算アプリ開発(Phase1)</h5>
+            <div class="pa-2">
+              <div class="d-flex text-primary align-center">
+                <CheckboxIcon class="mr-2" width="24" height="24" />
+                <h5 class="h4">Task</h5>
+              </div>
+              <VList density="compact">
+                <VListItem class="text-h6 font-weight-regular">
+                  ・積算システムからのデータを元に、実行予算を作成するアプリの開発
+                </VListItem>
+                <VListItem class="text-h6 font-weight-regular">
+                  ・Nuxt3によるフロントエンド開発（実行予算新規作成・編集、Entra ID認証機能の実装、マスタ管理画面、帳票出力）
+                </VListItem>
+                <VListItem class="text-h6 font-weight-regular">
+                  ・.NETによるDDDを意識したバックエンド開発（MediatRおよびDIによるクリーンアーキテクチャ採用、CRUD API設計・実装、Excel出力API実装）
+                </VListItem>
+                <VListItem class="text-h6 font-weight-regular">
+                  ・Azure環境の構築（Azure Web App, Azure VM, SQL Server）、Entra ID認証のためエンタープライズアプリ登録
+                </VListItem>
+              </VList>
+
+              <div class="d-flex text-success align-center">
+                <UserIcon class="mr-2" width="24" height="24" />
+                <h5 class="h4">Role</h5>
+              </div>
+              <VList density="compact">
+                <VListItem class="text-h6 font-weight-regular"
+                  >・共同開発者のコードレビュー・リードエンジニア</VListItem
+                >
+                <VListItem class="text-h6 font-weight-regular"
+                  >・Github管理者、Github Actionsの設定およびCI/CD整理</VListItem
+                >
+              </VList>
+
+              <div class="d-flex text-error align-center">
+                <CodeIcon class="mr-2" width="24" height="24" />
+                <h5 class="h4">Skill</h5>
+              </div>
+              <div class="d-flex my-4 mx-auto justify-center align-center overflow-hidden ga-3">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+                  height="32"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nuxtjs/nuxtjs-original.svg"
+                  height="32"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg"
+                  height="32"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dotnetcore/dotnetcore-original.svg"
+                  height="32"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg"
+                  height="32"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg"
+                  height="32"
+                />
+                <img :src="webApp" height="32" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg" height="32" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </VCol>
+
+      <!-- Resume2 -->
+      <VCol cols="12" lg="6">
+        <div class="px-4 py-2">
+          <!-- Resume1 -->
+          <div class="">
             <span class="text-body-2">2024/09~2024/11</span>
             <h5 class="h5">化学メーカーの作業手順書RAGアプリ開発</h5>
             <div class="pa-2">
