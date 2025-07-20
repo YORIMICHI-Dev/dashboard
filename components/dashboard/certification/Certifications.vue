@@ -37,6 +37,7 @@
     <VCol cols="12" lg="4">
       <SharedUIParentCard title="情報処理技術者試験">
         <div class="pa-4">
+          <DashboardCertification day="2025/07" certification="情報セキュリティマネジメント試験" />
           <DashboardCertification day="2023/12" certification="応用情報技術者試験" />
           <DashboardCertification day="2022/07" certification="基本情報技術者試験" />
         </div>

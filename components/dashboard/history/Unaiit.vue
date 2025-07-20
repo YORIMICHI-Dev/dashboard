@@ -14,6 +14,89 @@ import containerInstance from '/Icons/containers/10104-icon-service-Container-In
           <!-- Resume1 -->
           <div class="">
             <span class="text-body-2">2024/04~2025/04</span>
+            <h5 class="h5">建設会社実行予算アプリ 承認機能実装・AG Grid搭載(Phase2)</h5>
+            <div class="pa-2">
+              <div class="d-flex text-primary align-center">
+                <CheckboxIcon class="mr-2" width="24" height="24" />
+                <h5 class="h4">Task</h5>
+              </div>
+              <VList density="compact">
+                <VListItem class="text-h6 font-weight-regular">
+                  ・積算システムにて編集者が作成した実行予算の上長承認機能開発およびExcelライク操作の要件定義および要件定義書作成
+                </VListItem>
+                <VListItem class="text-h6 font-weight-regular">
+                  ・Phase2におけるプロジェクトのスケジュール管理・進捗報告
+                </VListItem>
+                <VListItem class="text-h6 font-weight-regular">
+                  ・要件定義内容の詳細を開発メンバーと共有及びレビュー、またメイン機能の実装
+                </VListItem>
+                <VListItem class="text-h6 font-weight-regular">
+                  ・Azure環境の構築にAzure Web Appのテストスロットデプロイ、Azure SQL Serverのスキーマによる論理分離によるテスト環境作成
+                </VListItem>
+              </VList>
+
+              <div class="d-flex text-success align-center">
+                <UserIcon class="mr-2" width="24" height="24" />
+                <h5 class="h4">Role</h5>
+              </div>
+              <VList density="compact">
+                <VListItem class="text-h6 font-weight-regular"
+                  >・プロダクトマネージャー（週次MTGによる要件定義・スケジュール管理）</VListItem
+                >
+                <VListItem class="text-h6 font-weight-regular"
+                  >・共同開発者のコードレビュー・リードエンジニア</VListItem
+                >
+                <VListItem class="text-h6 font-weight-regular"
+                  >・Azureクラウドのアーキテクチャ設計</VListItem
+                >
+                <VListItem class="text-h6 font-weight-regular"
+                  >・Github管理者、Github Actionsの設定およびCI/CD整理</VListItem
+                >
+              </VList>
+
+              <div class="d-flex text-error align-center">
+                <CodeIcon class="mr-2" width="24" height="24" />
+                <h5 class="h4">Skill</h5>
+              </div>
+              <div class="d-flex my-4 mx-auto justify-center align-center overflow-hidden ga-3">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+                  height="32"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nuxtjs/nuxtjs-original.svg"
+                  height="32"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg"
+                  height="32"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dotnetcore/dotnetcore-original.svg"
+                  height="32"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg"
+                  height="32"
+                />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg"
+                  height="32"
+                />
+                <img :src="webApp" height="32" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg" height="32" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </VCol>
+
+      <!-- Resume2 -->
+      <VCol cols="12" lg="6">
+        <div class="px-4 py-2">
+          <!-- Resume1 -->
+          <div class="">
+            <span class="text-body-2">2024/04~2025/04</span>
             <h5 class="h5">建設会社実行予算アプリ開発(Phase1)</h5>
             <div class="pa-2">
               <div class="d-flex text-primary align-center">
