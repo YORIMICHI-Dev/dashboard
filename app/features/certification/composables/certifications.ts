@@ -1,10 +1,4 @@
-export type CertLevel =
-  | 'EXPERT'
-  | 'ASSOCIATE'
-  | 'FUNDAMENTALS'
-  | 'FOUNDATIONAL'
-  | 'LEVEL 1'
-  | 'SILVER';
+export type CertLevel = 'EXPERT' | 'ASSOCIATE' | 'FUNDAMENTALS' | 'FOUNDATIONAL' | 'LEVEL 1' | 'SILVER';
 
 export type Cert = {
   /** 認定コード（例: AZ-305）。コードを持たない資格は省略 */
