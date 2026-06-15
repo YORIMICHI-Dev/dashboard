@@ -1,0 +1,21 @@
+version: '3'
+
+tasks:
+  dev:
+    cmd: pnpm run dev --open
+
+  build:
+    cmd: pnpm run build
+
+  install:
+    cmd: pnpm install
+
+  lint:
+    cmd: pnpm run lint
+
+  format:
+    cmd: pnpm run format
+
+  upgrade:
+    cmd: pnpm up -L
+  

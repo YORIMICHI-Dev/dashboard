@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: #EFEEE9; color: #111113; -webkit-font-smoothing: antialiased; }
+  ::selection { background: #22C55E; color: #fff; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+</style>
+</helmet>
+
+<div style="display:flex; min-height:100vh; background:#FAF9F6;">
+
+  <!-- ===================== SIDEBAR ===================== -->
+  <aside style="width:268px; flex-shrink:0; background:#FFFFFF; border-right:1px solid #E7E5DF; display:flex; flex-direction:column; position:sticky; top:0; height:100vh;">
+    <div style="padding:30px 26px 24px;">
+      <div style="display:flex; align-items:center; gap:11px;">
+        <div style="width:34px; height:34px; background:#111113; border-radius:9px; display:flex; align-items:center; justify-content:center;">
+          <svg width="17" height="15" viewBox="0 0 17 15" fill="none"><path d="M8.5 0L17 15H0L8.5 0Z" fill="#22C55E"/></svg>
+        </div>
+        <span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:20px; letter-spacing:-0.02em;">Dashboard</span>
+      </div>
+    </div>
+
+    <nav style="flex:1; padding:8px 18px;">
+      <div style="font-family:'Space Mono',monospace; font-size:11px; letter-spacing:0.18em; color:#A7A6A0; padding:14px 8px 8px;">DASHBOARD</div>
+
+      <a href="#" style="display:flex; align-items:center; gap:12px; padding:11px 14px; border-radius:11px; background:#111113; text-decoration:none; margin-bottom:4px;">
+        <span style="font-family:'Space Mono',monospace; font-size:12px; color:#22C55E; width:18px;">01</span>
+        <span style="font-family:'Space Grotesk',sans-serif; font-weight:500; font-size:15px; color:#fff;">Profile</span>
+      </a>
+      <a href="#" style="display:flex; align-items:center; gap:12px; padding:11px 14px; border-radius:11px; text-decoration:none; margin-bottom:4px; color:#52525A; transition:background .18s, color .18s;" style-hover="background:#F2F1EC; color:#111113;">
+        <span style="font-family:'Space Mono',monospace; font-size:12px; color:#B7B6B0; width:18px;">02</span>
+        <span style="font-family:'Space Grotesk',sans-serif; font-weight:500; font-size:15px;">Skill</span>
+      </a>
+      <a href="#" style="display:flex; align-items:center; gap:12px; padding:11px 14px; border-radius:11px; text-decoration:none; margin-bottom:4px; color:#52525A; transition:background .18s, color .18s;" style-hover="background:#F2F1EC; color:#111113;">
+        <span style="font-family:'Space Mono',monospace; font-size:12px; color:#B7B6B0; width:18px;">03</span>
+        <span style="font-family:'Space Grotesk',sans-serif; font-weight:500; font-size:15px;">History</span>
+      </a>
+      <a href="#" style="display:flex; align-items:center; gap:12px; padding:11px 14px; border-radius:11px; text-decoration:none; margin-bottom:4px; color:#52525A; transition:background .18s, color .18s;" style-hover="background:#F2F1EC; color:#111113;">
+        <span style="font-family:'Space Mono',monospace; font-size:12px; color:#B7B6B0; width:18px;">04</span>
+        <span style="font-family:'Space Grotesk',sans-serif; font-weight:500; font-size:15px;">Certification</span>
+      </a>
+
+      <div style="font-family:'Space Mono',monospace; font-size:11px; letter-spacing:0.18em; color:#A7A6A0; padding:22px 8px 8px;">BLOG</div>
+      <a href="#" style="display:flex; align-items:center; gap:12px; padding:11px 14px; border-radius:11px; text-decoration:none; margin-bottom:4px; color:#52525A; transition:background .18s, color .18s;" style-hover="background:#F2F1EC; color:#111113;">
+        <span style="font-family:'Space Mono',monospace; font-size:12px; color:#B7B6B0; width:18px;">05</span>
+        <span style="font-family:'Space Grotesk',sans-serif; font-weight:500; font-size:15px;">Zenn</span>
+      </a>
+    </nav>
+
+    <div style="padding:18px;">
+      <div style="display:flex; align-items:center; gap:12px; padding:13px; border:1px solid #E7E5DF; border-radius:14px;">
+        <div style="width:40px; height:40px; border-radius:11px; background:#111113; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; color:#fff;">KD</div>
+        <div style="flex:1;">
+          <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:14px;">Daisuke</div>
+          <div style="font-size:11px; color:#8A8980;">Engineer</div>
+        </div>
+        <div style="width:30px; height:30px; border-radius:8px; display:flex; align-items:center; justify-content:center; color:#B7B6B0; cursor:pointer; transition:background .18s,color .18s;" style-hover="background:#F2F1EC; color:#111113;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ===================== MAIN ===================== -->
+  <main style="flex:1; min-width:0;">
+
+    <!-- TOPBAR -->
+    <header style="position:sticky; top:0; z-index:20; background:rgba(250,249,246,0.82); backdrop-filter:blur(12px); border-bottom:1px solid #E7E5DF; display:flex; align-items:center; gap:24px; padding:0 40px; height:68px;">
+      <div style="display:flex; align-items:center; gap:14px;">
+        <div style="width:36px; height:36px; border:1px solid #E7E5DF; border-radius:10px; display:flex; align-items:center; justify-content:center; cursor:pointer; transition:background .18s;" style-hover="background:#F2F1EC;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#111113" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </div>
+        <span style="font-family:'Space Mono',monospace; font-size:12px; color:#A7A6A0; letter-spacing:0.06em;">DASHBOARD / <span style="color:#111113;">PROFILE</span></span>
+      </div>
+
+      <div style="display:flex; align-items:center; gap:22px; margin-left:8px;">
+        <a href="#" style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:500; color:#52525A; text-decoration:none; border-bottom:2px solid transparent; padding-bottom:2px; transition:color .18s, border-color .18s;" style-hover="color:#111113; border-color:#22C55E;">Github</a>
+        <a href="#" style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:500; color:#52525A; text-decoration:none; border-bottom:2px solid transparent; padding-bottom:2px; transition:color .18s, border-color .18s;" style-hover="color:#111113; border-color:#38BDF8;">Zenn</a>
+      </div>
+
+      <div style="flex:1;"></div>
+
+      <!-- OPTION SWITCHER -->
+      <div style="display:flex; align-items:center; gap:10px;">
+        <span style="font-family:'Space Mono',monospace; font-size:11px; letter-spacing:0.16em; color:#A7A6A0;">DESIGN OPTION</span>
+        <div style="display:flex; gap:3px; padding:4px; background:#F0EFEA; border-radius:10px;">
+          <button onClick="{{ setV0 }}" style="{{ sw0 }}">01</button>
+          <button onClick="{{ setV1 }}" style="{{ sw1 }}">02</button>
+          <button onClick="{{ setV2 }}" style="{{ sw2 }}">03</button>
+        </div>
+      </div>
+
+      <div style="width:38px; height:38px; border-radius:11px; background:#111113; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:13px; color:#fff;">KD</div>
+    </header>
+
+    <!-- ============ OPTION 01 — EDITORIAL GRID ============ -->
+    <sc-if value="{{ isV0 }}" hint-placeholder-val="{{ true }}">
+    <section data-screen-label="Option 01" style="max-width:1180px; margin:0 auto; padding:56px 48px 80px;">
+
+      <div style="display:flex; justify-content:space-between; align-items:flex-end; border-bottom:1px solid #DEDCD4; padding-bottom:14px;">
+        <span style="font-family:'Space Mono',monospace; font-size:12px; letter-spacing:0.18em; color:#9A998F;">PROFILE — 01 / EDITORIAL</span>
+        <span style="display:inline-flex; align-items:center; gap:8px; font-family:'Space Mono',monospace; font-size:12px; color:#1A9E5E;"><span style="width:7px; height:7px; border-radius:50%; background:#22C55E; display:inline-block;"></span>AVAILABLE FOR WORK</span>
+      </div>
+
+      <div style="margin-top:30px; display:flex; justify-content:space-between; align-items:flex-end; gap:30px; flex-wrap:wrap;">
+        <div>
+          <h1 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:84px; line-height:0.92; letter-spacing:-0.035em; margin:0;">Kusuda<br>Daisuke<span style="color:#22C55E;">.</span></h1>
+          <p style="margin:18px 0 0; font-size:16px; color:#52525A; max-width:520px;">Software Engineer based in Nagoya — フルスタックでの受託開発、RAGアプリ、現場データの可視化に取り組んでいます。</p>
+        </div>
+        <div style="display:flex; gap:10px;">
+          <div style="border:1px solid #DEDCD4; border-radius:12px; padding:14px 18px; text-align:center; min-width:96px;">
+            <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:30px;">3</div>
+            <div style="font-family:'Space Mono',monospace; font-size:10px; letter-spacing:0.12em; color:#9A998F; margin-top:2px;">YEARS EXP</div>
+          </div>
+          <div style="border:1px solid #DEDCD4; border-radius:12px; padding:14px 18px; text-align:center; min-width:96px;">
+            <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:30px;">6</div>
+            <div style="font-family:'Space Mono',monospace; font-size:10px; letter-spacing:0.12em; color:#9A998F; margin-top:2px;">SKILLS</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- hero image -->
+      <div style="position:relative; margin-top:36px; height:380px; border-radius:18px; overflow:hidden; border:1px solid #E7E5DF; background:repeating-linear-gradient(135deg,#E9E8E2,#E9E8E2 14px,#F2F1EC 14px,#F2F1EC 28px);">
+        <div style="position:absolute; inset:0; background:linear-gradient(120deg, rgba(34,197,94,0.10), rgba(56,189,248,0.12));"></div>
+        <span style="position:absolute; top:18px; left:20px; font-family:'Space Mono',monospace; font-size:12px; color:#8A8980;">[ workspace.jpg — 1600×900 ]</span>
+        <div style="position:absolute; left:32px; bottom:28px; display:flex; align-items:center; gap:16px;">
+          <div style="width:84px; height:84px; border-radius:50%; background:#111113; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:30px; color:#fff; box-shadow:0 0 0 4px #FAF9F6, 0 0 0 6px #22C55E;">KD</div>
+          <div style="background:#111113; color:#fff; padding:11px 17px; border-radius:12px;">
+            <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:16px; line-height:1.25; white-space:nowrap;">Kusuda Daisuke</div>
+            <div style="font-family:'Space Mono',monospace; font-size:11px; color:#7FE3A8; line-height:1.4; margin-top:2px;">@unaiit · Engineer</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- skills strip -->
+      <div style="margin-top:14px; font-family:'Space Mono',monospace; font-size:12px; letter-spacing:0.16em; color:#9A998F;">— STACK & EXPERIENCE</div>
+      <div style="margin-top:14px; display:grid; grid-template-columns:repeat(6,1fr); border:1px solid #E7E5DF; border-radius:16px; overflow:hidden; background:#fff;">
+        <sc-for list="{{ skills }}" as="s" hint-placeholder-count="6">
+          <div style="padding:24px 18px; border-right:1px solid #EFEEE9; transition:background .2s;" style-hover="background:#F7F6F2;">
+            <div style="font-family:'Space Mono',monospace; font-size:10px; letter-spacing:0.12em; color:#B7B6B0;">{{ s.tag }}</div>
+            <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:46px; line-height:1; margin:10px 0 6px;">{{ s.y }}</div>
+            <div style="font-size:13px; color:#52525A;">{{ s.n }}</div>
+          </div>
+        </sc-for>
+      </div>
+
+      <!-- two column -->
+      <div style="margin-top:44px; display:grid; grid-template-columns:1.4fr 1fr; gap:56px;">
+        <div>
+          <div style="font-family:'Space Mono',monospace; font-size:12px; letter-spacing:0.16em; color:#9A998F; border-bottom:1px solid #DEDCD4; padding-bottom:12px;">INTRODUCTION</div>
+          <p style="font-size:17px; line-height:2.0; color:#2B2B30; margin:22px 0 0;">名古屋でITエンジニアとして受注開発の業務を行っています。最近では社内ナレッジを活用した<span style="background:linear-gradient(transparent 62%, #C6F0D7 62%);">RAGアプリの開発</span>や、現場データの見える化を目的としたアプリを開発しています。</p>
+          <p style="font-size:17px; line-height:2.0; color:#2B2B30; margin:18px 0 0;">フルスタックエンジニアとして、APIの開発や画面のUI設計などのコーディングに加え、先方とのMTG資料の作成や定例会議などのフロント作業も実施しています。</p>
+          <div style="margin-top:26px; display:inline-flex; align-items:center; gap:10px; border:1px solid #DEDCD4; border-radius:12px; padding:11px 16px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#111113" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+            <span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:14px;">株式会社UNAIIT</span>
+            <span style="font-size:12px; color:#8A8980;">— 現職</span>
+          </div>
+        </div>
+        <div>
+          <div style="font-family:'Space Mono',monospace; font-size:12px; letter-spacing:0.16em; color:#9A998F; border-bottom:1px solid #DEDCD4; padding-bottom:12px;">CAREER</div>
+          <sc-for list="{{ timeline }}" as="t" hint-placeholder-count="2">
+            <div style="display:flex; gap:16px; margin-top:22px;">
+              <div style="display:flex; flex-direction:column; align-items:center; padding-top:4px;">
+                <span style="{{ t.dotStyle }}"></span>
+                <span style="width:1px; flex:1; background:#DEDCD4; margin-top:6px;"></span>
+              </div>
+              <div style="padding-bottom:6px;">
+                <div style="font-family:'Space Mono',monospace; font-size:11px; letter-spacing:0.1em; color:#9A998F;">{{ t.when }}</div>
+                <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:17px; margin:4px 0 3px;">{{ t.org }}</div>
+                <div style="font-size:13px; color:#6E6E73;">{{ t.note }}</div>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </section>
+    </sc-if>
+
+    <!-- ============ OPTION 02 — placeholder ============ -->
+    <sc-if value="{{ isV1 }}">
+    <section data-screen-label="Option 02" style="padding:0 0 80px;">
+      <div style="max-width:1180px; margin:0 auto; padding:56px 48px 0;">
+        <div style="display:flex; justify-content:space-between; align-items:flex-end; border-bottom:1px solid #DEDCD4; padding-bottom:14px;">
+          <span style="font-family:'Space Mono',monospace; font-size:12px; letter-spacing:0.18em; color:#9A998F;">PROFILE — 02 / BIG TYPE</span>
+          <span style="display:inline-flex; align-items:center; gap:8px; font-family:'Space Mono',monospace; font-size:12px; color:#1A9E5E;"><span style="width:7px; height:7px; border-radius:50%; background:#22C55E; display:inline-block;"></span>AVAILABLE FOR WORK</span>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1.06fr 0.94fr; gap:48px; align-items:center; margin-top:44px;">
+          <div>
+            <div style="font-family:'Space Mono',monospace; font-size:12px; letter-spacing:0.16em; color:#9A998F;">SOFTWARE ENGINEER — NAGOYA, JP</div>
+            <h1 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:104px; line-height:0.84; letter-spacing:-0.045em; margin:20px 0 0;">
+              <span style="display:block;">KUSUDA</span>
+              <span style="display:block; color:transparent; -webkit-text-stroke:2px #111113;">DAISUKE<span style="color:#22C55E; -webkit-text-stroke:0;">.</span></span>
+            </h1>
+            <p style="font-size:17px; line-height:1.9; color:#2B2B30; max-width:450px; margin:28px 0 0;">受託開発を軸に、RAGアプリや現場データの可視化など、フルスタックでプロダクトを設計・実装しています。</p>
+            <div style="display:flex; gap:10px; margin-top:30px; flex-wrap:wrap;">
+              <a href="#" style="display:inline-flex; align-items:center; gap:8px; padding:12px 22px; border:1px solid #111113; border-radius:999px; font-family:'Space Grotesk',sans-serif; font-weight:500; font-size:14px; color:#111113; text-decoration:none; transition:all .18s;" style-hover="background:#111113; color:#fff;">GitHub ↗</a>
+              <a href="#" style="display:inline-flex; align-items:center; gap:8px; padding:12px 22px; border:1px solid #111113; border-radius:999px; font-family:'Space Grotesk',sans-serif; font-weight:500; font-size:14px; color:#111113; text-decoration:none; transition:all .18s;" style-hover="background:#111113; color:#fff;">Zenn ↗</a>
+              <a href="#" style="display:inline-flex; align-items:center; gap:8px; padding:12px 22px; border:1px solid #DEDCD4; border-radius:999px; font-family:'Space Grotesk',sans-serif; font-weight:500; font-size:14px; color:#52525A; text-decoration:none; transition:all .18s;" style-hover="border-color:#111113; color:#111113;">unaiit.com ↗</a>
+            </div>
+          </div>
+
+          <div style="position:relative; height:480px; border-radius:20px; overflow:hidden; background:repeating-linear-gradient(135deg,#DBDAD4,#DBDAD4 14px,#E6E5DF 14px,#E6E5DF 28px);">
+            <div style="position:absolute; inset:0; background:linear-gradient(155deg,#22C55E,#38BDF8); mix-blend-mode:multiply; opacity:0.82;"></div>
+            <span style="position:absolute; top:18px; left:20px; font-family:'Space Mono',monospace; font-size:11px; color:rgba(255,255,255,0.85);">[ workspace.jpg ]</span>
+            <div style="position:absolute; left:24px; bottom:24px; display:flex; align-items:center; gap:14px;">
+              <div style="width:72px; height:72px; border-radius:50%; background:#111113; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:26px; color:#fff; box-shadow:0 0 0 4px rgba(255,255,255,0.9);">KD</div>
+              <div>
+                <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:17px; color:#fff;">Kusuda Daisuke</div>
+                <div style="font-family:'Space Mono',monospace; font-size:12px; color:rgba(255,255,255,0.85);">@unaiit · Engineer</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- marquee -->
+      <div style="margin-top:54px; border-top:1px solid #E7E5DF; border-bottom:1px solid #E7E5DF; overflow:hidden; padding:24px 0; background:#fff;">
+        <div style="display:flex; align-items:center; width:max-content; animation:marquee 28s linear infinite;">
+          <sc-for list="{{ skills }}" as="s" hint-placeholder-count="6">
+            <div style="display:inline-flex; align-items:center; gap:14px; padding:0 34px;">
+              <span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:34px; letter-spacing:-0.02em; color:#111113; white-space:nowrap;">{{ s.n }}</span>
+              <span style="font-family:'Space Mono',monospace; font-size:14px; color:#1A9E5E;">{{ s.y }}Y</span>
+              <span style="width:7px; height:7px; border-radius:50%; background:#D6D4CC;"></span>
+            </div>
+          </sc-for>
+          <sc-for list="{{ skills }}" as="s" hint-placeholder-count="6">
+            <div style="display:inline-flex; align-items:center; gap:14px; padding:0 34px;">
+              <span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:34px; letter-spacing:-0.02em; color:#111113; white-space:nowrap;">{{ s.n }}</span>
+              <span style="font-family:'Space Mono',monospace; font-size:14px; color:#1184C7;">{{ s.y }}Y</span>
+              <span style="width:7px; height:7px; border-radius:50%; background:#D6D4CC;"></span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+
+      <!-- intro + career -->
+      <div style="max-width:1180px; margin:0 auto; padding:56px 48px 0;">
+        <div style="display:grid; grid-template-columns:1.5fr 1fr; gap:56px;">
+          <div>
+            <div style="font-family:'Space Mono',monospace; font-size:12px; letter-spacing:0.16em; color:#9A998F; border-bottom:1px solid #DEDCD4; padding-bottom:12px;">INTRODUCTION</div>
+            <p style="font-size:20px; line-height:1.95; color:#1C1C20; margin:24px 0 0; text-wrap:pretty;">名古屋でITエンジニアとして受注開発の業務を行っています。最近では社内ナレッジを活用した<span style="background:linear-gradient(transparent 60%, #CDEBFB 60%);">RAGアプリ</span>の開発や、現場データの<span style="background:linear-gradient(transparent 60%, #C6F0D7 60%);">見える化</span>を目的としたアプリを開発。フルスタックエンジニアとして、API開発・UI設計などのコーディングに加え、MTG資料の作成や定例会議などフロント業務も担当しています。</p>
+          </div>
+          <div>
+            <div style="font-family:'Space Mono',monospace; font-size:12px; letter-spacing:0.16em; color:#9A998F; border-bottom:1px solid #DEDCD4; padding-bottom:12px;">CAREER</div>
+            <div style="display:flex; flex-direction:column; gap:14px; margin-top:24px;">
+              <sc-for list="{{ timeline }}" as="t" hint-placeholder-count="2">
+                <div style="border:1px solid #E7E5DF; border-radius:16px; padding:20px; transition:border-color .18s, transform .18s;" style-hover="border-color:#111113; transform:translateY(-2px);">
+                  <div style="display:flex; align-items:center; gap:9px;">
+                    <span style="{{ t.dotStyle }}"></span>
+                    <span style="font-family:'Space Mono',monospace; font-size:11px; letter-spacing:0.1em; color:#9A998F;">{{ t.when }}</span>
+                  </div>
+                  <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:18px; margin:10px 0 4px;">{{ t.org }}</div>
+                  <div style="font-size:13px; color:#6E6E73;">{{ t.note }}</div>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    </sc-if>
+
+    <!-- ============ OPTION 03 — placeholder ============ -->
+    <sc-if value="{{ isV2 }}">
+    <section data-screen-label="Option 03" style="max-width:1180px; margin:0 auto; padding:56px 48px 80px;">
+      <div style="display:flex; justify-content:space-between; align-items:flex-end; border-bottom:1px solid #DEDCD4; padding-bottom:14px;">
+        <span style="font-family:'Space Mono',monospace; font-size:12px; letter-spacing:0.18em; color:#9A998F;">PROFILE — 03 / BENTO</span>
+        <span style="display:inline-flex; align-items:center; gap:8px; font-family:'Space Mono',monospace; font-size:12px; color:#1A9E5E;"><span style="width:7px; height:7px; border-radius:50%; background:#22C55E; display:inline-block;"></span>AVAILABLE FOR WORK</span>
+      </div>
+
+      <div style="margin-top:26px; display:grid; grid-template-columns:repeat(4,1fr); gap:16px;">
+
+        <!-- identity -->
+        <div style="grid-column:span 2; min-height:330px; background:#111113; color:#fff; border-radius:22px; padding:32px; display:flex; flex-direction:column; justify-content:space-between;">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-family:'Space Mono',monospace; font-size:11px; letter-spacing:0.14em; color:rgba(255,255,255,0.55);">SOFTWARE ENGINEER</span>
+            <span style="display:inline-flex; align-items:center; gap:7px; font-family:'Space Mono',monospace; font-size:11px; color:#5EEAA0;"><span style="width:7px; height:7px; border-radius:50%; background:#22C55E; display:inline-block;"></span>AVAILABLE</span>
+          </div>
+          <div>
+            <div style="width:60px; height:60px; border-radius:50%; background:#22C55E; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:22px; color:#0A2C18; margin-bottom:20px;">KD</div>
+            <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:48px; line-height:0.96; letter-spacing:-0.03em; margin:0;">Kusuda<br>Daisuke<span style="color:#38BDF8;">.</span></h2>
+            <div style="font-family:'Space Mono',monospace; font-size:12px; color:rgba(255,255,255,0.6); margin-top:14px;">名古屋 · NAGOYA, JAPAN</div>
+          </div>
+        </div>
+
+        <!-- image -->
+        <div style="grid-column:span 2; min-height:330px; position:relative; border-radius:22px; overflow:hidden; background:repeating-linear-gradient(135deg,#E1E0DA,#E1E0DA 13px,#ECEBE6 13px,#ECEBE6 26px);">
+          <div style="position:absolute; inset:0; background:linear-gradient(150deg, rgba(34,197,94,0.16), rgba(56,189,248,0.20));"></div>
+          <span style="position:absolute; top:18px; left:20px; font-family:'Space Mono',monospace; font-size:11px; color:#8A8980;">[ workspace.jpg ]</span>
+        </div>
+
+        <!-- stat: green accent -->
+        <div style="grid-column:span 1; background:linear-gradient(150deg,#22C55E,#15A34A); color:#fff; border-radius:20px; padding:24px; min-height:150px; display:flex; flex-direction:column; justify-content:space-between;">
+          <span style="font-family:'Space Mono',monospace; font-size:11px; letter-spacing:0.1em; color:rgba(255,255,255,0.8);">FULL STACK</span>
+          <div><span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:52px; line-height:1;">3</span><span style="font-family:'Space Grotesk',sans-serif; font-weight:500; font-size:18px;"> yrs</span></div>
+        </div>
+
+        <!-- stat: blue accent -->
+        <div style="grid-column:span 1; background:linear-gradient(150deg,#38BDF8,#0EA5E9); color:#fff; border-radius:20px; padding:24px; min-height:150px; display:flex; flex-direction:column; justify-content:space-between;">
+          <span style="font-family:'Space Mono',monospace; font-size:11px; letter-spacing:0.1em; color:rgba(255,255,255,0.85);">SKILLS</span>
+          <div><span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:52px; line-height:1;">6</span><span style="font-family:'Space Grotesk',sans-serif; font-weight:500; font-size:18px;"> stacks</span></div>
+        </div>
+
+        <!-- stat: plain -->
+        <div style="grid-column:span 1; background:#fff; border:1px solid #E7E5DF; border-radius:20px; padding:24px; min-height:150px; display:flex; flex-direction:column; justify-content:space-between; transition:border-color .18s;" style-hover="border-color:#111113;">
+          <span style="font-family:'Space Mono',monospace; font-size:11px; letter-spacing:0.1em; color:#A7A6A0;">GITHUB</span>
+          <div><span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:52px; line-height:1;">3</span><span style="font-family:'Space Grotesk',sans-serif; font-weight:500; font-size:18px; color:#52525A;"> yrs</span></div>
+        </div>
+
+        <!-- stat: plain -->
+        <div style="grid-column:span 1; background:#fff; border:1px solid #E7E5DF; border-radius:20px; padding:24px; min-height:150px; display:flex; flex-direction:column; justify-content:space-between; transition:border-color .18s;" style-hover="border-color:#111113;">
+          <span style="font-family:'Space Mono',monospace; font-size:11px; letter-spacing:0.1em; color:#A7A6A0;">CURRENT</span>
+          <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:22px; line-height:1.15;">株式会社<br>UNAIIT</div>
+        </div>
+
+        <!-- intro -->
+        <div style="grid-column:span 2; background:#fff; border:1px solid #E7E5DF; border-radius:22px; padding:30px;">
+          <div style="font-family:'Space Mono',monospace; font-size:12px; letter-spacing:0.16em; color:#9A998F;">INTRODUCTION</div>
+          <p style="font-size:15px; line-height:1.95; color:#2B2B30; margin:18px 0 0; text-wrap:pretty;">名古屋でITエンジニアとして受注開発の業務を行っています。最近では社内ナレッジを活用したRAGアプリの開発や、現場データの見える化を目的としたアプリを開発。フルスタックエンジニアとして、API開発・UI設計などのコーディングに加え、MTG資料の作成や定例会議などフロント業務も担当しています。</p>
+        </div>
+
+        <!-- career -->
+        <div style="grid-column:span 2; background:#fff; border:1px solid #E7E5DF; border-radius:22px; padding:30px;">
+          <div style="font-family:'Space Mono',monospace; font-size:12px; letter-spacing:0.16em; color:#9A998F;">CAREER</div>
+          <div style="margin-top:18px;">
+            <sc-for list="{{ timeline }}" as="t" hint-placeholder-count="2">
+              <div style="display:flex; gap:14px; padding:14px 0; border-bottom:1px solid #F0EFEA;">
+                <span style="{{ t.dotStyle }}; margin-top:5px; flex-shrink:0;"></span>
+                <div style="flex:1;">
+                  <div style="display:flex; justify-content:space-between; align-items:baseline; gap:12px;">
+                    <span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:16px;">{{ t.org }}</span>
+                    <span style="font-family:'Space Mono',monospace; font-size:11px; color:#9A998F; flex-shrink:0;">{{ t.when }}</span>
+                  </div>
+                  <div style="font-size:13px; color:#6E6E73; margin-top:3px;">{{ t.note }}</div>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+    </section>
+    </sc-if>
+
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { v: 0 };
+
+  swStyle(i) {
+    const active = this.state.v === i;
+    const base = "min-width:42px; height:32px; border:none; border-radius:8px; font-family:'Space Mono',monospace; font-size:13px; font-weight:700; cursor:pointer; transition:all .2s;";
+    return active
+      ? base + " background:#111113; color:#fff;"
+      : base + " background:transparent; color:#9A998F;";
+  }
+
+  renderVals() {
+    const v = this.state.v;
+    return {
+      isV0: v === 0, isV1: v === 1, isV2: v === 2,
+      sw0: this.swStyle(0), sw1: this.swStyle(1), sw2: this.swStyle(2),
+      setV0: () => this.setState({ v: 0 }),
+      setV1: () => this.setState({ v: 1 }),
+      setV2: () => this.setState({ v: 2 }),
+      skills: [
+        { y: '3', n: 'Full Stack', tag: 'CORE' },
+        { y: '2', n: 'Frontend', tag: 'WEB' },
+        { y: '2', n: 'C# · .NET', tag: 'API' },
+        { y: '3', n: 'Python', tag: 'API' },
+        { y: '3', n: 'GitHub', tag: 'OSS' },
+        { y: '2', n: 'Married', tag: 'LIFE' },
+      ],
+      timeline: [
+        { when: 'CURRENT', org: '株式会社UNAIIT', note: 'フルスタック / RAG・データ可視化', dotStyle: 'width:11px; height:11px; border-radius:50%; background:#38BDF8; display:block;' },
+        { when: '~ 2024.01', org: 'Laniakea株式会社', note: 'Web開発 / 受託', dotStyle: 'width:11px; height:11px; border-radius:50%; background:#22C55E; display:block;' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>
