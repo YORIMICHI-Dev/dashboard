@@ -83,4 +83,4 @@ export const dbChart = {
   ],
 };
 
-export const dbIcon = 'i-tabler-database-cog';
+export const dbIcon = 'database-cog';

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import SharedIcon from '~/features/@shared/components/Icon/Icon.vue';
 import { recentTransaction } from '../composables/recentTransactions';
 </script>
 
@@ -11,7 +12,7 @@ import { recentTransaction } from '../composables/recentTransactions';
           <h6 class="text-base text-muted">{{ list.title }}</h6>
         </div>
         <div class="text-center px-2 flex flex-col items-center">
-          <UIcon name="i-tabler-circle-filled" class="size-3" :class="'text-' + list.textcolor" />
+          <SharedIcon name="circle-filled" class="size-3" :class="'text-' + list.textcolor" />
           <div v-if="list.line" class="line bg-muted" />
         </div>
         <div class="flex-1 pl-2">

@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import SharedIcon from '~/features/@shared/components/Icon/Icon.vue';
+
 const timeline = [
   {
     when: 'CURRENT — 2024.04~',
@@ -54,7 +56,7 @@ const timeline = [
       <div
         class="mt-[26px] inline-flex items-center gap-2.5 border border-[#DEDCD4] rounded-xl px-4 py-[11px]"
       >
-        <UIcon name="i-tabler-briefcase" class="size-4 text-[#111113]" />
+        <SharedIcon name="briefcase" class="size-4 text-[#111113]" />
         <span class="font-display font-bold text-sm text-[#111113]">株式会社UNAIIT</span>
         <span class="text-xs text-[#8A8980]">— 現職</span>
       </div>

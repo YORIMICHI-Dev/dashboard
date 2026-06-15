@@ -85,4 +85,4 @@ export const azureChart = {
   ],
 };
 
-export const azureIcon = 'i-tabler-brand-azure';
+export const azureIcon = 'brand-azure';

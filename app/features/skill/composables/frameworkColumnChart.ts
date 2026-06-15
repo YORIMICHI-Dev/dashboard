@@ -77,4 +77,4 @@ export const frameworkChart = {
   ],
 };
 
-export const frameworkIcon = 'i-tabler-id';
+export const frameworkIcon = 'id';

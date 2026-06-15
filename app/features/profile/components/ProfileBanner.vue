@@ -1,17 +1,18 @@
 <script setup lang="ts">
+import SharedIcon from '~/features/@shared/components/Icon/Icon.vue';
 import profileBg from '/images/profile/profile-card.png';
 import UserImage from '/images/profile/user-7.jpg';
 
 const skills = [
-  { icon: 'i-tabler-tie', color: 'text-primary', label: 'Full Stack', years: '3 years' },
-  { icon: 'i-tabler-brand-nuxt', color: 'text-success', label: 'Frontend', years: '2 years' },
-  { icon: 'i-tabler-brand-c-sharp', color: 'text-teal-600', label: 'Backend', years: '2 years' },
-  { icon: 'i-tabler-brand-python', color: 'text-purple-500', label: 'Backend', years: '3 years' },
+  { icon: 'tie', color: 'text-primary', label: 'Full Stack', years: '3 years' },
+  { icon: 'brand-nuxt', color: 'text-success', label: 'Frontend', years: '2 years' },
+  { icon: 'brand-c-sharp', color: 'text-teal-600', label: 'Backend', years: '2 years' },
+  { icon: 'brand-python', color: 'text-purple-500', label: 'Backend', years: '3 years' },
 ];
 
 const externals = [
-  { icon: 'i-tabler-brand-github', color: 'text-black dark:text-white', label: 'Github', years: '3 years' },
-  { icon: 'i-tabler-heart', color: 'text-pink-400', label: 'Married', years: '2 years' },
+  { icon: 'brand-github', color: 'text-black dark:text-white', label: 'Github', years: '3 years' },
+  { icon: 'heart', color: 'text-pink-400', label: 'Married', years: '2 years' },
 ];
 </script>
 
@@ -25,7 +26,7 @@ const externals = [
           <div class="px-4 py-1">
             <div class="grid grid-cols-12 gap-6 justify-center">
               <div v-for="s in skills" :key="s.label" class="col-span-3 text-center">
-                <UIcon :name="s.icon" :class="s.color" class="size-8" />
+                <SharedIcon :name="s.icon" :class="s.color" class="size-8 mx-auto" />
                 <h4 class="text-base font-semibold" :class="s.color">{{ s.label }}</h4>
                 <h6 class="text-base font-normal" :class="s.color">{{ s.years }}</h6>
               </div>
@@ -49,7 +50,7 @@ const externals = [
           <div class="px-4 py-1">
             <div class="grid grid-cols-12 gap-6 justify-center">
               <div v-for="e in externals" :key="e.label" class="col-span-3 text-center">
-                <UIcon :name="e.icon" :class="e.color" class="size-8" />
+                <SharedIcon :name="e.icon" :class="e.color" class="size-8 mx-auto" />
                 <h4 class="text-base font-semibold" :class="e.color">{{ e.label }}</h4>
                 <h6 class="text-base font-normal" :class="e.color">{{ e.years }}</h6>
               </div>

@@ -82,4 +82,4 @@ export const columnChart = {
   ],
 };
 
-export const columnIcon = 'i-tabler-code';
+export const columnIcon = 'code';

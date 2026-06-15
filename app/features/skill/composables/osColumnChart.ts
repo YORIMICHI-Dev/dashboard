@@ -77,4 +77,4 @@ export const osChart = {
   ],
 };
 
-export const osIcon = 'i-tabler-brand-windows';
+export const osIcon = 'brand-windows';

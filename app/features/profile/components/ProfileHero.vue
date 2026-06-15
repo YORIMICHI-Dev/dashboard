@@ -12,7 +12,7 @@ const stats = [
   <!-- section label -->
   <div class="flex justify-between items-end border-b border-[#DEDCD4] pb-3.5">
     <span class="font-mono-dc text-xs tracking-[0.18em] text-[#9A998F]">
-      PROFILE — 01 / EDITORIAL
+      PROFILE —  EDITORIAL
     </span>
     <span class="inline-flex items-center gap-2 font-mono-dc text-xs text-[#1A9E5E]">
       <span class="w-[7px] h-[7px] rounded-full bg-[#22C55E] inline-block" />

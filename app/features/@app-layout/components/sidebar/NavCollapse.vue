@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import SharedIcon from '~/features/@shared/components/Icon/Icon.vue';
 import Icon from './Icon.vue';
 import LayoutSidebarNavCollapse from './NavCollapse.vue';
 import LayoutSidebarNavItem from './NavItem.vue';
@@ -19,8 +20,8 @@ const open = ref(false);
     >
       <Icon :item="item.icon" :level="level" />
       <span class="flex-1 text-left hide-menu">{{ item.title }}</span>
-      <UIcon
-        name="i-tabler-chevron-down"
+      <SharedIcon
+        name="chevron-down"
         class="size-4 transition-transform hide-menu"
         :class="{ 'rotate-180': open }"
       />

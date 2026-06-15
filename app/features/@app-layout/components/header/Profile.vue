@@ -1,12 +1,11 @@
 <script setup lang="ts">
+import SharedIcon from '~/features/@shared/components/Icon/Icon.vue';
 import { profileItems } from './profileItem';
 </script>
 
 <template>
   <UPopover :content="{ align: 'end' }">
-    <UButton variant="ghost" color="neutral" square class="rounded-full p-0">
-      <UAvatar src="/images/profile/user-7.jpg" alt="profile" size="sm" />
-    </UButton>
+    <button type="button" class="kd-avatar font-display">KD</button>
 
     <template #content>
       <div class="w-[320px]">
@@ -18,7 +17,7 @@ import { profileItems } from './profileItem';
               <h6 class="text-base font-semibold">Kusuda Daisuke</h6>
               <span class="text-sm text-muted">Engineer</span>
               <div class="flex items-center mt-1">
-                <UIcon name="i-tabler-mail" class="size-4" />
+                <SharedIcon name="mail" class="size-4" />
                 <span class="text-sm text-muted ml-2">yorimichi.dev@gmail.com</span>
               </div>
             </div>
@@ -44,3 +43,20 @@ import { profileItems } from './profileItem';
     </template>
   </UPopover>
 </template>
+
+<style scoped>
+.kd-avatar {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 11px;
+  background: #111113;
+  color: #fff;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+}
+</style>

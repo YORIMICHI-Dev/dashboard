@@ -1,9 +1,11 @@
 <script setup lang="ts">
+import SharedIcon from '~/features/@shared/components/Icon/Icon.vue';
+
 const infos = [
-  { icon: 'i-tabler-briefcase', text: '株式会社UNAIIT' },
-  { icon: 'i-tabler-mail', text: 'yorimichi.dev@gmail.com' },
-  { icon: 'i-tabler-device-desktop', text: 'https://dashboard-daisuke.vercel.app/' },
-  { icon: 'i-tabler-map-pin', text: '三重県 四日市市' },
+  { icon: 'briefcase', text: '株式会社UNAIIT' },
+  { icon: 'mail', text: 'yorimichi.dev@gmail.com' },
+  { icon: 'device-desktop', text: 'https://dashboard-daisuke.vercel.app/' },
+  { icon: 'map-pin', text: '三重県 四日市市' },
 ];
 </script>
 
@@ -20,7 +22,7 @@ const infos = [
       </p>
     </div>
     <div v-for="info in infos" :key="info.text" class="flex items-center gap-3 mb-5">
-      <UIcon :name="info.icon" class="size-5" />
+      <SharedIcon :name="info.icon" class="size-5" />
       <span class="text-base font-semibold">{{ info.text }}</span>
     </div>
   </UCard>

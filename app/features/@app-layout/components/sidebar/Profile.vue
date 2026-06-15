@@ -8,17 +8,6 @@
         <h6 class="-mb-1 text-base font-semibold text-highlighted">Daisuke</h6>
         <span class="text-sm text-muted">Engineer</span>
       </div>
-      <div class="ml-auto">
-        <UTooltip text="Profile">
-          <UButton
-            to="/profile"
-            icon="i-tabler-power"
-            color="primary"
-            variant="ghost"
-            square
-          />
-        </UTooltip>
-      </div>
     </div>
   </div>
 </template>

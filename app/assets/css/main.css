@@ -1,6 +1,14 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
 
+/* Editorial color palette (from reference HTML) */
+:root {
+  --ui-border: #e7e5df;
+}
+body {
+  background: #faf9f6;
+}
+
 /* Profile (Editorial) design tokens */
 .font-display {
   font-family: "Space Grotesk", "Plus Jakarta Sans", sans-serif;

@@ -66,6 +66,11 @@ const customizer = useCustomizerStore();
 .scrollnavbar {
   flex: 1;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+.userbottom {
+  margin-top: auto;
 }
 .app-sidebar.is-mini {
   width: 75px;
