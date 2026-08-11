@@ -3,8 +3,9 @@ const azureVm = '/Icons/compute/10021-icon-service-Virtual-Machine.svg';
 const azureFunctions = '/Icons/compute/10029-icon-service-Function-Apps.svg';
 const azureWebApp = '/Icons/web/10035-icon-service-App-Services.svg';
 const azureSqlServer = '/Icons/databases/10132-icon-service-SQL-Server.svg';
-const azureOpenAi = '/Icons/ai + machine learning/03438-icon-service-Azure-OpenAI.svg';
-const azureAiSearch = '/Icons/ai + machine learning/10044-icon-service-Cognitive-Search.svg';
+// スペースや + を含むパスはデプロイ先で404になるため、Icons/azure 配下のコピーを参照する
+const azureOpenAi = '/Icons/azure/azure-openai.svg';
+const azureAiSearch = '/Icons/azure/ai-search.svg';
 const azureBlob = '/Icons/storage/10086-icon-service-Storage-Accounts.svg';
 
 const cdn = (icon: string) => `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${icon}`;

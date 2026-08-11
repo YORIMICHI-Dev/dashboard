@@ -11,13 +11,13 @@ import SharedIcon from '~/features/@shared/components/Icon/Icon.vue';
     </div>
     <div class="max-w-[720px]">
       <p class="text-[17px] leading-loose text-[#2B2B30] mt-[22px]">
-        名古屋でITエンジニアとして受注開発の業務を行っています。最近では社内ナレッジを活用した<span
+        名古屋でITエンジニアとして受託開発の業務を行っています。最近では建築・建設業界のお客様を中心に、社内ナレッジを活用した<span
           class="bg-[linear-gradient(transparent_62%,#C6F0D7_62%)]"
           >RAGアプリの開発</span
-        >や、現場データの見える化を目的としたアプリを開発しています。
+        >や、現場データの見える化を目的としたアプリ開発に取り組んでいます。
       </p>
       <p class="text-[17px] leading-loose text-[#2B2B30] mt-[18px]">
-        フルスタックエンジニアとして、APIの開発や画面のUI設計などのコーディングに加え、先方とのMTG資料の作成や定例会議などのフロント作業も実施しています。
+        フルスタックエンジニアとして、APIの開発や画面のUI設計などのコーディングに加え、先方との打ち合わせ資料の作成や定例会議の進行といった顧客対応も担当しています。
       </p>
       <div class="mt-[26px] flex flex-wrap gap-2.5">
         <div

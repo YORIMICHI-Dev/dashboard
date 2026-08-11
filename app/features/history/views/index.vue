@@ -38,7 +38,13 @@ const projectView = (project: Project) => ({
 });
 
 type ProjectView = ReturnType<typeof projectView>;
-type EntryView = { id: string; phases: ProjectView[] };
+type EntryView = { id: string; group?: string; phases: ProjectView[] };
+
+/** グループ表示時のサブタイトル(タイトル先頭のグループ名が重複する場合は取り除く) */
+const phaseSubtitle = (group: string, title: string) => {
+  if (title === `${group}開発`) return '新規開発';
+  return title.startsWith(`${group} `) ? title.slice(group.length + 1) : title;
+};
 
 /** 同じgroupのプロジェクトを1エントリーに統合(フェーズは終了時期の新しい順) */
 const buildEntries = (companyId: string, projects: Project[]): EntryView[] => {
@@ -53,7 +59,7 @@ const buildEntries = (companyId: string, projects: Project[]): EntryView[] => {
         continue;
       }
       groupIndex.set(project.group, entries.length);
-      entries.push({ id: `${companyId}:${project.group}`, phases: [vm] });
+      entries.push({ id: `${companyId}:${project.group}`, group: project.group, phases: [vm] });
     } else {
       entries.push({ id: `${companyId}:${project.title}`, phases: [vm] });
     }
@@ -180,29 +186,33 @@ const isMaintained = (entry: EntryView) => entry.phases.some((p) => p.phase);
         :key="entry.id"
         class="proj-entry mt-5 bg-white border border-[#E7E5DF] rounded-[20px] p-6 lg:p-[30px] grid grid-cols-1 lg:grid-cols-[200px_minmax(0,1fr)] gap-x-9 gap-y-5 items-start"
       >
-        <!-- phase tabs -->
-        <div
-          v-if="entry.phases.length > 1"
-          class="lg:col-span-2 flex flex-wrap gap-1.5 border-b border-[#EFEEE9] pb-4"
-        >
-          <button
-            v-for="(ph, pi) in entry.phases"
-            :key="ph.title"
-            type="button"
-            class="font-mono-dc text-[10px] tracking-[0.1em] border rounded-full px-3 py-1 cursor-pointer transition-colors"
-            :class="
-              (selectedPhase[entry.id] ?? 0) === pi
-                ? 'bg-[#111113] border-[#111113] text-white'
-                : 'bg-white border-[#DEDCD4] text-[#52525A] hover:border-[#B4B2A8]'
-            "
-            @click="selectedPhase[entry.id] = pi"
-          >
-            {{ ph.phase ?? `#${pi + 1}` }}
-          </button>
-          <span v-if="isMaintained(entry)" class="maint-badge ml-auto">
-            <span class="maint-dot" />
-            保守対応中
-          </span>
+        <!-- entry title + phase tabs -->
+        <div class="lg:col-span-2 border-b border-[#EFEEE9] pb-4">
+          <div class="flex items-start justify-between gap-4 flex-wrap">
+            <h3 class="font-display font-bold text-[26px] leading-[1.3] tracking-[-0.02em] m-0">
+              {{ entry.group ?? entry.phases[0]?.title }}
+            </h3>
+            <span v-if="isMaintained(entry)" class="maint-badge shrink-0">
+              <span class="maint-dot" />
+              保守対応中
+            </span>
+          </div>
+          <div v-if="entry.phases.length > 1" class="mt-3 flex flex-wrap gap-1.5">
+            <button
+              v-for="(ph, pi) in entry.phases"
+              :key="ph.title"
+              type="button"
+              class="font-mono-dc text-[10px] tracking-[0.1em] border rounded-full px-3 py-1 cursor-pointer transition-colors"
+              :class="
+                (selectedPhase[entry.id] ?? 0) === pi
+                  ? 'bg-[#111113] border-[#111113] text-white'
+                  : 'bg-white border-[#DEDCD4] text-[#52525A] hover:border-[#B4B2A8]'
+              "
+              @click="selectedPhase[entry.id] = pi"
+            >
+              {{ ph.phase ?? `#${pi + 1}` }}
+            </button>
+          </div>
         </div>
 
         <template v-for="project in [phaseOf(entry)]" :key="project.title">
@@ -224,13 +234,6 @@ const isMaintained = (entry: EntryView) => entry.phases.some((p) => p.phase);
             class="font-mono-dc text-[11px] tracking-[0.1em] text-[#1A9E5E] border border-[#BFE9CF] bg-[#EAF8F0] px-[11px] py-1 rounded-full shrink-0 lg:inline-block lg:mt-3"
           >
             {{ project.phase }}
-          </span>
-          <span
-            v-if="entry.phases.length === 1 && isMaintained(entry)"
-            class="maint-badge shrink-0 lg:mt-3"
-          >
-            <span class="maint-dot" />
-            保守対応中
           </span>
           <div v-if="project.orderedProcesses.length" class="w-full flex flex-wrap gap-1.5 lg:mt-4">
             <span
@@ -263,12 +266,25 @@ const isMaintained = (entry: EntryView) => entry.phases.some((p) => p.phase);
 
         <!-- body column -->
         <div class="min-w-0">
-          <h3 class="font-display font-bold text-xl leading-[1.4] tracking-[-0.01em] m-0">
-            {{ project.title }}
-          </h3>
-          <div class="h-px bg-[#EFEEE9] mt-4" />
+          <template v-if="entry.group">
+            <div class="flex items-baseline gap-3 flex-wrap">
+              <span
+                v-if="project.phase"
+                class="font-mono-dc text-[11px] tracking-widest text-[#1A9E5E] shrink-0"
+              >
+                {{ project.phase }}
+              </span>
+              <h4 class="font-display font-semibold text-base leading-normal text-[#2B2B30] m-0">
+                {{ phaseSubtitle(entry.group, project.title) }}
+              </h4>
+            </div>
+            <div class="h-px bg-[#EFEEE9] mt-4" />
+          </template>
 
-          <div class="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-7">
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-7"
+            :class="entry.group ? 'mt-6' : ''"
+          >
             <!-- TASK -->
             <div>
               <div class="flex items-center gap-3">

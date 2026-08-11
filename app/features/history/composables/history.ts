@@ -1,7 +1,8 @@
 // public/Icons 配下のAzure公式アイコン(importするとNuxtが壊れたURLに解決するため、公開URLを直接参照)
-const openAi = '/Icons/ai + machine learning/03438-icon-service-Azure-OpenAI.svg';
-const aiSearch = '/Icons/ai + machine learning/10044-icon-service-Cognitive-Search.svg';
-const speechService = '/Icons/ai + machine learning/00797-icon-service-Speech-Services.svg';
+// スペースや + を含むパスはデプロイ先で404になるため、Icons/azure 配下のコピーを参照する
+const openAi = '/Icons/azure/azure-openai.svg';
+const aiSearch = '/Icons/azure/ai-search.svg';
+const speechService = '/Icons/azure/speech-services.svg';
 const webApp = '/Icons/web/10035-icon-service-App-Services.svg';
 const containerInstance = '/Icons/containers/10104-icon-service-Container-Instances.svg';
 
@@ -143,7 +144,7 @@ export const companies: Company[] = [
         skills: [ICON.python, ICON.pytorch],
       },
       {
-        period: '2026/01 — 2026/09',
+        period: '2026/01 — PRESENT',
         phase: 'PHASE 2.5',
         group: '建設会社実行予算アプリ',
         title: '建設会社実行予算アプリ 実行予算明細入力アップデート・見積書更新対応',
@@ -177,16 +178,16 @@ export const companies: Company[] = [
         group: '建設会社実行予算アプリ',
         title: '建設会社実行予算アプリ 承認機能実装・AG Grid搭載',
         tasks: [
-          '積算システムにて編集者が作成した実行予算の上長承認機能開発およびExcelライク操作の要件定義および要件定義書作成',
+          '積算システムで作成した実行予算に対する上長承認機能と、Excelライクな入力操作の要件定義および要件定義書の作成',
           'Phase2におけるプロジェクトのスケジュール管理・進捗報告',
           '要件定義内容の詳細を開発メンバーと共有及びレビュー、またメイン機能の実装',
-          'Azure環境の構築にAzure Web Appのテストスロットデプロイ、Azure SQL Serverのスキーマによる論理分離によるテスト環境作成',
+          'Azure Web Appのデプロイスロットと、Azure SQL Serverのスキーマによる論理分離を利用したテスト環境の構築',
         ],
         roles: [
           'プロダクトマネージャー（週次MTGによる要件定義・スケジュール管理）',
           '共同開発者のコードレビュー・リードエンジニア',
           'Azureクラウドのアーキテクチャ設計',
-          'Github管理者、Github Actionsの設定およびCI/CD整理',
+          'GitHub管理者、GitHub Actionsの設定およびCI/CDの整備',
         ],
         processes: ['要件定義', '基本設計', '実装', 'テスト'],
         skills: [
@@ -210,9 +211,9 @@ export const companies: Company[] = [
           '積算システムからのデータを元に、実行予算を作成するアプリの開発',
           'Nuxt3によるフロントエンド開発（実行予算新規作成・編集、Entra ID認証機能の実装、マスタ管理画面、帳票出力）',
           '.NETによるDDDを意識したバックエンド開発（MediatRおよびDIによるクリーンアーキテクチャ採用、CRUD API設計・実装、Excel出力API実装）',
-          'Azure環境の構築（Azure Web App, Azure VM, SQL Server）、Entra ID認証のためエンタープライズアプリ登録',
+          'Azure環境の構築（Azure Web App, Azure VM, SQL Server）、Entra ID認証のためのエンタープライズアプリケーション登録',
         ],
-        roles: ['共同開発者のコードレビュー・リードエンジニア', 'Github管理者、Github Actionsの設定およびCI/CD整理'],
+        roles: ['共同開発者のコードレビュー・リードエンジニア', 'GitHub管理者、GitHub Actionsの設定およびCI/CDの整備'],
         processes: ['詳細設計', '実装', 'リリース'],
         skills: [
           ICON.typescript,
@@ -228,14 +229,13 @@ export const companies: Company[] = [
       {
         period: '2024/09 — 2024/11',
         title: '化学メーカーの作業手順書RAGアプリ開発',
-        featured: true,
         tasks: [
           'Chroma DBによるRAG検索に使用する文書の登録・更新・削除・チャンク取得APIをVM上に開発',
           'Nuxt3および.NETによるRAG検索画面とユーザー管理画面の実装',
           'Azure環境の構築（Azure Web App, Azure VM, SQL Server, VNET関連）',
         ],
         roles: [
-          'FastAPIとlangchainによるRAGバックエンド開発の詳細設計・実装作業',
+          'FastAPIとLangChainによるRAGバックエンド開発の詳細設計・実装作業',
           '共同開発者のコードレビュー・リードエンジニア',
           '先方との定例打合せ資料作成、開発状況説明、納品作業まで',
         ],
@@ -271,10 +271,35 @@ export const companies: Company[] = [
         skills: [ICON.python, ICON.flask, ICON.azure, ICON.azureSql, ICON.aiSearch, ICON.openAi, ICON.windows],
       },
       {
+        period: '2024/02 — 2024/07',
+        title: '特定地域を走行する車両の可視化サンプルアプリ開発（PoC案件）',
+        tasks: [
+          'Map box GL JSより車両データをマップ上に可視化アプリ実装',
+          'Azureよるクラウドリソース設計とデプロイ環境構築・AzureのPrivate EndpointとVNet統合を利用した閉域化クラウドリソース設計とデプロイ環境構築',
+          '3Dモデルの車両を時刻ごとにアニメーションとしてマップ上に表示',
+        ],
+        roles: [
+          '車両データの可視化に向けた技術選定と設計およびNuxt3, .NETによるフルスタック実装',
+          '先方との定例打合せ資料作成、開発状況説明、納品作業まで',
+        ],
+        processes: ['基本設計', '実装', 'リリース'],
+        skills: [
+          ICON.typescript,
+          ICON.nuxt,
+          ICON.mapbox,
+          ICON.csharp,
+          ICON.dotnet,
+          ICON.azure,
+          ICON.azureSql,
+          ICON.windows,
+        ],
+      },
+      {
         period: '2025/10 — 2026/01',
         phase: 'PHASE 2',
-        group: '建設企業RAG Chatアプリ',
+        group: '建設企業のマニュアルに対するRAG Chatアプリ',
         title: '建設企業のマニュアルに対するRAG Chatアプリ 議事録自動作成機能追加',
+        featured: true,
         tasks: [
           '議事録音声をAzure Speech to Textにより文字起こしする機能の実装',
           'LLM（Azure OpenAI）による文字起こしテキストからの議事録自動作成機能の実装',
@@ -290,10 +315,10 @@ export const companies: Company[] = [
       {
         period: '2024/04 — 2024/07',
         phase: 'PHASE 1',
-        group: '建設企業RAG Chatアプリ',
+        group: '建設企業のマニュアルに対するRAG Chatアプリ',
         title: '建設企業のマニュアルに対するRAG Chatアプリ開発',
         tasks: [
-          'Azure Open AIとAI SearchによるRAG検索および生成AIによるチャットを連携したChatGPT系アプリ実装',
+          'Azure OpenAIとAI SearchによるRAG検索と生成AIチャットを連携したChatGPT系アプリの実装',
           'AzureのPrivate EndpointとVNet統合を利用した閉域化クラウドリソース設計とデプロイ環境構築',
           '利用ログの集計および可視化による運用監視機能の追加',
           'Google DriveとAzure Storage Blobとのファイル同期サーバーの構築',
@@ -340,7 +365,7 @@ export const companies: Company[] = [
       {
         period: '2023/03 — 2024/05',
         title: '自動車整備工場 チャットボットアプリ開発',
-        tasks: ['Bard Sentence, TFIDFによる文章類似度測定の実装', 'AWS(ES2, S3, RDB, SES)によるデプロイ環境構築'],
+        tasks: ['Bard Sentence, TFIDFによる文章類似度測定の実装', 'AWS(EC2, S3, RDS, SES)によるデプロイ環境構築'],
         roles: ['Python バックエンド開発', 'AWSクラウド環境構築開発', 'Project Leader、窓口業務'],
         processes: ['詳細設計', '実装', 'リリース'],
         skills: [ICON.python, ICON.javascript, ICON.django, ICON.pandas, ICON.mysql, ICON.aws, ICON.ubuntu],
@@ -352,30 +377,6 @@ export const companies: Company[] = [
     period: '2022 — 2023',
     role: 'PYTHON / SIMULATION / ML',
     projects: [
-      {
-        period: '2022/02 — 2022/07',
-        title: '特定地域を走行する車両の可視化サンプルアプリ開発（PoC案件）',
-        tasks: [
-          'Map box GL JSより車両データをマップ上に可視化アプリ実装',
-          'Azureよるクラウドリソース設計とデプロイ環境構築・AzureのPrivate EndpointとVNet統合を利用した閉域化クラウドリソース設計とデプロイ環境構築',
-          '3Dモデルの車両を時刻ごとにアニメーションとしてマップ上に表示',
-        ],
-        roles: [
-          '車両データの可視化に向けた技術選定と設計およびNuxt3, .NETによるフルスタック実装',
-          '先方との定例打合せ資料作成、開発状況説明、納品作業まで',
-        ],
-        processes: ['基本設計', '実装', 'リリース'],
-        skills: [
-          ICON.typescript,
-          ICON.nuxt,
-          ICON.mapbox,
-          ICON.csharp,
-          ICON.dotnet,
-          ICON.azure,
-          ICON.azureSql,
-          ICON.windows,
-        ],
-      },
       {
         period: '2022/06 — 2023/02',
         title: 'AGVシミュレータ（自社製品）の導入およびマップ要件機能の実装',
@@ -390,9 +391,9 @@ export const companies: Company[] = [
       },
       {
         period: '2022/02 — 2022/05',
-        title: 'Neutral Architecture Searchによる物体検出ネットワークの画像分類学習器のゼロ学習探索',
-        tasks: ['Neutoral Architecture Search論文内容の実装', '先方提供スクリプトへの追加実装'],
-        roles: ['Neutoral Architecture Search論文内容調査・要約', '論文内容を実装、先方提供スクリプトへの追加実装'],
+        title: 'Neural Architecture Searchによる物体検出ネットワークの画像分類学習器のゼロ学習探索',
+        tasks: ['Neural Architecture Search論文内容の実装', '先方提供スクリプトへの追加実装'],
+        roles: ['Neural Architecture Search論文内容調査・要約', '論文内容を実装、先方提供スクリプトへの追加実装'],
         processes: ['実装'],
         skills: [ICON.python, ICON.pytorch, ICON.sqlite, ICON.docker, ICON.ubuntu],
       },
