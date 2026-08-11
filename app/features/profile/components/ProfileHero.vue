@@ -1,10 +1,12 @@
 <script setup lang="ts">
-import profileBg from '/images/profile/profile-card.png';
+import profileBg from '/images/profile/profile-card.webp';
 import userImage from '/images/profile/user-7.jpg';
+import { profileStats } from '../composables/profileStats';
 
 const stats = [
-  { value: '3', label: 'YEARS EXP' },
-  { value: '6', label: 'SKILLS' },
+  { value: profileStats.years ?? '—', label: 'YEARS' },
+  { value: profileStats.projects, label: 'PROJECTS' },
+  { value: profileStats.certs, label: 'CERTS' },
 ];
 </script>
 
@@ -51,7 +53,13 @@ const stats = [
   <div
     class="relative mt-9 h-[380px] rounded-[18px] overflow-hidden border border-[#E7E5DF]"
   >
-    <img :src="profileBg" alt="workspace" class="absolute inset-0 w-full h-full object-cover" />
+    <img
+      :src="profileBg"
+      alt="workspace"
+      fetchpriority="high"
+      decoding="async"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
     <div
       class="absolute inset-0"
       style="background: linear-gradient(120deg, rgba(34, 197, 94, 0.1), rgba(56, 189, 248, 0.12))"

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import SkillBoard from '../components/SkillBoard.vue';
 
-const TITLE = 'Skill';
+const TITLE = 'Skillset';
 useHead({
   title: TITLE,
 });

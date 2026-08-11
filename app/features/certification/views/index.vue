@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import SharedIcon from '~/features/@shared/components/Icon/Icon.vue';
 import { certGroups, type CertLevel } from '../composables/certifications';
 
 const TITLE = 'Certification';
@@ -8,6 +9,9 @@ const allCerts = certGroups.flatMap((g) => g.certs);
 const earned = allCerts.length;
 const categories = certGroups.length;
 const expert = allCerts.filter((c) => c.level === 'EXPERT').length;
+
+// 直近に取得した資格（日付は 'YYYY/MM' 形式なので文字列比較で最大を取る）
+const latestDate = allCerts.reduce((max, c) => (c.date > max ? c.date : max), '');
 
 // レベル別のアクセント（バッジ色 / ピル配色）
 type Accent = { badge: string; pill: string };
@@ -37,7 +41,7 @@ const accent = (level?: CertLevel) => ACCENTS[level ?? 'DEFAULT'];
     <div class="mt-7 flex justify-between items-end gap-8 flex-wrap">
       <div>
         <h1 class="font-display font-bold text-[64px] sm:text-[80px] leading-[0.92] tracking-[-0.035em] m-0">
-          Certified<span class="text-[#22C55E]">.</span>
+          Certification<span class="text-[#22C55E]">.</span>
         </h1>
         <p class="mt-[18px] text-base text-[#52525A] max-w-[540px]">
           Microsoft Azure / AWS のクラウド資格を中心に、情報処理技術者試験などの国家資格、AI・Linux・Java
@@ -68,12 +72,18 @@ const accent = (level?: CertLevel) => ACCENTS[level ?? 'DEFAULT'];
     <template v-for="(group, gi) in certGroups" :key="group.category">
       <!-- section divider -->
       <div
-        class="mt-12 flex items-baseline gap-4 pb-3.5 flex-wrap"
+        class="mt-12 flex items-center gap-3 pb-3.5 flex-wrap"
         :class="gi === 0 ? 'border-b-2 border-[#111113]' : 'border-b-2 border-[#DEDCD4]'"
       >
+        <SharedIcon :name="group.icon" class="size-6 shrink-0" />
         <h2 class="font-display font-bold text-[28px] tracking-[-0.02em] m-0">
           {{ group.category }}
         </h2>
+        <span
+          class="font-mono-dc text-[10px] tracking-[0.12em] text-[#6E6E73] border border-[#DEDCD4] rounded-full px-2.5 py-0.5"
+        >
+          {{ group.certs.length }}
+        </span>
         <div class="flex-1" />
         <span class="font-mono-dc text-[11px] tracking-[0.12em] text-[#9A998F]">
           {{ group.label }}
@@ -85,27 +95,29 @@ const accent = (level?: CertLevel) => ACCENTS[level ?? 'DEFAULT'];
         <div
           v-for="cert in group.certs"
           :key="cert.code ?? cert.name"
-          class="cert-card bg-white border border-[#E7E5DF] rounded-[18px] p-6 min-w-0"
+          class="cert-card relative overflow-hidden bg-white border border-[#E7E5DF] rounded-[18px] p-6 min-w-0"
         >
+          <!-- level accent bar -->
+          <span
+            class="absolute inset-x-0 top-0 h-0.75"
+            :style="{ background: accent(cert.level).badge }"
+          />
+
           <div class="flex justify-between items-center">
             <span
-              class="w-6 h-6 rounded-[7px] flex items-center justify-center shrink-0"
-              :style="{ background: accent(cert.level).badge }"
+              class="w-11 h-11 rounded-xl border border-[#E7E5DF] bg-[#FAFAF8] flex items-center justify-center shrink-0"
             >
-              <svg
-                width="13"
-                height="13"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="#fff"
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <polyline points="20 6 9 17 4 12" />
-              </svg>
+              <SharedIcon :name="group.icon" class="size-6" />
             </span>
-            <span class="font-mono-dc text-xs text-[#9A998F]">{{ cert.date }}</span>
+            <span class="flex items-center gap-2">
+              <span
+                v-if="cert.date === latestDate"
+                class="font-mono-dc text-[9px] tracking-[0.12em] text-[#1A9E5E] border border-[#BFE9CF] bg-[#EAF8F0] rounded-full px-2 py-0.5"
+              >
+                LATEST
+              </span>
+              <span class="font-mono-dc text-xs text-[#9A998F]">{{ cert.date }}</span>
+            </span>
           </div>
 
           <div
@@ -121,12 +133,29 @@ const accent = (level?: CertLevel) => ACCENTS[level ?? 'DEFAULT'];
             {{ cert.name }}
           </div>
 
-          <div v-if="cert.level" class="mt-4">
+          <div class="mt-4 flex items-center justify-between gap-2">
             <span
+              v-if="cert.level"
               class="inline-flex items-center px-3 py-[5px] rounded-full font-mono-dc text-[10px] tracking-[0.1em]"
               :style="accent(cert.level).pill"
             >
               {{ cert.level }}
+            </span>
+            <span v-else />
+            <span class="inline-flex items-center gap-1 font-mono-dc text-[9px] tracking-[0.14em] text-[#9A998F]">
+              <svg
+                width="11"
+                height="11"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#22C55E"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+              CERTIFIED
             </span>
           </div>
         </div>

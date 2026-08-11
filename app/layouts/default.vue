@@ -7,7 +7,7 @@ const customizer = useCustomizerStore();
 const TITLE = 'Kusuda Daisuke Dashboard';
 
 useHead({
-  meta: [{ content: TITLE }],
+  meta: [{ name: 'application-name', content: TITLE }],
   titleTemplate: (titleChunk: string | undefined) => {
     if (titleChunk !== undefined) return `${titleChunk} | Dashboard`;
     return TITLE;

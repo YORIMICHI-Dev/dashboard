@@ -1,61 +1,19 @@
 <script setup lang="ts">
-import SkillColumnChart from './SkillColumnChart.vue';
-import SkillBarList from './SkillBarList.vue';
+import SkillList from './SkillList.vue';
 import SharedIcon from '~/features/@shared/components/Icon/Icon.vue';
-import { columnOptions, columnChart, columnIcon } from '../composables/cordColumnChart';
-import { frameworkOptions, frameworkChart, frameworkIcon } from '../composables/frameworkColumnChart';
-import { azureOptions, azureChart, azureIcon } from '../composables/azureColumnChart';
-import { dbOptions, dbChart, dbIcon } from '../composables/dbColumnChart';
-import { osOptions, osChart, osIcon } from '../composables/osColumnChart';
+import { SKILLS_UPDATED, skillCategories } from '../composables/skills';
 
-const progCategories = columnOptions.xaxis.categories as string[];
-const progValues = columnChart.series[0]!.data;
+const programming = skillCategories.find((c) => c.key === 'programming');
+const framework = skillCategories.find((c) => c.key === 'framework');
 
-// ヘッダー統計（データから算出）
-const languages = progCategories.length;
-const frameworks = (frameworkOptions.xaxis.categories as string[]).length;
-const peak = Math.max(...progValues);
-const topLang = progCategories[progValues.indexOf(peak)] ?? '';
-const peakCode = topLang.slice(0, 2).toUpperCase();
+// ヘッダー統計(データから算出)
+const languages = programming?.items.length ?? 0;
+const frameworks = framework?.items.length ?? 0;
+const topSkill = [...(programming?.items ?? [])].sort((a, b) => b.years - a.years)[0];
+const peakCode = (topSkill?.name ?? '').replace(/[^A-Za-z0-9]/g, '').slice(0, 2).toUpperCase();
 
-// type 'A' = 1系列の縦棒 / 'B' = 2系列の横バー
-const cards = [
-  {
-    type: 'A' as const,
-    title: 'Programming',
-    icon: columnIcon,
-    categories: progCategories,
-    values: progValues,
-  },
-  {
-    type: 'B' as const,
-    title: 'Framework',
-    icon: frameworkIcon,
-    categories: frameworkOptions.xaxis.categories as string[],
-    series: frameworkChart.series,
-  },
-  {
-    type: 'A' as const,
-    title: 'Azure',
-    icon: azureIcon,
-    categories: azureOptions.xaxis.categories as string[],
-    values: azureChart.series[0]!.data,
-  },
-  {
-    type: 'A' as const,
-    title: 'DB',
-    icon: dbIcon,
-    categories: dbOptions.xaxis.categories as string[],
-    values: dbChart.series[0]!.data,
-  },
-  {
-    type: 'B' as const,
-    title: 'OS',
-    icon: osIcon,
-    categories: osOptions.xaxis.categories as string[],
-    series: osChart.series,
-  },
-];
+const featuredCategories = skillCategories.filter((c) => c.featured);
+const gridCategories = skillCategories.filter((c) => !c.featured);
 </script>
 
 <template>
@@ -65,7 +23,7 @@ const cards = [
       <span class="font-mono-dc text-xs tracking-[0.18em] text-[#9A998F]">
         SKILL — STACK & TOOLING
       </span>
-      <span class="font-mono-dc text-xs text-[#9A998F]">UPDATED 2026.06</span>
+      <span class="font-mono-dc text-xs text-[#9A998F]">UPDATED {{ SKILLS_UPDATED }}</span>
     </div>
 
     <!-- ===== title + stats ===== -->
@@ -94,7 +52,7 @@ const cards = [
         </div>
         <div class="bg-[#111113] rounded-xl px-[18px] py-3.5 text-center min-w-[92px]">
           <div class="font-display font-bold text-[30px] leading-none text-[#22C55E]">
-            {{ peak.toFixed(1) }}
+            {{ topSkill ? topSkill.years.toFixed(1) : '—' }}
           </div>
           <div class="font-mono-dc text-[10px] tracking-[0.12em] text-[#9A9890] mt-0.5">
             PEAK · {{ peakCode }}
@@ -103,49 +61,43 @@ const cards = [
       </div>
     </div>
 
-    <!-- ===== cards ===== -->
-    <div class="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-5">
+    <!-- ===== featured cards ===== -->
+    <div
+      v-for="category in featuredCategories"
+      :key="category.key"
+      class="mt-12 border border-[#E7E5DF] rounded-[20px] bg-white px-7 pt-7 pb-7 lg:px-9 lg:pt-8"
+    >
+      <div class="flex justify-between items-center">
+        <div class="flex items-center gap-2.5">
+          <SharedIcon :name="category.headerIcon" class="size-5 text-[#22C55E]" />
+          <span class="font-display font-bold text-[22px] text-[#111113]">{{ category.title }}</span>
+        </div>
+        <span class="font-mono-dc text-[11px] tracking-widest text-[#9A998F]">
+          CAREER · YEARS
+        </span>
+      </div>
+      <div class="h-px bg-[#EFEEE9] my-6" />
+      <SkillList :items="category.items" size="lg" />
+    </div>
+
+    <!-- ===== grid cards ===== -->
+    <div class="mt-5 grid grid-cols-1 lg:grid-cols-2 gap-5">
       <div
-        v-for="card in cards"
-        :key="card.title"
-        class="border border-[#E7E5DF] rounded-[20px] bg-white px-7 pt-7 pb-5"
+        v-for="category in gridCategories"
+        :key="category.key"
+        class="border border-[#E7E5DF] rounded-[20px] bg-white px-7 pt-7 pb-6"
       >
-        <!-- card header -->
         <div class="flex justify-between items-center">
           <div class="flex items-center gap-2.5">
-            <SharedIcon :name="card.icon" class="size-5 text-[#22C55E]" />
-            <span class="font-display font-bold text-[20px] text-[#111113]">{{ card.title }}</span>
+            <SharedIcon :name="category.headerIcon" class="size-5 text-[#22C55E]" />
+            <span class="font-display font-bold text-[20px] text-[#111113]">{{ category.title }}</span>
           </div>
-          <span
-            v-if="card.type === 'A'"
-            class="font-mono-dc text-[11px] tracking-widest text-[#9A998F]"
-          >
-            CAREER · YEARS
+          <span class="font-mono-dc text-[10px] tracking-[0.14em] text-[#9A998F]">
+            {{ category.items.length }} SKILLS
           </span>
-          <div v-else class="flex items-center gap-4 font-mono-dc text-[10px] text-[#9A998F]">
-            <span
-              v-for="(s, idx) in card.series"
-              :key="s.name"
-              class="inline-flex items-center gap-1.5"
-            >
-              <span
-                class="w-2 h-2 rounded-full inline-block"
-                :style="{ background: idx === 0 ? '#22C55E' : '#38BDF8' }"
-              />
-              {{ s.name.toUpperCase() }}
-            </span>
-          </div>
         </div>
-
         <div class="h-px bg-[#EFEEE9] my-5" />
-
-        <!-- card body -->
-        <SkillColumnChart
-          v-if="card.type === 'A'"
-          :categories="card.categories"
-          :values="card.values!"
-        />
-        <SkillBarList v-else :categories="card.categories" :series="card.series!" />
+        <SkillList :items="category.items" size="sm" />
       </div>
     </div>
   </section>

@@ -58,7 +58,7 @@ const crumb = computed(() => {
       </button>
 
       <span class="crumb font-mono-dc">
-        DASHBOARD / <span class="crumb-current">{{ crumb }}</span>
+        <span class="hidden sm:inline">DASHBOARD / </span><span class="crumb-current">{{ crumb }}</span>
       </span>
     </div>
 

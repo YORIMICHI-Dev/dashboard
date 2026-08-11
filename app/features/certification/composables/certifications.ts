@@ -15,6 +15,8 @@ export type CertGroup = {
   category: string;
   /** セクション右上のモノスペースラベル */
   label: string;
+  /** 発行元のブランドアイコン名（@shared Icon） */
+  icon: string;
   certs: Cert[];
 };
 
@@ -22,6 +24,7 @@ export const certGroups: CertGroup[] = [
   {
     category: 'Microsoft Azure 認定',
     label: 'CLOUD CERTIFICATIONS',
+    icon: 'brand-azure',
     certs: [
       { code: 'AZ-305', name: 'Azure Infrastructure Solutions', date: '2025/04', level: 'EXPERT' },
       { code: 'AZ-104', name: 'Azure Administrator Associate', date: '2024/09', level: 'ASSOCIATE' },
@@ -34,6 +37,7 @@ export const certGroups: CertGroup[] = [
   {
     category: 'AWS 認定',
     label: 'CLOUD CERTIFICATIONS',
+    icon: 'brand-aws',
     certs: [
       {
         code: 'SAA-C03',
@@ -52,6 +56,7 @@ export const certGroups: CertGroup[] = [
   {
     category: '情報処理技術者試験',
     label: 'NATIONAL EXAMS',
+    icon: 'seal-jp',
     certs: [
       { name: '情報セキュリティマネジメント試験', date: '2025/07' },
       { name: '応用情報技術者試験', date: '2023/12' },
@@ -61,6 +66,7 @@ export const certGroups: CertGroup[] = [
   {
     category: 'ディープラーニング協会',
     label: 'AI / ML',
+    icon: 'ai-chip',
     certs: [
       { name: 'Generative AI Test', date: '2024/06' },
       { name: 'G検定', date: '2024/03' },
@@ -69,11 +75,13 @@ export const certGroups: CertGroup[] = [
   {
     category: 'LPIC',
     label: 'LINUX',
+    icon: 'brand-linux',
     certs: [{ name: 'LPIC Level-1', date: '2023/08', level: 'LEVEL 1' }],
   },
   {
     category: 'Oracle 資格',
     label: 'JAVA',
+    icon: 'brand-java',
     certs: [{ name: 'Java SE 11 Programmer I (Java Silver)', date: '2022/01', level: 'SILVER' }],
   },
 ];

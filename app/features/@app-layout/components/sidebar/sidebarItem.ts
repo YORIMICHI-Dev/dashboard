@@ -24,7 +24,7 @@ const sidebarItem: menu[] = [
     to: '/',
   },
   {
-    title: 'Skill',
+    title: 'Skillset',
     icon: 'code',
     to: '/skill',
   },
@@ -37,6 +37,13 @@ const sidebarItem: menu[] = [
     title: 'Certification',
     icon: 'certificate',
     to: '/certification',
+  },
+  { header: 'Develop' },
+  {
+    title: 'GitHub',
+    icon: 'brand-github',
+    to: 'https://github.com/YORIMICHI-Dev',
+    type: 'external',
   },
   { header: 'Blog' },
   {
