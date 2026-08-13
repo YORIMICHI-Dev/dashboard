@@ -67,17 +67,21 @@ const buildEntries = (companyId: string, projects: Project[]): EntryView[] => {
   return entries;
 };
 
-const companyViews = companies.map((company, ci) => {
-  const id = `company-${ci}`;
-  return {
-    ...company,
-    id,
-    tabLabel: company.name.replace(/株式会社/g, ''),
-    entries: buildEntries(id, company.projects),
-  };
-});
+const companyViews = companies.map((company) => ({
+  ...company,
+  id: company.slug,
+  tabLabel: company.name.replace(/株式会社/g, ''),
+  entries: buildEntries(company.slug, company.projects),
+}));
 
-const activeCompanyId = ref(companyViews.find((c) => c.current)?.id ?? companyViews[0]?.id ?? '');
+// URLパス(/history/[company])で選択会社を制御。未指定・不明なスラッグは在籍中の会社にフォールバック
+const route = useRoute();
+const defaultCompanyId = companyViews.find((c) => c.current)?.id ?? companyViews[0]?.id ?? '';
+const activeCompanyId = computed(() => {
+  const param = route.params.company;
+  const slug = Array.isArray(param) ? param[0] : param;
+  return companyViews.some((c) => c.id === slug) ? slug! : defaultCompanyId;
+});
 const activeCompany = computed(() => companyViews.find((c) => c.id === activeCompanyId.value) ?? companyViews[0]);
 
 const selectedPhase = reactive<Record<string, number>>({});
@@ -133,17 +137,16 @@ const isMaintained = (entry: EntryView) => entry.phases.some((p) => p.phase);
 
     <!-- ===== company tabs ===== -->
     <div class="mt-9 flex flex-wrap gap-2">
-      <button
+      <NuxtLink
         v-for="company in companyViews"
         :key="company.id"
-        type="button"
+        :to="`/history/${company.id}`"
         class="company-tab flex items-baseline gap-2 border rounded-full px-4 py-2 cursor-pointer transition-colors"
         :class="
           activeCompanyId === company.id
             ? 'bg-[#111113] border-[#111113] text-white'
             : 'bg-white border-[#DEDCD4] text-[#52525A] hover:border-[#B4B2A8]'
         "
-        @click="activeCompanyId = company.id"
       >
         <span class="font-display font-bold text-sm">{{ company.tabLabel }}</span>
         <span
@@ -152,7 +155,7 @@ const isMaintained = (entry: EntryView) => entry.phases.some((p) => p.phase);
         >
           {{ company.period }}
         </span>
-      </button>
+      </NuxtLink>
     </div>
 
     <!-- ===== active company ===== -->

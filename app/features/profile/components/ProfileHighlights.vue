@@ -59,7 +59,7 @@ const coreStack = ['Python', 'TypeScript · Nuxt', 'C# · .NET', 'Azure'];
           <NuxtLink
             v-for="p in featuredProjects"
             :key="p.title"
-            to="/history"
+            :to="`/history/${p.companySlug}`"
             class="group py-3 first:pt-1"
           >
             <div class="font-mono-dc text-[11px] tracking-widest text-[#9A998F]">

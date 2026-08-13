@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import profileBg from '/images/profile/profile-card.webp';
-import userImage from '/images/profile/user-7.jpg';
+import userImage from '/images/profile/avatar-face.jpg';
 import { profileStats } from '../composables/profileStats';
 
 const stats = [

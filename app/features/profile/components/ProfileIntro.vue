@@ -19,28 +19,27 @@ import SharedIcon from '~/features/@shared/components/Icon/Icon.vue';
       <p class="text-[17px] leading-loose text-[#2B2B30] mt-[18px]">
         フルスタックエンジニアとして、APIの開発や画面のUI設計などのコーディングに加え、先方との打ち合わせ資料の作成や定例会議の進行といった顧客対応も担当しています。
       </p>
-      <div class="mt-[26px] flex flex-wrap gap-2.5">
-        <div
-          class="inline-flex items-center gap-2.5 border border-[#DEDCD4] rounded-xl px-4 py-[11px]"
-        >
-          <SharedIcon name="briefcase" class="size-4" />
-          <span class="font-display font-bold text-sm text-[#111113]">株式会社UNAIIT</span>
-          <span class="text-xs text-[#8A8980]">— 現職</span>
-        </div>
-        <div
-          class="inline-flex items-center gap-2.5 border border-[#DEDCD4] rounded-xl px-4 py-[11px]"
-        >
-          <SharedIcon name="map-pin" class="size-4" />
-          <span class="font-display font-bold text-sm text-[#111113]">Nagoya</span>
-          <span class="text-xs text-[#8A8980]">— 在住</span>
-        </div>
-        <div
-          class="inline-flex items-center gap-2.5 border border-[#DEDCD4] rounded-xl px-4 py-[11px]"
-        >
-          <SharedIcon name="heart" class="size-4" />
-          <span class="font-display font-bold text-sm text-[#111113]">Married</span>
-          <span class="text-xs text-[#8A8980]">— 既婚</span>
-        </div>
+    </div>
+    <div class="mt-[26px] grid grid-cols-2 lg:grid-cols-4 gap-2.5">
+      <div class="flex items-center gap-2.5 border border-[#DEDCD4] rounded-xl px-4 py-[11px]">
+        <SharedIcon name="briefcase" class="size-4 shrink-0" />
+        <span class="font-display font-bold text-sm text-[#111113]">株式会社UNAIIT</span>
+        <span class="text-xs text-[#8A8980]">— 現職</span>
+      </div>
+      <div class="flex items-center gap-2.5 border border-[#DEDCD4] rounded-xl px-4 py-[11px]">
+        <SharedIcon name="map-pin" class="size-4 shrink-0" />
+        <span class="font-display font-bold text-sm text-[#111113]">Nagoya</span>
+        <span class="text-xs text-[#8A8980]">— 在住</span>
+      </div>
+      <div class="flex items-center gap-2.5 border border-[#DEDCD4] rounded-xl px-4 py-[11px]">
+        <SharedIcon name="heart" class="size-4 shrink-0" />
+        <span class="font-display font-bold text-sm text-[#111113]">Married</span>
+        <span class="text-xs text-[#8A8980]">— 既婚</span>
+      </div>
+      <div class="flex items-center gap-2.5 border border-[#DEDCD4] rounded-xl px-4 py-[11px]">
+        <SharedIcon name="child-girl" class="size-4 shrink-0" />
+        <span class="font-display font-bold text-sm text-[#111113]">Daughter</span>
+        <span class="text-xs text-[#8A8980]">— 娘1人</span>
       </div>
     </div>
   </div>

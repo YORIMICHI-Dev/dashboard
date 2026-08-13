@@ -19,7 +19,7 @@ import { careerSummary } from '../composables/profileStats';
       <NuxtLink
         v-for="c in careerSummary"
         :key="c.name"
-        to="/history"
+        :to="`/history/${c.slug}`"
         class="group flex flex-wrap items-baseline gap-x-5 gap-y-1 py-4"
       >
         <span

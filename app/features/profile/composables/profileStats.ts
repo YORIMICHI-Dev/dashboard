@@ -16,14 +16,17 @@ export const profileStats = {
 /** 最上位資格(EXPERTレベル)。HIGHLIGHTSの資格カードに使用 */
 export const expertCert: Cert | null = allCerts.find((c) => c.level === 'EXPERT') ?? null;
 
+export type FeaturedProject = Project & { companySlug: string };
+
 /** 代表プロジェクト(history.ts の featured フラグで選定、最大3件) */
-export const featuredProjects: Project[] = companies
-  .flatMap((c) => c.projects)
+export const featuredProjects: FeaturedProject[] = companies
+  .flatMap((c) => c.projects.map((p) => ({ ...p, companySlug: c.slug })))
   .filter((p) => p.featured)
   .slice(0, 3);
 
 export type CareerSummary = {
   name: string;
+  slug: string;
   period: string;
   role: string;
   current: boolean;
@@ -32,6 +35,7 @@ export type CareerSummary = {
 /** CAREER要約リスト(社名・期間・役割のみ) */
 export const careerSummary: CareerSummary[] = companies.map((c) => ({
   name: c.name,
+  slug: c.slug,
   period: c.period,
   role: c.role,
   current: c.current === true,

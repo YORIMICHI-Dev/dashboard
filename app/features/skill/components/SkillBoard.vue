@@ -62,22 +62,24 @@ const gridCategories = skillCategories.filter((c) => !c.featured);
     </div>
 
     <!-- ===== featured cards ===== -->
-    <div
-      v-for="category in featuredCategories"
-      :key="category.key"
-      class="mt-12 border border-[#E7E5DF] rounded-[20px] bg-white px-7 pt-7 pb-7 lg:px-9 lg:pt-8"
-    >
-      <div class="flex justify-between items-center">
-        <div class="flex items-center gap-2.5">
-          <SharedIcon :name="category.headerIcon" class="size-5 text-[#22C55E]" />
-          <span class="font-display font-bold text-[22px] text-[#111113]">{{ category.title }}</span>
+    <div class="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-5">
+      <div
+        v-for="category in featuredCategories"
+        :key="category.key"
+        class="border border-[#E7E5DF] rounded-[20px] bg-white px-7 pt-7 pb-7 lg:px-9 lg:pt-8"
+      >
+        <div class="flex justify-between items-center">
+          <div class="flex items-center gap-2.5">
+            <SharedIcon :name="category.headerIcon" class="size-5 text-[#22C55E]" />
+            <span class="font-display font-bold text-[22px] text-[#111113]">{{ category.title }}</span>
+          </div>
+          <span class="font-mono-dc text-[11px] tracking-widest text-[#9A998F]">
+            CAREER · YEARS
+          </span>
         </div>
-        <span class="font-mono-dc text-[11px] tracking-widest text-[#9A998F]">
-          CAREER · YEARS
-        </span>
+        <div class="h-px bg-[#EFEEE9] my-6" />
+        <SkillList :items="category.items" size="lg" :keep-order="category.keepOrder" />
       </div>
-      <div class="h-px bg-[#EFEEE9] my-6" />
-      <SkillList :items="category.items" size="lg" />
     </div>
 
     <!-- ===== grid cards ===== -->
@@ -97,7 +99,7 @@ const gridCategories = skillCategories.filter((c) => !c.featured);
           </span>
         </div>
         <div class="h-px bg-[#EFEEE9] my-5" />
-        <SkillList :items="category.items" size="sm" />
+        <SkillList :items="category.items" size="sm" :keep-order="category.keepOrder" />
       </div>
     </div>
   </section>

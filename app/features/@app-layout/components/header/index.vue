@@ -62,15 +62,6 @@ const crumb = computed(() => {
       </span>
     </div>
 
-    <nav class="ml-2 flex items-center gap-[22px]">
-      <a href="https://github.com/YORIMICHI-Dev" target="_blank" class="nav-link nav-link--gh">
-        Github
-      </a>
-      <a href="https://zenn.dev/yorimichi" target="_blank" class="nav-link nav-link--zenn">
-        Zenn
-      </a>
-    </nav>
-
     <div class="flex-1" />
 
     <LayoutHeaderProfile />
@@ -110,24 +101,5 @@ const crumb = computed(() => {
 }
 .crumb-current {
   color: #111113;
-}
-.nav-link {
-  font-family: "Space Grotesk", "Plus Jakarta Sans", sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  color: #52525a;
-  text-decoration: none;
-  padding-bottom: 2px;
-  border-bottom: 2px solid transparent;
-  transition: color 0.18s ease, border-color 0.18s ease;
-}
-.nav-link:hover {
-  color: #111113;
-}
-.nav-link--gh:hover {
-  border-color: #22c55e;
-}
-.nav-link--zenn:hover {
-  border-color: #38bdf8;
 }
 </style>

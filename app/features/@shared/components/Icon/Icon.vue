@@ -66,7 +66,7 @@ const icons: Record<string, IconDef> = {
 
   // ===== 工程(開発プロセス) =====
   route: {
-    body: `<circle cx="6.5" cy="6" r="3" fill="#22C55E"/><circle cx="17.5" cy="18" r="3" fill="#16A34A"/><path d="M6.5 9v4a4 4 0 0 0 4 4h4" fill="none" stroke="#86EFAC" stroke-width="2" stroke-linecap="round"/>`,
+    body: `<path d="M8.5 18.5h6.8a3.5 3.5 0 0 0 0-7H8.7a3.5 3.5 0 0 1 0-7h5.8" fill="none" stroke="#4ADE80" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="0.1 4.4"/><circle cx="5.5" cy="18.5" r="2.9" fill="#16A34A"/><circle cx="5.5" cy="18.5" r="1.1" fill="#DCFCE7"/><path d="M18.2 2.4a3.6 3.6 0 0 1 3.6 3.6c0 2.6-3.6 6.4-3.6 6.4s-3.6-3.8-3.6-6.4a3.6 3.6 0 0 1 3.6-3.6z" fill="#22C55E"/><circle cx="18.2" cy="5.9" r="1.4" fill="#DCFCE7"/>`,
   },
   'phase-requirement': {
     body: `<rect x="4" y="3" width="13" height="18" rx="2" fill="#E0E7FF"/><path d="M7 7.5h7M7 10.5h7M7 13.5h4" fill="none" stroke="#6366F1" stroke-width="1.6" stroke-linecap="round"/><path d="m13.2 20.6.7-3.2 5-5 2.5 2.5-5 5z" fill="#F59E0B"/><path d="m18.9 12.4 2.5 2.5 1-1a1.2 1.2 0 0 0 0-1.7l-.8-.8a1.2 1.2 0 0 0-1.7 0z" fill="#B45309"/>`,
@@ -93,6 +93,9 @@ const icons: Record<string, IconDef> = {
   // ===== 装飾 =====
   heart: {
     body: `<path d="M12 20.8 4.6 13.4a4.7 4.7 0 0 1 6.6-6.6l.8.8.8-.8a4.7 4.7 0 0 1 6.6 6.6z" fill="#EC4899"/><path d="M7.4 8a2.6 2.6 0 0 1 2-.7" fill="none" stroke="#FBCFE8" stroke-width="1.6" stroke-linecap="round"/>`,
+  },
+  'child-girl': {
+    body: `<circle cx="5.7" cy="10.2" r="2.3" fill="#B45309"/><circle cx="18.3" cy="10.2" r="2.3" fill="#B45309"/><path d="M9 15.2h6l2.3 5.8H6.7z" fill="#EC4899"/><path d="M12 20.2v-3.4" fill="none" stroke="#F9A8D4" stroke-width="1.2" stroke-linecap="round"/><circle cx="12" cy="9.6" r="5.5" fill="#FBD7B5"/><path d="M6.5 9.6a5.5 5.5 0 0 1 11 0c-1.7-.5-2.8-1.7-3.3-2.9-1 .9-4 1.8-7.7 2.9z" fill="#92400E"/><path d="m12 2.9 1.7 1.05L12 5 10.3 3.95z" fill="#F472B6"/><circle cx="10.1" cy="10.4" r=".65" fill="#42210B"/><circle cx="13.9" cy="10.4" r=".65" fill="#42210B"/><path d="M10.9 12.6c.7.5 1.5.5 2.2 0" fill="none" stroke="#D97706" stroke-width="1.1" stroke-linecap="round"/>`,
   },
   tie: {
     body: `<path d="M9.5 3h5l-1.2 3.2h-2.6z" fill="#38BDF8"/><path d="M10.8 6.8h2.4l1.5 8.4a1 1 0 0 1-.3.9l-2 1.9a.6.6 0 0 1-.8 0l-2-1.9a1 1 0 0 1-.3-.9z" fill="#0EA5E9"/>`,

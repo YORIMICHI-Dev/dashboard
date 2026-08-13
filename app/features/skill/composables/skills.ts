@@ -28,12 +28,31 @@ export type SkillCategory = {
   headerIcon: string;
   /** 全幅の主役カードとして表示する */
   featured?: boolean;
+  /** 年数降順ソートせず、items の並び順のまま表示する */
+  keepOrder?: boolean;
   items: SkillItem[];
 };
 
 export const SKILLS_UPDATED = '2026.08';
 
 export const skillCategories: SkillCategory[] = [
+  {
+    key: 'process',
+    title: 'Process',
+    headerIcon: 'route',
+    featured: true,
+    keepOrder: true,
+    // 工程順(上流→下流)で表示する
+    items: [
+      { name: '要件定義', icon: 'phase-requirement', years: 2, tag: 'REQUIREMENT' },
+      { name: '基本設計', icon: 'phase-basic-design', years: 2, tag: 'BASIC DESIGN' },
+      { name: '詳細設計', icon: 'phase-detail-design', years: 3, tag: 'DETAIL DESIGN' },
+      { name: 'クラウド設計', icon: 'phase-cloud', years: 3, tag: 'CLOUD' },
+      { name: '実装', icon: 'phase-implementation', years: 5, tag: 'CODING' },
+      { name: 'テスト', icon: 'phase-test', years: 2, tag: 'TEST' },
+      { name: '保守対応', icon: 'phase-maintenance', years: 3, tag: 'MAINTENANCE' },
+    ],
+  },
   {
     key: 'programming',
     title: 'Programming',
@@ -48,21 +67,6 @@ export const skillCategories: SkillCategory[] = [
     ],
   },
   {
-    key: 'process',
-    title: 'Process',
-    headerIcon: 'route',
-    featured: true,
-    items: [
-      { name: '実装', icon: 'phase-implementation', years: 5, tag: 'CODING' },
-      { name: '詳細設計', icon: 'phase-detail-design', years: 3, tag: 'DETAIL DESIGN' },
-      { name: 'クラウド', icon: 'phase-cloud', years: 3, tag: 'CLOUD' },
-      { name: '保守対応', icon: 'phase-maintenance', years: 3, tag: 'MAINTENANCE' },
-      { name: '要件定義', icon: 'phase-requirement', years: 2, tag: 'REQUIREMENT' },
-      { name: '基本設計', icon: 'phase-basic-design', years: 2, tag: 'BASIC DESIGN' },
-      { name: 'テスト', icon: 'phase-test', years: 2, tag: 'TEST' },
-    ],
-  },
-  {
     key: 'framework',
     title: 'Framework',
     headerIcon: 'id',
@@ -73,6 +77,16 @@ export const skillCategories: SkillCategory[] = [
       { name: 'Next.js', icon: cdn('nextjs/nextjs-original.svg'), years: 1, tag: 'FRONTEND' },
       { name: 'Flask', icon: cdn('flask/flask-original.svg'), years: 1, tag: 'BACKEND' },
       { name: 'Django', icon: cdnBase('django/django-plain.svg'), years: 0.5, tag: 'BACKEND' },
+    ],
+  },
+  {
+    key: 'ai-tool',
+    title: 'AI Tool',
+    headerIcon: 'ai-chip',
+    items: [
+      { name: 'ChatGPT', icon: '/Icons/ai/openai.svg', years: 3, tag: 'CHAT / API' },
+      { name: 'GitHub Copilot', icon: '/Icons/ai/githubcopilot.svg', years: 2, tag: 'COMPLETION' },
+      { name: 'Claude Code', icon: '/Icons/ai/claude.svg', years: 2, tag: 'CODING AGENT' },
     ],
   },
   {

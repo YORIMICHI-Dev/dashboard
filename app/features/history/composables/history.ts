@@ -73,6 +73,8 @@ export type Project = {
 
 export type Company = {
   name: string;
+  /** URLパスで会社を指定するためのスラッグ(/history/[company]) */
+  slug: string;
   period: string;
   role: string;
   /** 在籍中など強調表示する企業 */
@@ -126,6 +128,7 @@ export const projectsByEndDesc = (projects: Project[]): Project[] => {
 export const companies: Company[] = [
   {
     name: '株式会社UNAIIT',
+    slug: 'unaiit',
     period: '2024 — PRESENT',
     role: 'LEAD ENGINEER / PM',
     current: true,
@@ -144,7 +147,37 @@ export const companies: Company[] = [
         skills: [ICON.python, ICON.pytorch],
       },
       {
-        period: '2026/01 — PRESENT',
+        period: '2026/06 — PRESENT',
+        phase: 'PHASE 3',
+        group: '建設会社実行予算アプリ',
+        title: '建設会社実行予算アプリ 原価管理月報・月別支払内訳書モジュール開発',
+        tasks: [
+          '実行予算に対する実績原価の取込と予実対比を行う原価管理月報モジュールの要件定義',
+          '工事台帳から月別支払内訳書を作成するモジュールの要件定義',
+          '要件定義としての業務シナリオの整理',
+          'AIコーディングによるモック作成と、モックを用いた先方との仕様イメージのすり合わせ',
+          'Phase3全体のスケジュール策定と週次定例による先方との仕様調整',
+        ],
+        roles: [
+          'プロダクトマネージャー（要件定義・スケジュール管理・進捗報告）',
+          'AIコーディングによる実装・単体テスト',
+          '開発メンバーへの仕様共有およびコードレビュー',
+          '運用中アプリの保守対応（問い合わせ・不具合対応）',
+        ],
+        processes: ['要件定義', '基本設計', '詳細設計', '実装'],
+        skills: [
+          ICON.typescript,
+          ICON.nuxt,
+          ICON.csharp,
+          ICON.dotnet,
+          ICON.azure,
+          ICON.azureSql,
+          ICON.webApp,
+          ICON.githubActions,
+        ],
+      },
+      {
+        period: '2026/01 — 2026/09',
         phase: 'PHASE 2.5',
         group: '建設会社実行予算アプリ',
         title: '建設会社実行予算アプリ 実行予算明細入力アップデート・見積書更新対応',
@@ -347,6 +380,7 @@ export const companies: Company[] = [
   },
   {
     name: 'Laniakea株式会社',
+    slug: 'laniakea',
     period: '2023 — 2024',
     role: 'BACKEND / PROJECT LEADER',
     projects: [
@@ -374,6 +408,7 @@ export const companies: Company[] = [
   },
   {
     name: '株式会社iPX',
+    slug: 'ipx',
     period: '2022 — 2023',
     role: 'PYTHON / SIMULATION / ML',
     projects: [
@@ -401,6 +436,7 @@ export const companies: Company[] = [
   },
   {
     name: 'KIOXIA株式会社',
+    slug: 'kioxia',
     period: '2021',
     role: 'PRODUCTION PLANNING',
     projects: [
@@ -418,6 +454,7 @@ export const companies: Company[] = [
   },
   {
     name: '住友電気工業株式会社',
+    slug: 'sumitomo-electric',
     period: '2019 — 2021',
     role: 'R&D / MATERIALS ENGINEER',
     projects: [
