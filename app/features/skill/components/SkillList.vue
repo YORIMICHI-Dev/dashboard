@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { computed } from 'vue';
 import SharedIcon from '~/features/@shared/components/Icon/Icon.vue';
 import type { SkillItem } from '../composables/skills';
 
@@ -26,43 +27,43 @@ const initials = (name: string) => name.replace(/[^A-Za-z0-9]/g, '').slice(0, 2)
 </script>
 
 <template>
-  <div class="flex flex-col" :class="size === 'lg' ? 'gap-6' : 'gap-[18px]'">
+  <div class="flex flex-col" :class="size === 'lg' ? 'gap-4' : 'gap-3'">
     <div
       v-for="(item, i) in sorted"
       :key="item.name"
       class="flex items-center"
-      :class="size === 'lg' ? 'gap-4' : 'gap-3'"
+      :class="size === 'lg' ? 'gap-3' : 'gap-2.5'"
     >
       <!-- icon tile -->
       <span
-        class="shrink-0 rounded-xl border border-[#E7E5DF] bg-[#FAFAF8] flex items-center justify-center"
-        :class="size === 'lg' ? 'w-11 h-11' : 'w-9 h-9'"
+        class="shrink-0 rounded-[10px] border border-[#E7E5DF] bg-[#FAFAF8] flex items-center justify-center"
+        :class="size === 'lg' ? 'w-9 h-9' : 'w-8 h-8'"
       >
         <img
           v-if="item.icon && item.icon.includes('/')"
           :src="item.icon"
           :alt="item.name"
           class="object-contain"
-          :class="size === 'lg' ? 'w-6 h-6' : 'w-5 h-5'"
+          :class="size === 'lg' ? 'w-5 h-5' : 'w-4 h-4'"
         />
         <SharedIcon
           v-else-if="item.icon"
           :name="item.icon"
           class="shrink-0"
-          :class="size === 'lg' ? 'size-6' : 'size-5'"
+          :class="size === 'lg' ? 'size-5' : 'size-4'"
         />
-        <span v-else class="font-mono-dc font-bold text-[11px] text-[#52525A]">
+        <span v-else class="font-mono-dc font-bold text-[10px] text-[#52525A]">
           {{ initials(item.name) }}
         </span>
       </span>
 
       <!-- name + bar -->
       <div class="flex-1 min-w-0">
-        <div class="flex justify-between items-baseline mb-1.5 gap-3">
+        <div class="flex justify-between items-baseline mb-1 gap-3">
           <div class="flex items-baseline gap-2 min-w-0">
             <span
               class="font-display font-bold text-[#111113] truncate"
-              :class="size === 'lg' ? 'text-[17px]' : 'text-[15px]'"
+              :class="size === 'lg' ? 'text-[15px]' : 'text-[13px]'"
             >
               {{ item.name }}
             </span>
@@ -72,14 +73,14 @@ const initials = (name: string) => name.replace(/[^A-Za-z0-9]/g, '').slice(0, 2)
           </div>
           <span
             class="font-display font-bold shrink-0"
-            :class="[size === 'lg' ? 'text-[18px]' : 'text-[15px]', i === peakIndex ? 'text-[#1A9E5E]' : 'text-[#111113]']"
+            :class="[size === 'lg' ? 'text-[15px]' : 'text-[13px]', i === peakIndex ? 'text-[#1A9E5E]' : 'text-[#111113]']"
           >
             {{ item.years.toFixed(1) }}<span class="font-mono-dc font-normal text-[9px] text-[#9A998F] ml-1">YRS</span>
           </span>
         </div>
         <div
           class="rounded-full overflow-hidden"
-          :class="size === 'lg' ? 'h-2.5' : 'h-2'"
+          :class="size === 'lg' ? 'h-2' : 'h-1.5'"
           :style="{ background: TRACK }"
         >
           <div

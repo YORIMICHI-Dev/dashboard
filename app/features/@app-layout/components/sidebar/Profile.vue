@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { UAvatar } from '#components';
+</script>
 
 <template>
   <div class="ExtraBox rounded-xl bg-secondary/10 px-4 py-3">

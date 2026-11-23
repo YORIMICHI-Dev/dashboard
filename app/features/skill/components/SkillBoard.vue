@@ -62,43 +62,43 @@ const gridCategories = skillCategories.filter((c) => !c.featured);
     </div>
 
     <!-- ===== featured cards ===== -->
-    <div class="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-5">
+    <div class="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-3.5">
       <div
         v-for="category in featuredCategories"
         :key="category.key"
-        class="border border-[#E7E5DF] rounded-[20px] bg-white px-7 pt-7 pb-7 lg:px-9 lg:pt-8"
+        class="border border-[#E7E5DF] rounded-[14px] bg-white p-5 lg:px-6"
       >
         <div class="flex justify-between items-center">
           <div class="flex items-center gap-2.5">
             <SharedIcon :name="category.headerIcon" class="size-5 text-[#22C55E]" />
-            <span class="font-display font-bold text-[22px] text-[#111113]">{{ category.title }}</span>
+            <span class="font-display font-bold text-[18px] text-[#111113]">{{ category.title }}</span>
           </div>
-          <span class="font-mono-dc text-[11px] tracking-widest text-[#9A998F]">
+          <span class="font-mono-dc text-[10px] tracking-widest text-[#9A998F]">
             CAREER · YEARS
           </span>
         </div>
-        <div class="h-px bg-[#EFEEE9] my-6" />
+        <div class="h-px bg-[#EFEEE9] my-4" />
         <SkillList :items="category.items" size="lg" :keep-order="category.keepOrder" />
       </div>
     </div>
 
     <!-- ===== grid cards ===== -->
-    <div class="mt-5 grid grid-cols-1 lg:grid-cols-2 gap-5">
+    <div class="mt-3.5 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-3.5">
       <div
         v-for="category in gridCategories"
         :key="category.key"
-        class="border border-[#E7E5DF] rounded-[20px] bg-white px-7 pt-7 pb-6"
+        class="border border-[#E7E5DF] rounded-[14px] bg-white p-5"
       >
         <div class="flex justify-between items-center">
           <div class="flex items-center gap-2.5">
             <SharedIcon :name="category.headerIcon" class="size-5 text-[#22C55E]" />
-            <span class="font-display font-bold text-[20px] text-[#111113]">{{ category.title }}</span>
+            <span class="font-display font-bold text-[16px] text-[#111113]">{{ category.title }}</span>
           </div>
           <span class="font-mono-dc text-[10px] tracking-[0.14em] text-[#9A998F]">
             {{ category.items.length }} SKILLS
           </span>
         </div>
-        <div class="h-px bg-[#EFEEE9] my-5" />
+        <div class="h-px bg-[#EFEEE9] my-3.5" />
         <SkillList :items="category.items" size="sm" :keep-order="category.keepOrder" />
       </div>
     </div>

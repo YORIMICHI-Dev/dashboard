@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { UBreadcrumb } from '#components';
+import { computed } from 'vue';
 const props = defineProps<{
   title: string;
   breadcrumbs: any[];

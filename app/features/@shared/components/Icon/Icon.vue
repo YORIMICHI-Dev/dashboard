@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { computed } from 'vue';
 // オリジナル自作SVGアイコン集（@iconify-json/tabler 依存を廃止）。
 // すべて手作りのフラット・デュオトーン調。viewBox 24 で統一。
 //   mode 'fill'  … currentColor の塗り（動的色を継承する circle-filled 用）

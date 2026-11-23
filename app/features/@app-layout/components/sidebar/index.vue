@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { shallowRef } from 'vue';
 import sidebarItem from './sidebarItem';
 import { useCustomizerStore } from '~/features/@app-layout/stores/customizer';
 import Logo from '~/features/@shared/components/Logo.vue';

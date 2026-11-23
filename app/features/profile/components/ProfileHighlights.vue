@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { NuxtLink } from '#components';
 import SharedIcon from '~/features/@shared/components/Icon/Icon.vue';
 import { expertCert, featuredProjects } from '../composables/profileStats';
 

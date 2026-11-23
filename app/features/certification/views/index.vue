@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useHead } from '#imports';
 import SharedIcon from '~/features/@shared/components/Icon/Icon.vue';
 import { certGroups, type CertLevel } from '../composables/certifications';
 
@@ -91,11 +92,11 @@ const accent = (level?: CertLevel) => ACCENTS[level ?? 'DEFAULT'];
       </div>
 
       <!-- cert grid -->
-      <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[18px]">
+      <div class="mt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3.5">
         <div
           v-for="cert in group.certs"
           :key="cert.code ?? cert.name"
-          class="cert-card relative overflow-hidden bg-white border border-[#E7E5DF] rounded-[18px] p-6 min-w-0"
+          class="cert-card relative overflow-hidden bg-white border border-[#E7E5DF] rounded-[14px] p-4 min-w-0"
         >
           <!-- level accent bar -->
           <span
@@ -105,9 +106,9 @@ const accent = (level?: CertLevel) => ACCENTS[level ?? 'DEFAULT'];
 
           <div class="flex justify-between items-center">
             <span
-              class="w-11 h-11 rounded-xl border border-[#E7E5DF] bg-[#FAFAF8] flex items-center justify-center shrink-0"
+              class="w-9 h-9 rounded-[10px] border border-[#E7E5DF] bg-[#FAFAF8] flex items-center justify-center shrink-0"
             >
-              <SharedIcon :name="group.icon" class="size-6" />
+              <SharedIcon :name="group.icon" class="size-5" />
             </span>
             <span class="flex items-center gap-2">
               <span
@@ -122,40 +123,23 @@ const accent = (level?: CertLevel) => ACCENTS[level ?? 'DEFAULT'];
 
           <div
             v-if="cert.code"
-            class="font-display font-bold text-[30px] tracking-[-0.02em] mt-5"
+            class="font-display font-bold text-[22px] tracking-[-0.02em] mt-3.5"
           >
             {{ cert.code }}
           </div>
           <div
-            class="text-[#2B2B30] leading-[1.5] mt-2"
-            :class="cert.code ? 'text-sm min-h-[42px]' : 'font-display font-bold text-xl tracking-[-0.01em] min-h-[56px] flex items-center'"
+            class="text-[#2B2B30] leading-normal mt-1"
+            :class="cert.code ? 'text-[13px] min-h-[39px]' : 'font-display font-bold text-base tracking-[-0.01em] min-h-[48px] flex items-center'"
           >
             {{ cert.name }}
           </div>
 
-          <div class="mt-4 flex items-center justify-between gap-2">
+          <div v-if="cert.level" class="mt-3">
             <span
-              v-if="cert.level"
-              class="inline-flex items-center px-3 py-[5px] rounded-full font-mono-dc text-[10px] tracking-[0.1em]"
+              class="inline-flex items-center px-2.5 py-1 rounded-full font-mono-dc text-[9px] tracking-[0.1em]"
               :style="accent(cert.level).pill"
             >
               {{ cert.level }}
-            </span>
-            <span v-else />
-            <span class="inline-flex items-center gap-1 font-mono-dc text-[9px] tracking-[0.14em] text-[#9A998F]">
-              <svg
-                width="11"
-                height="11"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="#22C55E"
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <polyline points="20 6 9 17 4 12" />
-              </svg>
-              CERTIFIED
             </span>
           </div>
         </div>
@@ -171,6 +155,6 @@ const accent = (level?: CertLevel) => ACCENTS[level ?? 'DEFAULT'];
 .cert-card:hover {
   border-color: #cfcdc4;
   box-shadow: 0 14px 40px rgba(17, 17, 19, 0.07);
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 }
 </style>

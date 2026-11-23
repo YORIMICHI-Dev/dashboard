@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { UCollapsible } from '#components';
+import { ref } from 'vue';
 import Icon from './Icon.vue';
 import LayoutSidebarNavCollapse from './NavCollapse.vue';
 import LayoutSidebarNavItem from './NavItem.vue';

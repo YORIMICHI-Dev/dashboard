@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { NuxtLink, UBadge } from '#components';
+import { computed } from 'vue';
+import { useRoute } from '#imports';
 import Icon from './Icon.vue';
 const props = defineProps<{
   item: any;

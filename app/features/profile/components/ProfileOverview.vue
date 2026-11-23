@@ -9,9 +9,9 @@ import ProfileCareer from './ProfileCareer.vue';
 <template>
   <section class="font-jp text-[#111113]">
     <ProfileHero />
-    <ProfileContact />
     <ProfileIntro />
     <ProfileHighlights />
     <ProfileCareer />
+    <ProfileContact />
   </section>
 </template>

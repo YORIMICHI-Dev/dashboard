@@ -14,22 +14,22 @@
     "format:check": "oxfmt --check \"**/*.ts\""
   },
   "devDependencies": {
-    "lefthook": "^2.1.10",
-    "nuxt": "^4.5.2",
-    "oxfmt": "^0.63.0",
-    "oxlint": "^1.78.0",
-    "sass": "^1.102.0",
-    "typescript": "^5.9.3",
-    "vue": "^3.5.41",
-    "vue-router": "^5.2.0",
-    "vue-tsc": "^3.3.9"
+    "lefthook": "^2.2.2",
+    "nuxt": "^4.6.4",
+    "oxfmt": "^0.79.0",
+    "oxlint": "^1.94.0",
+    "sass": "^1.108.2",
+    "typescript": "^7.0.2",
+    "vue": "^3.5.46",
+    "vue-router": "^5.5.1",
+    "vue-tsc": "^3.3.14"
   },
   "dependencies": {
-    "@nuxt/ui": "^4.10.0",
-    "@pinia/nuxt": "^1.0.1",
+    "@nuxt/ui": "^4.13.0",
+    "@pinia/nuxt": "^1.0.3",
     "@vercel/analytics": "^2.0.1",
-    "apexcharts": "^6.8.0",
-    "pinia": "^4.0.2",
-    "vue3-apexcharts": "^1.11.1"
+    "apexcharts": "^8.9.1",
+    "pinia": "^4.1.0",
+    "vue3-apexcharts": "^1.11.3"
   }
 }

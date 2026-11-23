@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { NuxtLink } from '#components';
 import { careerSummary } from '../composables/profileStats';
 </script>
 

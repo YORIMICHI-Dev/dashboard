@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useHead } from '#imports';
 import ProfileOverview from '../components/ProfileOverview.vue';
 
 const TITLE = 'Profile';

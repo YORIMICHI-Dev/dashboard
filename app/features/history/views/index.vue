@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { NuxtLink } from '#components';
+import { computed, reactive } from 'vue';
+import { useHead, useRoute } from '#imports';
 import SharedIcon from '~/features/@shared/components/Icon/Icon.vue';
 import type { Project } from '../composables/history';
 import {
@@ -87,8 +90,8 @@ const activeCompany = computed(() => companyViews.find((c) => c.id === activeCom
 const selectedPhase = reactive<Record<string, number>>({});
 const phaseOf = (entry: EntryView): ProjectView => entry.phases[selectedPhase[entry.id] ?? 0] ?? entry.phases[0]!;
 
-/** Phase付きプロジェクトは納品後も保守対応が続いている */
-const isMaintained = (entry: EntryView) => entry.phases.some((p) => p.phase);
+/** 工程に「運用保守」を含むプロジェクトは保守対応中として表示する */
+const isMaintained = (entry: EntryView) => entry.phases.some((p) => p.processes?.includes('運用保守'));
 </script>
 
 <template>
@@ -183,16 +186,17 @@ const isMaintained = (entry: EntryView) => entry.phases.some((p) => p.phase);
         </span>
       </div>
 
-      <!-- project entries -->
+      <!-- project entries (2列) -->
+      <div class="mt-5 grid grid-cols-1 xl:grid-cols-2 gap-4">
       <article
         v-for="entry in activeCompany.entries"
         :key="entry.id"
-        class="proj-entry mt-5 bg-white border border-[#E7E5DF] rounded-[20px] p-6 lg:p-[30px] grid grid-cols-1 lg:grid-cols-[200px_minmax(0,1fr)] gap-x-9 gap-y-5 items-start"
+        class="proj-entry bg-white border border-[#E7E5DF] rounded-[20px] p-6 flex flex-col gap-5 min-w-0"
       >
         <!-- entry title + phase tabs -->
-        <div class="lg:col-span-2 border-b border-[#EFEEE9] pb-4">
+        <div class="border-b border-[#EFEEE9] pb-4">
           <div class="flex items-start justify-between gap-4 flex-wrap">
-            <h3 class="font-display font-bold text-[26px] leading-[1.3] tracking-[-0.02em] m-0">
+            <h3 class="font-display font-bold text-[22px] leading-[1.35] tracking-[-0.02em] m-0">
               {{ entry.group ?? entry.phases[0]?.title }}
             </h3>
             <span v-if="isMaintained(entry)" class="maint-badge shrink-0">
@@ -200,7 +204,7 @@ const isMaintained = (entry: EntryView) => entry.phases.some((p) => p.phase);
               保守対応中
             </span>
           </div>
-          <div v-if="entry.phases.length > 1" class="mt-3 flex flex-wrap gap-1.5">
+          <div v-if="entry.phases.length > 1 || entry.phases[0]?.phase" class="mt-3 flex flex-wrap gap-1.5">
             <button
               v-for="(ph, pi) in entry.phases"
               :key="ph.title"
@@ -220,25 +224,15 @@ const isMaintained = (entry: EntryView) => entry.phases.some((p) => p.phase);
 
         <template v-for="project in [phaseOf(entry)]" :key="project.title">
         <!-- meta column -->
-        <aside class="flex flex-wrap items-center gap-x-4 gap-y-2.5 lg:block lg:border-r lg:border-[#EFEEE9] lg:pr-7 lg:self-stretch">
+        <aside class="flex flex-wrap items-center gap-x-4 gap-y-2.5">
           <div class="font-mono-dc text-xs tracking-[0.08em] text-[#2B2B30]">
             <span>{{ project.periodParts.start }}</span>
-            <template v-if="project.periodParts.end">
-              <span class="lg:hidden"> — {{ project.periodParts.end }}</span>
-              <span class="hidden lg:block h-3 border-l border-[#DEDCD4] ml-[3px] my-1" />
-              <span class="hidden lg:inline">{{ project.periodParts.end }}</span>
-            </template>
+            <span v-if="project.periodParts.end"> — {{ project.periodParts.end }}</span>
           </div>
-          <div v-if="project.duration" class="font-mono-dc text-[11px] text-[#9A998F] lg:mt-2">
+          <div v-if="project.duration" class="font-mono-dc text-[11px] text-[#9A998F]">
             {{ project.duration }}
           </div>
-          <span
-            v-if="project.phase && entry.phases.length === 1"
-            class="font-mono-dc text-[11px] tracking-[0.1em] text-[#1A9E5E] border border-[#BFE9CF] bg-[#EAF8F0] px-[11px] py-1 rounded-full shrink-0 lg:inline-block lg:mt-3"
-          >
-            {{ project.phase }}
-          </span>
-          <div v-if="project.orderedProcesses.length" class="w-full flex flex-wrap gap-1.5 lg:mt-4">
+          <div v-if="project.orderedProcesses.length" class="w-full flex flex-wrap gap-1.5">
             <span
               v-for="step in project.orderedProcesses"
               :key="step"
@@ -247,45 +241,19 @@ const isMaintained = (entry: EntryView) => entry.phases.some((p) => p.phase);
               {{ step }}
             </span>
           </div>
-          <div v-if="project.skills.length" class="w-full flex flex-wrap gap-1.5 lg:mt-4">
-            <span
-              v-for="skill in project.skills"
-              :key="skill.name"
-              class="inline-flex items-center gap-1.5 border border-[#DEDCD4] bg-[#FAFAF8] rounded-lg px-2 py-1"
-            >
-              <img
-                v-if="skill.icon.includes('/')"
-                :src="skill.icon"
-                :alt="skill.name"
-                class="w-3.5 h-3.5 object-contain"
-              />
-              <SharedIcon v-else :name="skill.icon" class="w-3.5 h-3.5 shrink-0" />
-              <span class="font-mono-dc text-[10px] tracking-[0.04em] text-[#52525A]">
-                {{ skill.name }}
-              </span>
-            </span>
-          </div>
         </aside>
 
         <!-- body column -->
         <div class="min-w-0">
           <template v-if="entry.group">
-            <div class="flex items-baseline gap-3 flex-wrap">
-              <span
-                v-if="project.phase"
-                class="font-mono-dc text-[11px] tracking-widest text-[#1A9E5E] shrink-0"
-              >
-                {{ project.phase }}
-              </span>
-              <h4 class="font-display font-semibold text-base leading-normal text-[#2B2B30] m-0">
-                {{ phaseSubtitle(entry.group, project.title) }}
-              </h4>
-            </div>
+            <h4 class="font-display font-semibold text-base leading-normal text-[#2B2B30] m-0">
+              {{ phaseSubtitle(entry.group, project.title) }}
+            </h4>
             <div class="h-px bg-[#EFEEE9] mt-4" />
           </template>
 
           <div
-            class="grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-7"
+            class="flex flex-col gap-7"
             :class="entry.group ? 'mt-6' : ''"
           >
             <!-- TASK -->
@@ -329,10 +297,37 @@ const isMaintained = (entry: EntryView) => entry.phases.some((p) => p.phase);
                 </li>
               </ol>
             </div>
+
+            <!-- STACK -->
+            <div v-if="project.skills.length">
+              <div class="flex items-center gap-3">
+                <span class="font-mono-dc text-[11px] tracking-[0.18em] text-[#111113]">STACK</span>
+                <span class="flex-1 h-px bg-[#E7E5DF]" />
+              </div>
+              <div class="mt-3 flex flex-wrap gap-1.5">
+                <span
+                  v-for="skill in project.skills"
+                  :key="skill.name"
+                  class="inline-flex items-center gap-1.5 border border-[#DEDCD4] bg-[#FAFAF8] rounded-lg px-2 py-1"
+                >
+                  <img
+                    v-if="skill.icon.includes('/')"
+                    :src="skill.icon"
+                    :alt="skill.name"
+                    class="w-3.5 h-3.5 object-contain"
+                  />
+                  <SharedIcon v-else :name="skill.icon" class="w-3.5 h-3.5 shrink-0" />
+                  <span class="font-mono-dc text-[10px] tracking-[0.04em] text-[#52525A]">
+                    {{ skill.name }}
+                  </span>
+                </span>
+              </div>
+            </div>
           </div>
         </div>
         </template>
       </article>
+      </div>
     </template>
   </section>
 </template>

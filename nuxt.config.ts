@@ -1,7 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  ssr: false,
   devtools: { enabled: true },
+  imports: {
+    autoImport: false,
+  },
+  components: false,
   modules: ['@pinia/nuxt', '@nuxt/ui', '@vercel/analytics'],
   css: ['~/assets/css/main.css'],
   colorMode: {

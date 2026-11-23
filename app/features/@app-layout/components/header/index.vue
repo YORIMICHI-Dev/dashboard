@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { computed } from 'vue';
+import { useRoute } from '#imports';
 import { useCustomizerStore } from '~/features/@app-layout/stores/customizer';
 import LayoutHeaderProfile from './Profile.vue';
 

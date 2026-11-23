@@ -5,6 +5,7 @@ const aiSearch = '/Icons/azure/ai-search.svg';
 const speechService = '/Icons/azure/speech-services.svg';
 const webApp = '/Icons/web/10035-icon-service-App-Services.svg';
 const containerInstance = '/Icons/containers/10104-icon-service-Container-Instances.svg';
+const azureMonitor = '/Icons/monitor/00001-icon-service-Monitor.svg';
 
 const cdn = (icon: string) => `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${icon}`;
 const cdnBase = (icon: string) => `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${icon}`;
@@ -46,10 +47,11 @@ const ICON = {
     icon: 'https://assets-global.website-files.com/6050a76fa6a633d5d54ae714/6050ac000ff99b5cdba92d07_mapbox_favicon_32x32%202.png',
   },
   openAi: { name: 'Azure OpenAI', icon: openAi },
-  aiSearch: { name: 'AI Search', icon: aiSearch },
+  aiSearch: { name: 'Azure AI Search', icon: aiSearch },
   speech: { name: 'Azure Speech', icon: speechService },
   webApp: { name: 'Azure Web App', icon: webApp },
   containerInstance: { name: 'Container Instances', icon: containerInstance },
+  azureMonitor: { name: 'Azure Monitor', icon: azureMonitor },
 } satisfies Record<string, Skill>;
 
 export const PROCESS_STEPS = ['要件定義', '基本設計', '詳細設計', '実装', 'テスト', 'リリース', '運用保守'] as const;
@@ -134,6 +136,19 @@ export const companies: Company[] = [
     current: true,
     projects: [
       {
+        period: '2026/09 — PRESENT',
+        phase: '課題棚卸',
+        group: '建物管理劣化診断アプリ',
+        title: '建物管理劣化診断アプリ 現行業務・アプリの可視化と来期開発に向けた課題整理',
+        tasks: [
+          '劣化診断業務の棚卸資料の作成（現行アプリの機能棚卸、業務フローのフローチャート化、ヒアリング用資料の作成）',
+          '既存の劣化診断アプリのリファクタリング',
+        ],
+        roles: ['PM補助（業務棚卸・ヒアリング準備）', '既存アプリのリファクタリング実装'],
+        processes: ['要件定義', '実装', '運用保守'],
+        skills: [ICON.typescript, ICON.nuxt, ICON.python, ICON.fastapi, ICON.azure, ICON.openAi, ICON.aiSearch],
+      },
+      {
         period: '2026/07 — 2026/08',
         title: 'SAM3による建設現場ドメイン画像の対象物検出POC開発',
         tasks: [
@@ -147,7 +162,7 @@ export const companies: Company[] = [
         skills: [ICON.python, ICON.pytorch],
       },
       {
-        period: '2026/06 — PRESENT',
+        period: '2026/06 — 2026/12',
         phase: 'PHASE 3',
         group: '建設会社実行予算アプリ',
         title: '建設会社実行予算アプリ 原価管理月報・月別支払内訳書モジュール開発',
@@ -164,7 +179,7 @@ export const companies: Company[] = [
           '開発メンバーへの仕様共有およびコードレビュー',
           '運用中アプリの保守対応（問い合わせ・不具合対応）',
         ],
-        processes: ['要件定義', '基本設計', '詳細設計', '実装'],
+        processes: ['要件定義', '基本設計', '詳細設計', '実装', '運用保守'],
         skills: [
           ICON.typescript,
           ICON.nuxt,
@@ -221,8 +236,9 @@ export const companies: Company[] = [
           '共同開発者のコードレビュー・リードエンジニア',
           'Azureクラウドのアーキテクチャ設計',
           'GitHub管理者、GitHub Actionsの設定およびCI/CDの整備',
+          '運用中アプリの保守対応（問い合わせ・不具合対応）',
         ],
-        processes: ['要件定義', '基本設計', '実装', 'テスト'],
+        processes: ['要件定義', '基本設計', '実装', 'テスト', '運用保守'],
         skills: [
           ICON.typescript,
           ICON.nuxt,
@@ -246,8 +262,12 @@ export const companies: Company[] = [
           '.NETによるDDDを意識したバックエンド開発（MediatRおよびDIによるクリーンアーキテクチャ採用、CRUD API設計・実装、Excel出力API実装）',
           'Azure環境の構築（Azure Web App, Azure VM, SQL Server）、Entra ID認証のためのエンタープライズアプリケーション登録',
         ],
-        roles: ['共同開発者のコードレビュー・リードエンジニア', 'GitHub管理者、GitHub Actionsの設定およびCI/CDの整備'],
-        processes: ['詳細設計', '実装', 'リリース'],
+        roles: [
+          '共同開発者のコードレビュー・リードエンジニア',
+          'GitHub管理者、GitHub Actionsの設定およびCI/CDの整備',
+          '運用中アプリの保守対応（問い合わせ・不具合対応）',
+        ],
+        processes: ['詳細設計', '実装', 'リリース', '運用保守'],
         skills: [
           ICON.typescript,
           ICON.nuxt,
@@ -328,6 +348,20 @@ export const companies: Company[] = [
         ],
       },
       {
+        period: '2024/08 — PRESENT',
+        phase: '保守対応',
+        group: '建設企業のマニュアルに対するRAG Chatアプリ',
+        title: '建設企業のマニュアルに対するRAG Chatアプリ 保守対応',
+        tasks: [
+          'Azure OpenAI の GPT モデル更新対応（新モデルへの切り替え・動作検証）',
+          'Phase1・Phase2 で開発した機能の不具合調査および修正',
+          'Azure Monitor（Log Analytics）によるログ監視と、障害発生時の原因調査・復旧対応',
+        ],
+        roles: ['運用中アプリの保守担当（GPTモデル更新・不具合対応・障害対応）'],
+        processes: ['実装', 'テスト', '運用保守'],
+        skills: [ICON.typescript, ICON.nuxt, ICON.csharp, ICON.dotnet, ICON.azure, ICON.openAi, ICON.aiSearch, ICON.azureMonitor],
+      },
+      {
         period: '2025/10 — 2026/01',
         phase: 'PHASE 2',
         group: '建設企業のマニュアルに対するRAG Chatアプリ',
@@ -343,7 +377,7 @@ export const companies: Company[] = [
           '先方との定例打合せ資料作成、開発状況説明',
         ],
         processes: ['要件定義', '詳細設計', '実装'],
-        skills: [ICON.typescript, ICON.nuxt, ICON.csharp, ICON.dotnet, ICON.azure, ICON.speech, ICON.openAi],
+        skills: [ICON.typescript, ICON.nuxt, ICON.csharp, ICON.dotnet, ICON.azure, ICON.speech, ICON.openAi, ICON.aiSearch],
       },
       {
         period: '2024/04 — 2024/07',

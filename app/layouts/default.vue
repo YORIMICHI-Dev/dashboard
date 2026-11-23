@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useHead } from '#imports';
 import { useCustomizerStore } from '~/features/@app-layout/stores/customizer';
 import LayoutSidebar from '~/features/@app-layout/components/sidebar/index.vue';
 import LayoutHeader from '~/features/@app-layout/components/header/index.vue';

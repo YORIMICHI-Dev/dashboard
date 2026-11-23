@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { UAvatar, UPopover } from '#components';
 import SharedIcon from '~/features/@shared/components/Icon/Icon.vue';
 </script>
 

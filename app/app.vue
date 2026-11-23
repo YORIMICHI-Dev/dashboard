@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { NuxtLayout, NuxtLoadingIndicator, NuxtPage, UApp } from '#components';
+</script>
 
 <template>
   <UApp>

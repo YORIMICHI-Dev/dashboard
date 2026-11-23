@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { UCard } from '#components';
 import Icon from '../../@app-layout/components/sidebar/Icon.vue';
 const props = defineProps<{
   title: string;

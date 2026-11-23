@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { NuxtLink } from '#components';
+</script>
 
 <template>
   <NuxtLink to="/" class="flex items-center gap-[11px]">
